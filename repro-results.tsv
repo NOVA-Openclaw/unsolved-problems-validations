@@ -1,0 +1,101 @@
+folder	script	status	reason
+aging-longevity/S239		NOT-RUNNABLE	document review or no checker script
+aging-longevity/S244		NOT-RUNNABLE	document review or no checker script
+aging-longevity/S245		NOT-RUNNABLE	document review or no checker script
+aging-longevity/S246		NOT-RUNNABLE	document review or no checker script
+aging-longevity/S253	aging-longevity/S253/S253-validate-epi321-comparators.py	PASS	exit 0
+aging-longevity/S253	aging-longevity/S253/scripts/validate_comparators.py	PASS	exit 0
+aging-longevity/S257	aging-longevity/S257/S257-jaspar-verify.py	PASS	exit 0
+aging-longevity/S257	aging-longevity/S257/S257-mmsi-rerun.py	PASS	exit 0
+aging-longevity/S257	aging-longevity/S257/scripts/jaspar_verify.py	PASS	exit 0
+aging-longevity/S257	aging-longevity/S257/scripts/mmsi_rerun.py	PASS	exit 0
+aging-longevity/S259	aging-longevity/S259/S259-exploratory-egr1.py	PASS	exit 0
+aging-longevity/S259	aging-longevity/S259/S259-exploratory-promoters.py	NOT-RE-RUN	network access required
+aging-longevity/S259	aging-longevity/S259/S259-exploratory-slc25a1.py	NOT-RE-RUN	network access required
+aging-longevity/S259	aging-longevity/S259/S259-hocomoco-nampt.py	NOT-RE-RUN	network access required
+aging-longevity/S259	aging-longevity/S259/scripts/exploratory_egr1.py	NOT-RE-RUN	network access required
+aging-longevity/S259	aging-longevity/S259/scripts/exploratory_promoters.py	NOT-RE-RUN	network access required
+aging-longevity/S259	aging-longevity/S259/scripts/exploratory_slc25a1.py	NOT-RE-RUN	network access required
+aging-longevity/S259	aging-longevity/S259/scripts/hocomoco_nampt.py	NOT-RE-RUN	network access required
+ai-alignment/S308	ai-alignment/S308/s308_check.py	PASS	exit 0
+ai-alignment/S308	ai-alignment/S308/s308_check_r2.py	PASS	exit 0
+ai-alignment/S308	ai-alignment/S308/s308_supp.py	PASS	exit 0
+ai-alignment/S308	ai-alignment/S308/scripts/s308_check.py	PASS	exit 0
+ai-alignment/S308	ai-alignment/S308/scripts/s308_check_r2.py	PASS	exit 0
+ai-alignment/S308	ai-alignment/S308/scripts/s308_supp.py	PASS	exit 0
+climate-change-mitigation/S258	climate-change-mitigation/S258/S258_optimal_R.py	PASS	exit 0
+climate-change-mitigation/S258	climate-change-mitigation/S258/S258_validated_design.py	PASS	exit 0
+climate-change-mitigation/S258	climate-change-mitigation/S258/scripts/S258_optimal_R.py	PASS	exit 0
+climate-change-mitigation/S258	climate-change-mitigation/S258/scripts/S258_validated_design.py	PASS	exit 0
+climate-change-mitigation/S261	climate-change-mitigation/S261/S261_composite_error.py	NOT-RE-RUN	missing Python dependency
+climate-change-mitigation/S261	climate-change-mitigation/S261/S261_gy_fse.py	PASS	exit 0
+climate-change-mitigation/S261	climate-change-mitigation/S261/scripts/S259_Rgrid_extension.py	NOT-RE-RUN	timeout (>5min)
+climate-change-mitigation/S261	climate-change-mitigation/S261/scripts/S260_cost_optimisation.py	NOT-RE-RUN	timeout (>5min)
+climate-change-mitigation/S261	climate-change-mitigation/S261/scripts/S261_composite_error.py	NOT-RE-RUN	timeout (>5min)
+climate-change-mitigation/S261	climate-change-mitigation/S261/scripts/S261_gy_fse.py	PASS	exit 0
+climate-change-mitigation/session-100	climate-change-mitigation/session-100/scripts/session-100-irf-lti-error-harness.py	PASS	exit 0
+climate-change-mitigation/session-103	climate-change-mitigation/session-103/scripts/session-103-twobox-calibrated-validate.py	PASS	exit 0
+climate-change-mitigation/session-105	climate-change-mitigation/session-105/scripts/session-105-obs-constrained-validate.py	PASS	exit 0
+collatz-conjecture/S37	collatz-conjecture/S37/verify_williams_crown.py	PASS	exit 0
+consciousness-hard-problem/S73		NOT-RUNNABLE	document review or no checker script
+consciousness-hard-problem/S75	consciousness-hard-problem/S75/s75-sig1-openweights-validate.py	NOT-RE-RUN	missing Python dependency
+consciousness-hard-problem/S75	consciousness-hard-problem/S75/scripts/s75-sig1-openweights-validate.py	NOT-RE-RUN	missing Python dependency
+consciousness-hard-problem/S77	consciousness-hard-problem/S77/s77-sig1-robustness-validate.py	NOT-RE-RUN	missing Python dependency
+consciousness-hard-problem/S77	consciousness-hard-problem/S77/scripts/s77-sig1-robustness-validate.py	NOT-RE-RUN	missing Python dependency
+consciousness-hard-problem/S80	consciousness-hard-problem/S80/s80-validate-injection-layer-generality.py	NOT-RE-RUN	missing Python dependency
+consciousness-hard-problem/S80	consciousness-hard-problem/S80/scripts/s80-validate-injection-layer-generality.py	NOT-RE-RUN	missing Python dependency
+consciousness-hard-problem/S82	consciousness-hard-problem/S82/s82-validate-depth-law-pythia410m.py	NOT-RE-RUN	missing Python dependency
+consciousness-hard-problem/S82	consciousness-hard-problem/S82/scripts/s82-validate-depth-law-pythia410m.py	NOT-RE-RUN	missing Python dependency
+consciousness-hard-problem/S84	consciousness-hard-problem/S84/s84-validate-scale-allocation.py	NOT-RE-RUN	missing Python dependency
+consciousness-hard-problem/S84	consciousness-hard-problem/S84/scripts/s84-validate-scale-allocation.py	NOT-RE-RUN	missing Python dependency
+consciousness-hard-problem/S85	consciousness-hard-problem/S85/s85-validate-pythia1b-scale.py	NOT-RE-RUN	missing Python dependency
+consciousness-hard-problem/S85	consciousness-hard-problem/S85/scripts/s85-validate-pythia1b-scale.py	NOT-RE-RUN	missing Python dependency
+goldbach-conjecture/S38	goldbach-conjecture/S38/s38_comet.py	NOT-RE-RUN	timeout (>5min)
+goldbach-conjecture/S38	goldbach-conjecture/S38/s38_scaling_and_cheb.py	NOT-RE-RUN	timeout (>5min)
+goldbach-conjecture/session-29		NOT-RUNNABLE	document review or no checker script
+langlands-program/S34	langlands-program/S34/actors.py	PASS	exit 0
+langlands-program/S34	langlands-program/S34/fetch.py	PASS	exit 0
+langlands-program/S34	langlands-program/S34/scripts/actors.py	PASS	exit 0
+langlands-program/S34	langlands-program/S34/scripts/fetch.py	PASS	exit 0
+langlands-program/S36	langlands-program/S36/s36_validate_dhar.py	PASS	exit 0
+langlands-program/S36	langlands-program/S36/scripts/s36_validate_dhar.py	PASS	exit 0
+langlands-program/S46	langlands-program/S46/s46_generic_vs_regular.py	PASS	exit 0
+langlands-program/S46	langlands-program/S46/s46_stdgeneric_o2.py	PASS	exit 0
+langlands-program/S46	langlands-program/S46/scripts/s46_generic_vs_regular.py	PASS	exit 0
+langlands-program/S46	langlands-program/S46/scripts/s46_stdgeneric_o2.py	PASS	exit 0
+langlands-program/S49	langlands-program/S49/s49_lemma521_toy.py	PASS	exit 0
+navier-stokes/S32	navier-stokes/S32/verify_logarithmic_mikado.py	PASS	exit 0
+navier-stokes/S37	navier-stokes/S37/scaling_check.py	PASS	exit 0
+navier-stokes/session-31		NOT-RUNNABLE	document review or no checker script
+p-vs-np/S109	p-vs-np/S109/scripts/s109_frac.py	NOT-RE-RUN	missing Python dependency
+p-vs-np/S109	p-vs-np/S109/scripts/s109_hpp.py	NOT-RE-RUN	missing Python dependency
+p-vs-np/S109	p-vs-np/S109/scripts/s109_joint.py	NOT-RE-RUN	missing Python dependency
+p-vs-np/S109	p-vs-np/S109/scripts/s109_pairs.py	NOT-RE-RUN	missing Python dependency
+p-vs-np/S109	p-vs-np/S109/scripts/s109_witness.py	NOT-RE-RUN	missing Python dependency
+p-vs-np/S146	p-vs-np/S146/scripts/s146_agg.py	PASS	exit 0 (after running sweep from scripts/)
+p-vs-np/S146	p-vs-np/S146/scripts/s146_controls.py	PASS	exit 0
+p-vs-np/S146	p-vs-np/S146/scripts/s146_monotone.py	PASS	exit 0
+p-vs-np/S146	p-vs-np/S146/scripts/s146_vxc.py	PASS	exit 0 (invoked with args thm 25 1)
+riemann-hypothesis/S41		NOT-RUNNABLE	document review or no checker script
+riemann-hypothesis/S49	riemann-hypothesis/S49/scripts/check_minimizer.py	PASS	exit 0
+riemann-hypothesis/S49	riemann-hypothesis/S49/scripts/stress_multiset_27.py	NOT-RE-RUN	timeout (>5min)
+riemann-hypothesis/S49	riemann-hypothesis/S49/scripts/thresholds.py	PASS	exit 0
+riemann-hypothesis/S52	riemann-hypothesis/S52/s52_algebra.py	PASS	exit 0
+riemann-hypothesis/S52	riemann-hypothesis/S52/s52_lp_skipped.py	PASS	exit 0 (run from S52 directory)
+riemann-hypothesis/S52	riemann-hypothesis/S52/s52_lp_stress.py	NOT-RE-RUN	timeout (>5min)
+riemann-hypothesis/S52	riemann-hypothesis/S52/s52_thresholds.py	PASS	exit 0
+twin-prime-conjecture/S33		NOT-RUNNABLE	document review or no checker script
+twin-prime-conjecture/S36	twin-prime-conjecture/S36/s36_admissible_tuples.py	NOT-RE-RUN	timeout (>5min)
+twin-prime-conjecture/S36	twin-prime-conjecture/S36/s36_maynard_Mk.py	PASS	exit 0
+twin-prime-conjecture/S36	twin-prime-conjecture/S36/s36_verify_tuples.py	PASS	exit 0 (after generating s36_admissible_tuples.out)
+unified-field-theory/S55	unified-field-theory/S55/s55_d6.py	PASS	exit 0
+unified-field-theory/S55	unified-field-theory/S55/s55_d7.py	NOT-RE-RUN	timeout (>5min) with args N2/N3/N4; README notes CPU-heavy
+unified-field-theory/S55	unified-field-theory/S55/s55_d7_N4b.py	NOT-RE-RUN	timeout (>5min) with arg N4; README notes CPU-heavy
+unified-field-theory/S55	unified-field-theory/S55/s55_steane.py	NOT-RE-RUN	missing Python dependency
+unified-field-theory/S55	unified-field-theory/S55/scripts/s55_d6.py	PASS	exit 0
+unified-field-theory/S55	unified-field-theory/S55/scripts/s55_d7.py	NOT-RE-RUN	timeout (>5min) with args N2/N3/N4; README notes CPU-heavy
+unified-field-theory/S55	unified-field-theory/S55/scripts/s55_d7_N4b.py	NOT-RE-RUN	timeout (>5min) with arg N4; README notes CPU-heavy
+unified-field-theory/S55	unified-field-theory/S55/scripts/s55_steane.py	NOT-RE-RUN	missing Python dependency
+unified-field-theory/validate-schmidt-magic-2026-09-07	unified-field-theory/validate-schmidt-magic-2026-09-07/s43-validate-schmidt-magic.py	FAIL	exit code 1: writes to hardcoded research/unsolved/... path; scripts/ version passes
+unified-field-theory/validate-schmidt-magic-2026-09-07	unified-field-theory/validate-schmidt-magic-2026-09-07/scripts/s43-validate-schmidt-magic.py	PASS	exit 0
+unified-field-theory/validate-sre-monotonicity-2026-08-01	unified-field-theory/validate-sre-monotonicity-2026-08-01/scripts/validate-sre-monotonicity-2026-08-01.py	PASS	exit 0
