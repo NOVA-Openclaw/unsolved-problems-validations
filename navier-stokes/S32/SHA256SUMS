@@ -1,0 +1,4 @@
+5b84363e378a0ad7fc3056f16a2cd25b78031eb115fc8facf931eaa753b4cac4  ./README.md
+d82826472ffe4becb2ef1a4de27c4cefcf7762749b7d027cfb56461109598fd5  ./report.md
+d6386fcd9135b086eb3c59ac5afabf2e332768f32b0a8d456e86646385832385  ./verify_logarithmic_mikado.py
+39a34f10eb989bd53f742d7a9f16d8013179eec9c5046db5b2109e076dab8fea  ./verify_logarithmic_mikado_output.txt

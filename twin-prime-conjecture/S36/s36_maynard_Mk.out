@@ -1,0 +1,35 @@
+k=5 UPPER k/(k-1)log k = 2.011797391  (needs >4 unconditional: IMPOSSIBLE)
+  k=5 D=2 basis=4 M_k >= 1.99055255917  -> implied min level theta > 2/M = 1.0047461
+  k=5 D=4 basis=9 M_k >= 2.00397484697  -> implied min level theta > 2/M = 0.99801652
+  k=5 D=6 basis=16 M_k >= 2.00410541536  -> implied min level theta > 2/M = 0.9979515
+  k=5 D=8 basis=25 M_k >= 2.00413524571  -> implied min level theta > 2/M = 0.99793664
+  k=5 D=10 basis=36 M_k >= 2.0041415789  -> implied min level theta > 2/M = 0.99793349
+  k=5 D=12 basis=49 M_k >= 2.00414399783  -> implied min level theta > 2/M = 0.99793229
+k=40 UPPER k/(k-1)log k = 3.783466107  (needs >4 unconditional: IMPOSSIBLE)
+  k=40 D=2 basis=4 M_k >= 3.08520259604  -> implied min level theta > 2/M = 0.64825565
+  k=40 D=4 basis=9 M_k >= 3.36116593971  -> implied min level theta > 2/M = 0.59503162
+  k=40 D=6 basis=16 M_k >= 3.48455946889  -> implied min level theta > 2/M = 0.57396064
+  k=40 D=8 basis=25 M_k >= 3.51838690151  -> implied min level theta > 2/M = 0.56844232
+  k=40 D=10 basis=36 M_k >= 3.5234950748  -> implied min level theta > 2/M = 0.56761822
+  k=40 D=12 basis=49 M_k >= 3.52437653313  -> implied min level theta > 2/M = 0.56747626
+k=50 UPPER k/(k-1)log k = 3.99186021  (needs >4 unconditional: IMPOSSIBLE)
+  k=50 D=2 basis=4 M_k >= 3.14436710896  -> implied min level theta > 2/M = 0.63605805
+  k=50 D=4 basis=9 M_k >= 3.44205178116  -> implied min level theta > 2/M = 0.58104878
+  k=50 D=6 basis=16 M_k >= 3.59200677553  -> implied min level theta > 2/M = 0.55679182
+  k=50 D=8 basis=25 M_k >= 3.64480187702  -> implied min level theta > 2/M = 0.54872667
+  k=50 D=10 basis=36 M_k >= 3.65556895066  -> implied min level theta > 2/M = 0.54711046
+  k=50 D=12 basis=49 M_k >= 3.65754448755  -> implied min level theta > 2/M = 0.54681495
+k=54 UPPER k/(k-1)log k = 4.064247896  (needs >4 unconditional: possible)
+  k=54 D=2 basis=4 M_k >= 3.16247353865  -> implied min level theta > 2/M = 0.63241636
+  k=54 D=4 basis=9 M_k >= 3.46639189333  -> implied min level theta > 2/M = 0.57696881
+  k=54 D=6 basis=16 M_k >= 3.62469664253  -> implied min level theta > 2/M = 0.55177031
+  k=54 D=8 basis=25 M_k >= 3.68468770639  -> implied min level theta > 2/M = 0.54278684
+  k=54 D=10 basis=36 M_k >= 3.69818740572  -> implied min level theta > 2/M = 0.54080548
+  k=54 D=12 basis=49 M_k >= 3.70076261778  -> implied min level theta > 2/M = 0.54042915
+k=105 UPPER k/(k-1)log k = 4.698709969  (needs >4 unconditional: possible)
+  k=105 D=2 basis=4 M_k >= 3.27853516114  -> implied min level theta > 2/M = 0.61002853
+  k=105 D=4 basis=9 M_k >= 3.61317411615  -> implied min level theta > 2/M = 0.55352993
+  k=105 D=6 basis=16 M_k >= 3.81867075241  -> implied min level theta > 2/M = 0.52374246
+  k=105 D=8 basis=25 M_k >= 3.93946424995  -> implied min level theta > 2/M = 0.50768325
+  k=105 D=10 basis=36 M_k >= 3.99141963514  -> implied min level theta > 2/M = 0.50107485
+  k=105 D=12 basis=49 M_k >= 4.00805822758  -> implied min level theta > 2/M = 0.49899475

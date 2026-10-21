@@ -1,0 +1,74 @@
+=== S259 HOCOMOCO v12 H12CORE m* (estimator frozen from S258) ===
+SP1    SP1.H12CORE.0.P.B        L=14 m_raw=0.9363 m_bg=0.5679 m*=0.8526  m*(Laplace)=0.8449
+SRF    SRF.H12CORE.0.PSM.A      L=17 m_raw=0.2103 m_bg=0.6439 m*=0.0000  m*(Laplace)=0.0000
+USF1   USF1.H12CORE.0.PSM.A     L=12 m_raw=0.8593 m_bg=0.5083 m*=0.7139  m*(Laplace)=0.7067
+USF2   USF2.H12CORE.0.PSM.A     L=18 m_raw=0.9448 m_bg=0.6662 m*=0.8347  m*(Laplace)=0.8274
+E2F1   E2F1.H12CORE.0.P.B       L=13 m_raw=0.9532 m_bg=0.5390 m*=0.8985  m*(Laplace)=0.8929
+E2F4   E2F4.H12CORE.0.P.B       L=15 m_raw=0.9510 m_bg=0.5949 m*=0.8790  m*(Laplace)=0.8738
+ELK1   ELK1.H12CORE.0.PSM.A     L=11 m_raw=0.9929 m_bg=0.4755 m*=0.9865  m*(Laplace)=0.9855
+
+=== JASPAR (S258) vs HOCOMOCO (S259) ===
+SP1    JASPAR 0.5912  HOCOMOCO 0.8526  delta +0.2614
+SRF    JASPAR 0.0000  HOCOMOCO 0.0000  delta +0.0000
+USF1   JASPAR 0.0000  HOCOMOCO 0.7139  delta +0.7139
+USF2   JASPAR 0.9915  HOCOMOCO 0.8347  delta -0.1568
+E2F1   JASPAR 0.9931  HOCOMOCO 0.8985  delta -0.0946
+E2F4   JASPAR 0.9934  HOCOMOCO 0.8790  delta -0.1144
+ELK1   JASPAR 0.9826  HOCOMOCO 0.9865  delta +0.0039
+
+=== MMSI (HOCOMOCO, USF=USF2, no pseudocount) — s_t, a_t, thresholds FROZEN ===
+SLC25A1  MMSI=0.5798 R=0.2702 -> INDETERMINATE
+NAMPT    MMSI=0.6344 R=0.2000 -> HIT-AND-RUN
+EZH2     MMSI=0.6689 R=0.1834 -> HIT-AND-RUN
+EGR1     MMSI=0.1233 R=0.6000 -> PLASTIC
+gap(min positive - EGR1) = 0.4565
+
+=== MMSI (HOCOMOCO, USF=USF2, Laplace sensitivity) — s_t, a_t, thresholds FROZEN ===
+SLC25A1  MMSI=0.5746 R=0.2754 -> INDETERMINATE
+NAMPT    MMSI=0.6288 R=0.2000 -> HIT-AND-RUN
+EZH2     MMSI=0.6645 R=0.1868 -> HIT-AND-RUN
+EGR1     MMSI=0.1232 R=0.6000 -> PLASTIC
+gap(min positive - EGR1) = 0.4514
+
+=== MMSI (HOCOMOCO, USF=USF1 scenario) — s_t, a_t, thresholds FROZEN ===
+SLC25A1  MMSI=0.5798 R=0.2702 -> INDETERMINATE
+NAMPT    MMSI=0.5426 R=0.2574 -> INDETERMINATE
+EZH2     MMSI=0.6689 R=0.1834 -> HIT-AND-RUN
+EGR1     MMSI=0.1233 R=0.6000 -> PLASTIC
+gap(min positive - EGR1) = 0.4193
+
+=== EGR1 s_SRF invariance probe (HOCOMOCO) ===
+s_SRF=0.20 -> EGR1 MMSI=0.1233 R=0.6000 PLASTIC
+s_SRF=0.50 -> EGR1 MMSI=0.1233 R=0.6000 PLASTIC
+s_SRF=0.80 -> EGR1 MMSI=0.1233 R=0.6000 PLASTIC
+s_SRF=1.00 -> EGR1 MMSI=0.1233 R=0.6000 PLASTIC
+
+=== NAMPT proximal promoter E-box scan (Ensembl GRCh38, window -1000..+200 vs TSS) ===
+gene=ENSG00000105835 chrom=7 strand=-1 canonical=ENST00000222553 TSS=106284983
+window 7:106284783-106285983 strand -1  len=1201
+GC% = 63.9
+canonical CACGTG : n=0 positions(rel TSS)=[]
+variant  CATGTG  : n=0 positions(rel TSS)=[]
+variant  CACATG  : n=0 positions(rel TSS)=[]
+nearest canonical |dist to TSS| = None
+NAMPT CALL: NO E-BOX IN WINDOW -> H5 FIRES: USF drive assignment unsupported at sequence level
+
+=== PREDICTION LEDGER ===
+Q1 HOCOMOCO SP1 m* in [0.40,0.80]             MISSED  (0.8526)
+Q2 HOCOMOCO SRF m* <= 0.05                    HELD  (0.0000)
+Q3 E2F1/E2F4/ELK1/USF2 m* >= 0.90             MISSED  (E2F1=0.8985,E2F4=0.8790,ELK1=0.9865,USF2=0.8347)
+Q4 HOCOMOCO USF1 m* >= 0.90 (contrarian)      MISSED  (0.7139)
+Q5 classes match S258 primary                 HELD  (['HIT-AND-RUN', 'HIT-AND-RUN', 'INDETERMINATE', 'PLASTIC'])
+Q6 >=1 canonical CACGTG in window             MISSED  (n=0)
+Q7 Laplace shift < 0.05, no class flip        HELD  (maxshift=0.0077)
+
+=== FALSIFIER LEDGER ===
+H1 HOCOMOCO SP1 m* >= 0.80 (JASPAR artefact)     TRIGGERED  (0.8526)
+H2 HOCOMOCO SRF m* > 0.05                        clear  (0.0000)
+H3 obligate-CpG motif m* < 0.90                  TRIGGERED  (E2F1=0.8985,E2F4=0.8790,ELK1=0.9865,USF2=0.8347)
+H4 Laplace flips a class                         clear  ()
+H5 zero E-box of either type in window           TRIGGERED  (can=0 var=0)
+
+FIRED FALSIFIERS: H1, H3, H5
+COMPUTED VERDICT: DISCREPANCY (H1,H3,H5)
+exit=0

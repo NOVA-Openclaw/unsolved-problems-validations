@@ -1,0 +1,20 @@
+t_crit(0.975, df=5) = 2.571
+label | EPI mean | ~SEM | ~SD | one-sample t vs 0 | 95% CI (EPI alone) | comparator | net delta | naive Welch t vs comparator | approx p
+LMV total % | +1.3 | 1.93 | 4.73 | 0.67 | [-3.7, +6.3] | digital twin (model prediction) -2.7 | +4.0 | 2.06 (df~5.1) | 0.093
+LMV upper % | +3.0 | 2.40 | 5.88 | 1.25 | [-3.2, +9.2] | digital twin (model prediction) -3.5 | +6.5 | 2.65 (df~5.4) | 0.042
+LMV lower % | +0.3 | 1.86 | 4.56 | 0.16 | [-4.5, +5.1] | digital twin (model prediction) -2.5 | +2.8 | 1.49 (df~5.2) | 0.194
+QMT total PPN | +3.3 | 3.59 | 8.79 | 0.92 | [-5.9, +12.5] | ReSolve ECA -0.8 | +4.1 | 1.14 (df~5.0) | 0.306
+QMT upper PPN | +4.1 | 3.78 | 9.26 | 1.08 | [-5.6, +13.8] | ReSolve ECA -0.3 | +4.4 | 1.16 (df~5.1) | 0.298
+QMT lower PPN | +0.8 | 2.03 | 4.97 | 0.39 | [-4.4, +6.0] | ReSolve ECA -1.3 | +2.1 | 1.00 (df~5.6) | 0.357
+
+Slide 15 muscle-level table (OBSERVED values), net deltas (DERIVED):
+Shoulder Abduction: LMV net +7.2 pts vs DT; QMT net -1.2 PPN vs ReSolve  <-- comparator > EPI-321
+Shoulder External Rotation: LMV net +3.8 pts vs DT; QMT net +3.8 PPN vs ReSolve
+Elbow Extension: LMV net +12.2 pts vs DT; QMT net +9.2 PPN vs ReSolve
+Elbow Flexion: LMV net +11.0 pts vs DT; QMT net +0.9 PPN vs ReSolve
+Total Upper Body: LMV net +6.8 pts vs DT; QMT net +3.2 PPN vs ReSolve
+
+Caveat: naive Welch treats the digital-twin SEM as sampling error of an independent arm. It is a model
+prediction for the SAME 6 patients, so the correct test is paired (obs - predicted) with model RMSE;
+neither the paired SD nor the 6-month prediction error is disclosed. These p-values are NOT evidence of
+significance; they only show that the per-arm EPI-321 95% CIs all include 0 at n=6.

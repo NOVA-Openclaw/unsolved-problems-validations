@@ -1,0 +1,22 @@
+instances 69 harness_failures 0 all_pass 69
+[thm] n_inst=45 pass=45 inner<=bound=45 inner==bound=40
+[rnd] n_inst=24 pass=24 inner<=bound=24 inner==bound=12
+n | s | nq(range) | ell(range) | vxc_upper(range) | ratio/sqrt(n) max | vxc_upper<n ? | added3 count | ell<=2s+1
+9 3 (3, 6) (4, 4) (16, 24) 8.0 False 1 True
+10 4 (5, 5) (4, 6) (22, 23) 7.2732 False 3 True
+16 4 (4, 7) (5, 5) (21, 30) 7.5 False 1 True
+25 5 (5, 5) (6, 6) (26, 26) 5.2 False 0 True
+36 6 (6, 6) (7, 7) (31, 31) 5.1667 True 0 True
+49 7 (7, 7) (8, 8) (36, 36) 5.1429 True 0 True
+50 8 (6, 6) (11, 11) (35, 35) 4.9497 True 0 True
+64 8 (8, 8) (9, 9) (41, 41) 5.125 True 0 True
+100 10 (10, 10) (11, 11) (51, 51) 5.1 True 0 True
+101 11 (9, 9) (14, 14) (50, 50) 4.9752 True 0 True
+144 12 (12, 12) (13, 13) (61, 61) 5.0833 True 0 True
+150 13 (11, 11) (21, 21) (65, 65) 5.3072 True 0 True
+196 14 (14, 14) (15, 15) (71, 71) 5.0714 True 0 True
+256 16 (16, 16) (17, 17) (81, 81) 5.0625 True 0 True
+400 20 (20, 20) (21, 21) (101, 101) 5.05 True 0 True
+first n with vxc_upper < n on all seeds: 36
+lambda* range (float, info only): 811872.1608645082 1380389752853.8818
+brute-force Minkowski check run on 51 instances, all true: True

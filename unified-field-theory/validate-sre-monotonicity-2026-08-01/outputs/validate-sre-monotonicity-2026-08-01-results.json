@@ -1,0 +1,150 @@
+{
+  "2": {
+    "clifford": {
+      "trials": 150,
+      "violations": 0,
+      "max_viol": 0.0,
+      "mean_delta": 2.409924112119673e-15,
+      "violation_rate": 0.0
+    },
+    "dephase": {
+      "trials": 150,
+      "violations": 0,
+      "max_viol": 0.0,
+      "mean_delta": -0.15229277916335734,
+      "violation_rate": 0.0
+    },
+    "ptrace": {
+      "trials": 150,
+      "violations": 0,
+      "max_viol": 0.0,
+      "mean_delta": -0.26955638205022064,
+      "violation_rate": 0.0
+    },
+    "pauli_ch": {
+      "trials": 150,
+      "violations": 0,
+      "max_viol": 0.0,
+      "mean_delta": -0.17462725753636882,
+      "violation_rate": 0.0
+    },
+    "selective_avg": {
+      "trials": 150,
+      "violations": 0,
+      "max_viol": 0.0,
+      "mean_delta": -0.23191702406439993,
+      "violation_rate": 0.0
+    }
+  },
+  "3": {
+    "clifford": {
+      "trials": 150,
+      "violations": 0,
+      "max_viol": 0.0,
+      "mean_delta": 1.885158695813516e-15,
+      "violation_rate": 0.0
+    },
+    "dephase": {
+      "trials": 150,
+      "violations": 0,
+      "max_viol": 0.0,
+      "mean_delta": -0.14618369431578046,
+      "violation_rate": 0.0
+    },
+    "ptrace": {
+      "trials": 150,
+      "violations": 0,
+      "max_viol": 0.0,
+      "mean_delta": -0.2805954782229905,
+      "violation_rate": 0.0
+    },
+    "pauli_ch": {
+      "trials": 150,
+      "violations": 0,
+      "max_viol": 0.0,
+      "mean_delta": -0.17140995646845017,
+      "violation_rate": 0.0
+    },
+    "selective_avg": {
+      "trials": 150,
+      "violations": 0,
+      "max_viol": 0.0,
+      "mean_delta": -0.2020926418019312,
+      "violation_rate": 0.0
+    }
+  },
+  "4": {
+    "clifford": {
+      "trials": 150,
+      "violations": 0,
+      "max_viol": 0.0,
+      "mean_delta": 1.4432899320127035e-15,
+      "violation_rate": 0.0
+    },
+    "dephase": {
+      "trials": 150,
+      "violations": 0,
+      "max_viol": 0.0,
+      "mean_delta": -0.12506277858198242,
+      "violation_rate": 0.0
+    },
+    "ptrace": {
+      "trials": 150,
+      "violations": 0,
+      "max_viol": 0.0,
+      "mean_delta": -0.25177823852862985,
+      "violation_rate": 0.0
+    },
+    "pauli_ch": {
+      "trials": 150,
+      "violations": 0,
+      "max_viol": 0.0,
+      "mean_delta": -0.16048854147026156,
+      "violation_rate": 0.0
+    },
+    "selective_avg": {
+      "trials": 150,
+      "violations": 0,
+      "max_viol": 0.0,
+      "mean_delta": -0.161018384239194,
+      "violation_rate": 0.0
+    }
+  },
+  "5": {
+    "clifford": {
+      "trials": 150,
+      "violations": 0,
+      "max_viol": 0.0,
+      "mean_delta": 1.2730557349035128e-15,
+      "violation_rate": 0.0
+    },
+    "dephase": {
+      "trials": 150,
+      "violations": 0,
+      "max_viol": 0.0,
+      "mean_delta": -0.10807478925239086,
+      "violation_rate": 0.0
+    },
+    "ptrace": {
+      "trials": 150,
+      "violations": 0,
+      "max_viol": 0.0,
+      "mean_delta": -0.21801670324330014,
+      "violation_rate": 0.0
+    },
+    "pauli_ch": {
+      "trials": 150,
+      "violations": 0,
+      "max_viol": 0.0,
+      "mean_delta": -0.1445044217954515,
+      "violation_rate": 0.0
+    },
+    "selective_avg": {
+      "trials": 150,
+      "violations": 0,
+      "max_viol": 0.0,
+      "mean_delta": -0.12876978222349697,
+      "violation_rate": 0.0
+    }
+  }
+}

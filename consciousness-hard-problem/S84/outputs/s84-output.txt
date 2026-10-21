@@ -1,0 +1,172 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+S84 VALIDATE — scale allocation curve + 24L island check  SEED=84
+primary model: gpt2-medium  (pythia-1b deferred unless primary fails)
+torch 2.13.0+cpu  cuda=False
+
+==============================================================================
+LOADING gpt2-medium
+==============================================================================
+Loading weights:   0%|          | 0/292 [00:00<?, ?it/s]Loading weights: 100%|██████████| 292/292 [00:00<00:00, 3380.56it/s]
+[model] gpt2-medium family=gpt2 nL=24 hidden=1024 heads=16 dtype=torch.float32
+
+[1] CLEAN allocation scan a_FAR,p across all layers (no injection)
+
+[allocation curve point] final L23 a_FAR,p mean=2.010370e-02 max-head=6.768038e-02
+[final-layer clean group mass] sink0:0.4819 pre:0.1331 p:0.0201 car:0.2183 post:0.1466
+
+[per-layer a_FAR,p clean (mean heads / max head)]
+    L         mean         maxh top_h      top_a
+    0 4.133431e-02 9.192087e-02     2   0.070874
+    1 4.042186e-02 8.474013e-02     0   0.062879
+    2 2.689878e-02 6.405335e-02     5   0.056752
+    3 1.263574e-02 5.069154e-02     6   0.035410
+    4 1.376794e-02 8.297710e-02    14   0.054656
+    5 1.041935e-02 4.136136e-02    10   0.026029
+    6 6.134050e-03 2.804637e-02     3   0.015573
+    7 8.726302e-03 3.749802e-02     6   0.031191
+    8 1.395039e-02 5.376639e-02     7   0.031710
+    9 1.018637e-02 3.905243e-02     8   0.026445
+   10 1.583469e-02 5.451491e-02    13   0.036799
+   11 1.474964e-02 5.722416e-02     7   0.043923
+   12 1.148741e-02 5.338178e-02    15   0.034394
+   13 1.494716e-02 6.812099e-02     6   0.048541
+   14 9.178792e-03 4.154452e-02    12   0.021004
+   15 1.073370e-02 4.689204e-02     6   0.026578
+   16 7.529677e-03 3.894521e-02     4   0.032140
+   17 8.798681e-03 3.750284e-02    12   0.030204
+   18 6.869686e-03 5.630961e-02    15   0.055004
+   19 4.956774e-03 1.838404e-02     4   0.010337
+   20 4.958059e-03 2.666550e-02     1   0.021658
+   21 5.653600e-03 3.330686e-02     1   0.020044
+   22 8.643886e-03 2.524520e-02    14   0.016695
+   23 2.010370e-02 6.768038e-02     2   0.054266
+
+[island detector late-half L>=12, ratio≥10× neighbors]
+  (none flagged at 10×; reporting top-5 late layers by mean a_p)
+  top-5 late by mean a_p:
+    L23: mean=2.010370e-02 maxh=6.768038e-02 ratio_mean=2.33 top h2 a=0.0543
+    L13: mean=1.494716e-02 maxh=6.812099e-02 ratio_mean=1.30 top h6 a=0.0485
+    L12: mean=1.148741e-02 maxh=5.338178e-02 ratio_mean=0.77 top h15 a=0.0344
+    L15: mean=1.073370e-02 maxh=4.689204e-02 ratio_mean=1.17 top h6 a=0.0266
+    L14: mean=9.178792e-03 maxh=4.154452e-02 ratio_mean=0.61 top h12 a=0.0210
+
+[late summary] peak late L23 mean a_p=2.010370e-02; final L23=2.010370e-02; peak/last2 = 1.40×
+  top heads at peak L23: h2:0.05427 h5:0.03684 h6:0.03189 h11:0.02863 h4:0.02852
+  top heads at final L23: h2:0.05427 h5:0.03684 h6:0.03189 h11:0.02863 h4:0.02852
+
+[2] KEEP-ONLY export at layers [13, 19, 21, 23] (inj=18)
+
+##############################################################################
+# S84 EXPORT CELLS — valence inj=18 keep_Ls=[13, 19, 21, 23]
+##############################################################################
+[setup] ||W||=71.38 target=3||W|| HA=12 FAR_W=3
+
+[hs24 FAR out-span] B(noablate) = 2.1387
+            k0 D = 0.000000  D/B = 0.0000
+      keep-L13 D = 0.000000  D/B = 0.0000
+      keep-L19 D = 1.296188  D/B = 0.6061
+      keep-L21 D = 0.481557  D/B = 0.2252
+      keep-L23 D = 0.913714  D/B = 0.4272
+     keep-Linj D = 0.000000  D/B = 0.0000
+
+##############################################################################
+# S84 EXPORT CELLS — size inj=18 keep_Ls=[13, 19, 21, 23]
+##############################################################################
+[setup] ||W||=87.15 target=3||W|| HA=12 FAR_W=3
+
+[hs24 FAR out-span] B(noablate) = 0.8869
+            k0 D = 0.000000  D/B = 0.0000
+      keep-L13 D = 0.000000  D/B = 0.0000
+      keep-L19 D = 0.327371  D/B = 0.3691
+      keep-L21 D = 0.215490  D/B = 0.2430
+      keep-L23 D = 0.612457  D/B = 0.6905
+     keep-Linj D = 0.000000  D/B = 0.0000
+
+==============================================================================
+OPTIONAL ANCHOR: gpt2-124M clean final-layer a_p under SEED=84 apparatus
+==============================================================================
+
+==============================================================================
+LOADING gpt2
+==============================================================================
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights:  78%|███████▊  | 115/148 [00:00<00:00, 1138.56it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 1308.61it/s]
+[model] gpt2 family=gpt2 nL=12 hidden=768 heads=12 dtype=torch.float32
+
+[1] CLEAN allocation scan a_FAR,p across all layers (no injection)
+
+[allocation curve point] final L11 a_FAR,p mean=1.418526e-02 max-head=5.893874e-02
+[final-layer clean group mass] sink0:0.6175 pre:0.1112 p:0.0142 car:0.1663 post:0.0908
+
+[per-layer a_FAR,p clean (mean heads / max head)]
+    L         mean         maxh top_h      top_a
+    0 2.864666e-02 8.814973e-02     8   0.053077
+    1 2.928525e-02 6.551688e-02     9   0.052175
+    2 1.038521e-02 3.602138e-02     7   0.035395
+    3 5.086367e-03 2.516691e-02     5   0.018106
+    4 6.075169e-03 2.520268e-02     8   0.016786
+    5 6.849959e-03 2.976397e-02    10   0.021753
+    6 8.329266e-03 2.788166e-02     4   0.016236
+    7 4.476736e-03 1.661006e-02     6   0.008975
+    8 8.704327e-03 2.513299e-02     0   0.014942
+    9 4.681545e-03 1.975123e-02     7   0.010866
+   10 5.405882e-03 1.899535e-02     4   0.015461
+   11 1.418526e-02 5.893874e-02     0   0.044212
+
+[island detector late-half L>=6, ratio≥10× neighbors]
+  (none flagged at 10×; reporting top-5 late layers by mean a_p)
+  top-5 late by mean a_p:
+    L11: mean=1.418526e-02 maxh=5.893874e-02 ratio_mean=2.62 top h0 a=0.0442
+    L8: mean=8.704327e-03 maxh=2.513299e-02 ratio_mean=1.86 top h0 a=0.0149
+    L6: mean=8.329266e-03 maxh=2.788166e-02 ratio_mean=1.22 top h4 a=0.0162
+    L10: mean=5.405882e-03 maxh=1.899535e-02 ratio_mean=0.38 top h4 a=0.0155
+    L9: mean=4.681545e-03 maxh=1.975123e-02 ratio_mean=0.54 top h7 a=0.0109
+
+[late summary] peak late L11 mean a_p=1.418526e-02; final L11=1.418526e-02; peak/last2 = 1.45×
+  top heads at peak L11: h0:0.04421 h8:0.04105 h4:0.01746 h1:0.01234 h3:0.01074
+  top heads at final L11: h0:0.04421 h8:0.04105 h4:0.01746 h1:0.01234 h3:0.01074
+
+==============================================================================
+APPARATUS / EXACTNESS GATES
+==============================================================================
+g1 sdpa recon max abs err:           1.91e-06  (PASS)
+g2 gpt2-medium nL==24:               1      (PASS)
+g3 keep-Linj D ~ 0 (max):            0.00e+00  (PASS)
+g4 k0 D ~ 0 (max):                   0.00e+00  (PASS)
+g5 injection out/in span rel (max):  1.07e-07  (PASS)
+g6 final a_p in [0,1] finite:        2.010370e-02  (PASS)
+g7 island scan cells (H*nL):         384     (PASS)
+
+==============================================================================
+SYNTHESIS — allocation curve + island check
+==============================================================================
+
+[allocation-suppression curve — final-layer a_FAR,p clean mean]
+  model             nL L_final      a_FAR,p source              
+  pythia-160m       12      11 0.000000e+00 S81 exact zero      
+  pythia-410m       24      23 3.160000e-04 S82 ~3e-4           
+  gpt2-124M         12      11 1.470000e-02 S81 0.0147          
+  gpt2-medium       24      23 2.010370e-02 S84 THIS RUN        
+  gpt2-124M@s84     12      11 1.418526e-02 S84 re-anchor       
+
+[island check — gpt2-medium 24L family outgroup]
+  late peak: L23 a_mean=2.010370e-02  peak/last2=1.40×  (S83 L21 was ~40–60× L22/23)
+  VERDICT island: NO — no ≥10× neighbor spike; peak/last2=1.40×
+
+[keep-only export D/B @ inj18]
+  [valence] B=2.1387
+              k0: D=0.0000  D/B=0.000
+        keep-L13: D=0.0000  D/B=0.000
+        keep-L19: D=1.2962  D/B=0.606
+        keep-L21: D=0.4816  D/B=0.225
+        keep-L23: D=0.9137  D/B=0.427
+       keep-Linj: D=0.0000  D/B=0.000
+  [size] B=0.8869
+              k0: D=0.0000  D/B=0.000
+        keep-L13: D=0.0000  D/B=0.000
+        keep-L19: D=0.3274  D/B=0.369
+        keep-L21: D=0.2155  D/B=0.243
+        keep-L23: D=0.6125  D/B=0.691
+       keep-Linj: D=0.0000  D/B=0.000
+
+[model choice] primary=gpt2-medium; pythia-1b NOT run (scope: one scale point; gpt2-medium is the family-outgroup discriminator at 24L).
+[wall-clock] 61.1 s

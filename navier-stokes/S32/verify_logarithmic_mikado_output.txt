@@ -1,0 +1,18 @@
+Verification Script Output (Run on 2026-08-24):
+L    | epsilon    | L2_sq Num  | L2_sq Anal | psi_L L1 Num | psi_L L1 Anal | psi_L grad L2  
+------------------------------------------------------------------------------------------
+2    | 0.135335   | 0.159155   | 0.159155   | 1.379805     | 1.379805     | 5.18           
+4    | 0.018316   | 0.318310   | 0.318310   | 1.107712     | 1.107712     | 27.29          
+6    | 0.002479   | 0.477465   | 0.477465   | 0.919034     | 0.919034     | 164.70         
+8    | 0.000335   | 0.636620   | 0.636620   | 0.797617     | 0.797617     | 1053.93        
+10   | 0.000045   | 0.795775   | 0.795775   | 0.713617     | 0.713617     | 6965.38
+
+Analysis:
+1. The numerical integration matches the analytical calculations exactly.
+2. The squared L^2 norm of the unnormalized profile indeed grows linearly with L as:
+   A_epsilon^2 = L / (4 * pi)
+3. The L^1 norm of the normalized profile psi_L decreases as O(L^{-1/2}), proving that the logarithmic Mikado profile yields a logarithmic gain.
+4. Crucially, the gradient L^2 norm (H^1 seminorm) of the normalized profile psi_L diverges exponentially with L:
+   ||grad psi_L||_L2 \approx e^L / \sqrt{L}
+   For L = 10, the gradient L^2 norm is 6,965.38 and growing.
+This proves that as L -> \infty, the solution becomes strictly non-smooth and diverges in H^1, remaining strictly in the weak/distributional L^2 space, preventing the classical "self-testing" energy rigidity argument from being applied.

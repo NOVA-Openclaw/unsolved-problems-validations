@@ -1,0 +1,1 @@
+{"n4": {"edges": 6, "odd_component_sets": 23, "w_tested": 202, "w_pass": 202}, "n6": {"edges": 15, "odd_component_sets": 5479, "w_tested": 202, "w_pass": 202}, "all_pass": true}

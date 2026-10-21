@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "scripts/exploratory_slc25a1.py", line 32, in <module>
+    scan("EGR1",1000,200)
+  File "scripts/exploratory_slc25a1.py", line 21, in scan
+    seq=json.loads(get("https://rest.ensembl.org/sequence/region/human/%s:%d..%d:%d?content-type=application/json"%(g["seq_region_name"],lo,hi,st)))["seq"].upper()
+urllib.error.HTTPError: HTTP Error 503: Service Unavailable

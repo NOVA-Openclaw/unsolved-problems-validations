@@ -1,0 +1,10 @@
+N0 3.774758283725532e-15
+N1 N=2 max rel 8.842e-10
+N1 N=3 max rel 4.279e-10
+N1 N=4 max rel 4.979e-10
+N1 N=5 max rel 4.826e-10
+N2 {'N': 2, 's': 0, 'dim': 6, 'eig_min': np.float64(11.541457538920657), 'eig_max': np.float64(11.541497069253685), 'eig_relmax': 8.905918102667354e-06, 'offdiag': np.float64(1.1344064686704823e-05)}
+N2 {'N': 2, 's': 1, 'dim': 6, 'eig_min': np.float64(11.541439480911544), 'eig_max': np.float64(11.541471710209583), 'eig_relmax': 1.047052536556065e-05, 'offdiag': np.float64(7.164320475915487e-06)}
+N2 {'N': 3, 's': 0, 'dim': 14, 'eig_min': np.float64(11.541484217782138), 'eig_max': np.float64(11.541521913871826), 'eig_relmax': 6.594370900663926e-06, 'offdiag': np.float64(1.083399502126533e-05)}
+N2 {'N': 3, 's': 1, 'dim': 14, 'eig_min': np.float64(11.541484692237743), 'eig_max': np.float64(11.54152779483175), 'eig_relmax': 6.55326245500985e-06, 'offdiag': np.float64(8.586733308203374e-06)}
+SUMMARY {'N0_maxerr_fwht_vs_brute': np.float64(3.774758283725532e-15), 'N1_max_rel': np.float64(8.841772068676655e-10), 'N1_max_rel_h1e-2': np.float64(0.00024424594870414875), 'N1_count': 192, 'N1_PASS': np.True_, 'N2_PASS': True, 'target_quadform': np.float64(5.7707801635558535), 'target_hessian': np.float64(11.541560327111707)}

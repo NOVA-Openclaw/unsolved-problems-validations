@@ -1,0 +1,83 @@
+witness H1(n4): exact H=True  M>=0 on Neg=True  A(z*)=1  sum(A)=1  A(0)=1  M(0)=1
+witness H2(n4): exact H=True  M>=0 on Neg=True  A(z*)=1  sum(A)=1  A(0)=1  M(0)=1
+witness H5a(n5): exact H=True  M>=0 on Neg=True  A(z*)=0  sum(A)=1  A(0)=1  M(0)=1
+witness H5b(n5): exact H=True  M>=0 on Neg=True  A(z*)=1  sum(A)=1  A(0)=1  M(0)=1
+witness H5c(n5): exact H=True  M>=0 on Neg=True  A(z*)=1  sum(A)=1  A(0)=1  M(0)=1
+witness H5d(n5): exact H=True  M>=0 on Neg=True  A(z*)=0  sum(A)=1  A(0)=1  M(0)=1
+witness H5e(n5): exact H=True  M>=0 on Neg=True  A(z*)=0  sum(A)=1  A(0)=1  M(0)=1
+
+== CONTROLS ==
+  POS-CONTROL NOT1 (0,1): True  (expected True)
+  NEG-CONTROL NOT1 (0,-1): False  (expected False)
+  H_A-only (3, 13, 14): exact H_A witness=True
+  NEG-CONTROL HA(3, 13, 14) x H1(n4): INFEASIBLE  (expected INFEASIBLE)
+  NEG-CONTROL HA(3, 13, 14) x H2(n4): INFEASIBLE  (expected INFEASIBLE)
+  NEG-CONTROL HA(3, 13, 14) x H5a(n5): INFEASIBLE  (expected INFEASIBLE)
+  H_A-only (7, 11, 12): exact H_A witness=True
+  NEG-CONTROL HA(7, 11, 12) x H1(n4): INFEASIBLE  (expected INFEASIBLE)
+  NEG-CONTROL HA(7, 11, 12) x H2(n4): INFEASIBLE  (expected INFEASIBLE)
+  NEG-CONTROL HA(7, 11, 12) x H5a(n5): INFEASIBLE  (expected INFEASIBLE)
+  H_A-only (7, 10, 13): exact H_A witness=True
+  NEG-CONTROL HA(7, 10, 13) x H1(n4): INFEASIBLE  (expected INFEASIBLE)
+  NEG-CONTROL HA(7, 10, 13) x H2(n4): INFEASIBLE  (expected INFEASIBLE)
+  NEG-CONTROL HA(7, 10, 13) x H5a(n5): INFEASIBLE  (expected INFEASIBLE)
+
+== 49 PAIRS (S95 witnesses) ==
+  H1(n4)    x H1(n4)   : OPT lam0*=-3/5 dual=-3/5 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H1(n4)    x H2(n4)   : OPT lam0*=-3/5 dual=-3/5 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H1(n4)    x H5a(n5)  : OPT lam0*=-3/5 dual=-3/5 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H1(n4)    x H5b(n5)  : OPT lam0*=-3/5 dual=-3/5 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H1(n4)    x H5c(n5)  : OPT lam0*=-3/5 dual=-3/5 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H1(n4)    x H5d(n5)  : OPT lam0*=-3/5 dual=-3/5 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H1(n4)    x H5e(n5)  : OPT lam0*=-3/5 dual=-3/5 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H2(n4)    x H1(n4)   : OPT lam0*=-3/5 dual=-3/5 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H2(n4)    x H2(n4)   : OPT lam0*=-3/5 dual=-3/5 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H2(n4)    x H5a(n5)  : OPT lam0*=-3/5 dual=-3/5 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H2(n4)    x H5b(n5)  : OPT lam0*=-3/5 dual=-3/5 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H2(n4)    x H5c(n5)  : OPT lam0*=-3/5 dual=-3/5 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H2(n4)    x H5d(n5)  : OPT lam0*=-3/5 dual=-3/5 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H2(n4)    x H5e(n5)  : OPT lam0*=-3/5 dual=-3/5 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H5a(n5)   x H1(n4)   : OPT lam0*=-2/3 dual=-2/3 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H5a(n5)   x H2(n4)   : OPT lam0*=-2/3 dual=-2/3 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H5a(n5)   x H5a(n5)  : OPT lam0*=-2/3 dual=-2/3 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H5a(n5)   x H5b(n5)  : OPT lam0*=-2/3 dual=-2/3 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H5a(n5)   x H5c(n5)  : OPT lam0*=-2/3 dual=-2/3 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H5a(n5)   x H5d(n5)  : OPT lam0*=-2/3 dual=-2/3 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H5a(n5)   x H5e(n5)  : OPT lam0*=-2/3 dual=-2/3 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H5b(n5)   x H1(n4)   : OPT lam0*=-3/5 dual=-3/5 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H5b(n5)   x H2(n4)   : OPT lam0*=-3/5 dual=-3/5 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H5b(n5)   x H5a(n5)  : OPT lam0*=-3/5 dual=-3/5 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H5b(n5)   x H5b(n5)  : OPT lam0*=-3/5 dual=-3/5 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H5b(n5)   x H5c(n5)  : OPT lam0*=-3/5 dual=-3/5 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H5b(n5)   x H5d(n5)  : OPT lam0*=-3/5 dual=-3/5 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H5b(n5)   x H5e(n5)  : OPT lam0*=-3/5 dual=-3/5 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H5c(n5)   x H1(n4)   : OPT lam0*=-3/5 dual=-3/5 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H5c(n5)   x H2(n4)   : OPT lam0*=-3/5 dual=-3/5 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H5c(n5)   x H5a(n5)  : OPT lam0*=-3/5 dual=-3/5 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H5c(n5)   x H5b(n5)  : OPT lam0*=-3/5 dual=-3/5 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H5c(n5)   x H5c(n5)  : OPT lam0*=-3/5 dual=-3/5 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H5c(n5)   x H5d(n5)  : OPT lam0*=-3/5 dual=-3/5 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H5c(n5)   x H5e(n5)  : OPT lam0*=-3/5 dual=-3/5 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H5d(n5)   x H1(n4)   : OPT lam0*=-2/3 dual=-2/3 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H5d(n5)   x H2(n4)   : OPT lam0*=-2/3 dual=-2/3 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H5d(n5)   x H5a(n5)  : OPT lam0*=-2/3 dual=-2/3 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H5d(n5)   x H5b(n5)  : OPT lam0*=-2/3 dual=-2/3 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H5d(n5)   x H5c(n5)  : OPT lam0*=-2/3 dual=-2/3 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H5d(n5)   x H5d(n5)  : OPT lam0*=-2/3 dual=-2/3 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H5d(n5)   x H5e(n5)  : OPT lam0*=-2/3 dual=-2/3 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H5e(n5)   x H1(n4)   : OPT lam0*=-2/3 dual=-2/3 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H5e(n5)   x H2(n4)   : OPT lam0*=-2/3 dual=-2/3 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H5e(n5)   x H5a(n5)  : OPT lam0*=-2/3 dual=-2/3 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H5e(n5)   x H5b(n5)  : OPT lam0*=-2/3 dual=-2/3 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H5e(n5)   x H5c(n5)  : OPT lam0*=-2/3 dual=-2/3 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H5e(n5)   x H5d(n5)  : OPT lam0*=-2/3 dual=-2/3 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+  H5e(n5)   x H5e(n5)  : OPT lam0*=-2/3 dual=-2/3 primal_exact=True mu_Lemma1=True EXACT_OPT=True
+
+exact-certified optima: 49/49
+  g1=H1(n4): distinct lam0* over g2 = ['-3/5']
+  g1=H2(n4): distinct lam0* over g2 = ['-3/5']
+  g1=H5a(n5): distinct lam0* over g2 = ['-2/3']
+  g1=H5b(n5): distinct lam0* over g2 = ['-3/5']
+  g1=H5c(n5): distinct lam0* over g2 = ['-3/5']
+  g1=H5d(n5): distinct lam0* over g2 = ['-2/3']
+  g1=H5e(n5): distinct lam0* over g2 = ['-2/3']

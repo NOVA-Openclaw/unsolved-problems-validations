@@ -1,0 +1,1 @@
+{"C1_minN_at_half_lamstar_negative": true, "C1_minN_at_lamstar_zero": true, "C1_minN_at_lamstar_plus1_nonneg": true, "C2_corrupted_product_detected": true, "C3_halfplane_normals_rejected": true, "all_controls_behave": true}

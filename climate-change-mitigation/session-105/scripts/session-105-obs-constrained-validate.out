@@ -1,0 +1,159 @@
+==========================================================================
+SESSION 105 — OBS-CONSTRAINED (MLD,Kz) VALIDATE vs S104/Tyka  [VALIDATE]
+==========================================================================
+Baseline DIC0=2061.17 umol/kg  pCO2=420.0000 uatm
+S103/S104 anchor Iceland/ECCO eta@1/3/7/15 = 0.1176/0.2860/0.4638/0.5848  (expected 0.1176/0.2860/0.4638/0.5848)
+Anchor reproduced: PASS
+
+==========================================================================
+(1) PRIMARY (M1): annual-mean MLD box x observational Kz box
+    mapping: w_mix = Kz/50*3600  (S103/S104 convention)
+==========================================================================
+
+Iceland/Norway  [finding 4876]
+  MLD box 90..130 m (mean 110);  Kz box 1.0e-05..5.0e-05 m2/s
+  center-point eta@1/3/7/15yr = 0.197/0.417/0.566/0.628
+  horizon  max spread   target  match+-10  match+-5
+     1yr        39.0%     22.0%       True      True
+     3yr        41.7%     24.0%       True      True
+     7yr        39.9%     25.0%       True      True
+    15yr        28.2%     22.0%       True      True
+  acceptance over 400 ordered pairs: ordering 35.0%, +-10pt 13.0%, +-5pt 4.0%
+
+Oman  [finding 4877]
+  MLD box 35..50 m (mean 42);  Kz box 1.0e-06..1.0e-05 m2/s
+  center-point eta@1/3/7/15yr = 0.432/0.720/0.791/0.795
+  horizon  max spread   target  match+-10  match+-5
+     1yr        28.6%     48.0%      False     False
+     3yr        20.2%     42.0%      False     False
+     7yr        15.6%     33.0%      False     False
+    15yr        13.8%     25.0%      False     False
+  acceptance over 400 ordered pairs: ordering 33.5%, +-10pt 0.0%, +-5pt 0.0%
+
+Brazil  [finding 4878]
+  MLD box 18..28 m (mean 22);  Kz box 1.0e-05..3.0e-05 m2/s
+  center-point eta@1/3/7/15yr = 0.533/0.631/0.647/0.671
+  horizon  max spread   target  match+-10  match+-5
+     1yr        33.1%     10.0%       True      True
+     3yr        26.6%     12.0%       True      True
+     7yr        22.3%     12.0%       True      True
+    15yr        15.8%     10.0%       True      True
+  acceptance over 400 ordered pairs: ordering 100.0%, +-10pt 68.0%, +-5pt 43.5%
+
+Japan/Kuroshio  [finding 4879]
+  MLD box 65..90 m (mean 78);  Kz box 5.0e-05..1.0e-04 m2/s
+  center-point eta@1/3/7/15yr = 0.220/0.353/0.430/0.532
+  horizon  max spread   target  match+-10  match+-5
+     1yr        34.6%     12.0%       True      True
+     3yr        32.7%     14.0%       True      True
+     7yr        22.4%     14.0%       True      True
+    15yr         9.8%     12.0%       True      True
+  acceptance over 400 ordered pairs: ordering 39.8%, +-10pt 27.8%, +-5pt 4.2%
+
+==========================================================================
+(2) ALT (M2): ventilation-timescale mapping w_mix = H_s/tau
+    (upper bound on effective exchange; includes advective ventilation)
+==========================================================================
+
+Iceland/Norway: tau 2-5 yr -> Kz-equiv 3.5e-05..8.7e-05 m2/s (obs Kz 1.0e-05..5.0e-05)
+     1yr  max   43.6%  target  22.0%  m10=True   m5=True
+     3yr  max   48.7%  target  24.0%  m10=True   m5=True
+     7yr  max   40.9%  target  25.0%  m10=True   m5=True
+    15yr  max   21.1%  target  22.0%  m10=True   m5=True
+  acceptance: ordering 37.8%, +-10pt 12.0%, +-5pt 1.8%
+
+Oman: tau 1-4 yr -> Kz-equiv 1.7e-05..6.7e-05 m2/s (obs Kz 1.0e-06..1.0e-05)  << MAPPINGS DISJOINT: tau-implied Kz outside obs Kz box
+     1yr  max   51.4%  target  48.0%  m10=True   m5=True
+     3yr  max   56.8%  target  42.0%  m10=True   m5=True
+     7yr  max   44.4%  target  33.0%  m10=True   m5=True
+    15yr  max   25.2%  target  25.0%  m10=True   m5=True
+  acceptance: ordering 41.5%, +-10pt 9.8%, +-5pt 1.5%
+
+Brazil: tau 1-3 yr -> Kz-equiv 1.2e-05..3.6e-05 m2/s (obs Kz 1.0e-05..3.0e-05)
+     1yr  max   44.0%  target  10.0%  m10=True   m5=True
+     3yr  max   40.6%  target  12.0%  m10=True   m5=True
+     7yr  max   33.2%  target  12.0%  m10=True   m5=True
+    15yr  max   22.0%  target  10.0%  m10=True   m5=True
+  acceptance: ordering 100.0%, +-10pt 71.5%, +-5pt 29.0%
+
+Japan/Kuroshio: tau 2-5 yr -> Kz-equiv 2.5e-05..6.1e-05 m2/s (obs Kz 5.0e-05..1.0e-04)
+     1yr  max   38.5%  target  12.0%  m10=True   m5=True
+     3yr  max   42.9%  target  14.0%  m10=True   m5=True
+     7yr  max   36.3%  target  14.0%  m10=True   m5=True
+    15yr  max   20.4%  target  12.0%  m10=True   m5=True
+  acceptance: ordering 37.2%, +-10pt 27.0%, +-5pt 9.0%
+
+==========================================================================
+(3) ALT (M3): seasonal-envelope MLD box x obs Kz (structural sensitivity)
+==========================================================================
+
+Iceland/Norway: MLD envelope 30..300 m  [winter MLD 500-600 m exceeds H_d=500; capped at 300 m]
+     1yr  max  145.6%  target  22.0%  m10=True   m5=True
+     3yr  max  110.6%  target  24.0%  m10=True   m5=True
+     7yr  max   70.4%  target  25.0%  m10=True   m5=True
+    15yr  max   41.2%  target  22.0%  m10=True   m5=True
+  acceptance: ordering 36.8%, +-10pt 3.5%, +-5pt 0.7%
+
+Oman: MLD envelope 15..80 m
+     1yr  max   93.9%  target  48.0%  m10=True   m5=True
+     3yr  max   42.8%  target  42.0%  m10=True   m5=True
+     7yr  max   19.1%  target  33.0%  m10=False  m5=False
+    15yr  max   14.2%  target  25.0%  m10=False  m5=False
+  acceptance: ordering 33.3%, +-10pt 0.0%, +-5pt 0.0%
+
+Brazil: MLD envelope 10..45 m
+     1yr  max   63.6%  target  10.0%  m10=True   m5=True
+     3yr  max   30.4%  target  12.0%  m10=True   m5=True
+     7yr  max   23.2%  target  12.0%  m10=True   m5=True
+    15yr  max   16.6%  target  10.0%  m10=True   m5=True
+  acceptance: ordering 100.0%, +-10pt 54.2%, +-5pt 34.7%
+
+Japan/Kuroshio: MLD envelope 20..250 m
+     1yr  max  129.1%  target  12.0%  m10=True   m5=True
+     3yr  max   77.9%  target  14.0%  m10=True   m5=True
+     7yr  max   45.9%  target  14.0%  m10=True   m5=True
+    15yr  max   25.7%  target  12.0%  m10=True   m5=True
+  acceptance: ordering 40.3%, +-10pt 12.5%, +-5pt 2.1%
+
+Iceland winter-weighted effective MLD diagnostic: 200 m (S103 ECCO used 200 m) -> eta = 0.118/0.286/0.464/0.585
+
+==========================================================================
+(4) S103 CALIBRATED PAIRS vs OBSERVATIONAL BOXES (containment)
+==========================================================================
+site            member    MLD       Kz  in ann-mean box?  in seasonal box?  Kz in obs box?
+Iceland/Norway  ECCO      200  2.5e-05             False              True            True
+Iceland/Norway  CESM2     280  3.5e-05             False              True            True
+Oman            ECCO       25  1.0e-05             False              True            True
+Oman            CESM2      55  4.0e-05             False              True           False
+Brazil          ECCO       18  2.0e-05              True              True            True
+Brazil          CESM2      22  2.5e-05              True              True            True
+Japan/Kuroshio  ECCO       85  3.5e-05              True              True           False
+Japan/Kuroshio  CESM2      65  2.0e-05              True              True           False
+
+==========================================================================
+(5) INTER-SITE SPREAD ORDERING
+==========================================================================
+M1 annual-mean  : Iceland/Norway(37%) > Japan/Kuroshio(25%) > Brazil(24%) > Oman(20%)   Tyka-order match: False
+M2 tau-based    : Oman(44%) > Iceland/Norway(39%) > Brazil(35%) > Japan/Kuroshio(35%)   Tyka-order match: False
+M3 seasonal     : Iceland/Norway(92%) > Japan/Kuroshio(70%) > Oman(43%) > Brazil(33%)   Tyka-order match: False
+Tyka            : Oman > Iceland/Norway > Japan/Kuroshio > Brazil
+
+==========================================================================
+SESSION 105 VERDICT INPUTS
+==========================================================================
+site              M1 +-10  M1 +-5  M2 +-10  M2 +-5  M3 +-10  M3 +-5
+Iceland/Norway      13.0%    4.0%    12.0%    1.8%     3.5%    0.7%
+Oman                 0.0%    0.0%     9.8%    1.5%     0.0%    0.0%
+Brazil              68.0%   43.5%    71.5%   29.0%    54.2%   34.7%
+Japan/Kuroshio      27.8%    4.2%    27.0%    9.0%    12.5%    2.1%
+
+M1 mean acceptance: +-10pt 27.2%, +-5pt 12.9%
+(S104 unconstrained-defensible-box baseline: +-10pt 47.5%, +-5pt 16.6%)
+
+Residuals (Tyka target - max achievable spread, M1, per horizon; positive = box CANNOT reach target):
+  Iceland/Norway  : 1yr: -17.0pt  3yr: -17.7pt  7yr: -14.9pt  15yr:  -6.2pt
+  Oman            : 1yr: +19.4pt  3yr: +21.8pt  7yr: +17.4pt  15yr: +11.2pt
+  Brazil          : 1yr: -23.1pt  3yr: -14.6pt  7yr: -10.3pt  15yr:  -5.8pt
+  Japan/Kuroshio  : 1yr: -22.6pt  3yr: -18.7pt  7yr:  -8.4pt  15yr:  +2.2pt
+
+Total wall time: 28.4s

@@ -1,0 +1,124 @@
+== (1) A(z*) range over normalized H-witnesses ==
+  H1(n4): A(z*) in [1, 1]  (endpoint witnesses exact-verified: True, True)
+  H2(n4): A(z*) in [1, 1]  (endpoint witnesses exact-verified: True, True)
+  H5a(n5): A(z*) in [0, 1]  (endpoint witnesses exact-verified: True, True)
+  H5b(n5): A(z*) in [1, 1]  (endpoint witnesses exact-verified: True, True)
+  H5c(n5): A(z*) in [1, 1]  (endpoint witnesses exact-verified: True, True)
+  H5d(n5): A(z*) in [0, 1]  (endpoint witnesses exact-verified: True, True)
+  H5e(n5): A(z*) in [0, 1]  (endpoint witnesses exact-verified: True, True)
+
+== (2) vary g1 witness (K=12 random-objective vertices + A(z*) extremes), g2 = H1 S95 witness ==
+  H1(n4): distinct lam0* = ['None']
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+  H2(n4): distinct lam0* = ['-3/5', 'None']
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=OPT lam0*=-3/5 exact=True A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=OPT lam0*=-3/5 exact=True A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+  H5a(n5): distinct lam0* = ['-2/3', 'None']
+      status=OPT lam0*=-2/3 exact=True A(z*)=0 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=OPT lam0*=-2/3 exact=True A(z*)=0 sumA=1
+      status=OPT lam0*=-2/3 exact=True A(z*)=0 sumA=1
+      status=OPT lam0*=-2/3 exact=True A(z*)=0 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=OPT lam0*=-2/3 exact=True A(z*)=0 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=OPT lam0*=-2/3 exact=True A(z*)=0 sumA=1
+      status=OPT lam0*=-2/3 exact=True A(z*)=0 sumA=1
+      status=OPT lam0*=-2/3 exact=True A(z*)=0 sumA=1
+  H5b(n5): distinct lam0* = ['-3/5', 'None']
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=OPT lam0*=-3/5 exact=True A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=OPT lam0*=-3/5 exact=True A(z*)=1 sumA=1
+  H5c(n5): distinct lam0* = ['-3/5', 'None']
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=OPT lam0*=-3/5 exact=True A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=OPT lam0*=-3/5 exact=True A(z*)=1 sumA=1
+      status=OPT lam0*=-3/5 exact=True A(z*)=1 sumA=1
+      status=OPT lam0*=-3/5 exact=True A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=OPT lam0*=-3/5 exact=True A(z*)=1 sumA=1
+  H5d(n5): distinct lam0* = ['-2/3', 'None']
+      status=OPT lam0*=-2/3 exact=True A(z*)=0 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=OPT lam0*=-2/3 exact=True A(z*)=0 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=OPT lam0*=-2/3 exact=True A(z*)=0 sumA=1
+      status=OPT lam0*=-2/3 exact=True A(z*)=0 sumA=1
+      status=OPT lam0*=-2/3 exact=True A(z*)=0 sumA=1
+      status=OPT lam0*=-2/3 exact=True A(z*)=0 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=OPT lam0*=-2/3 exact=True A(z*)=0 sumA=1
+      status=OPT lam0*=-2/3 exact=True A(z*)=0 sumA=1
+      status=OPT lam0*=-2/3 exact=True A(z*)=0 sumA=1
+      status=OPT lam0*=-2/3 exact=True A(z*)=0 sumA=1
+      status=OPT lam0*=-2/3 exact=True A(z*)=0 sumA=1
+  H5e(n5): distinct lam0* = ['-2/3', 'None']
+      status=OPT lam0*=-2/3 exact=True A(z*)=0 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=OPT lam0*=-2/3 exact=True A(z*)=0 sumA=1
+      status=OPT lam0*=-2/3 exact=True A(z*)=0 sumA=1
+      status=OPT lam0*=-2/3 exact=True A(z*)=0 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=OPT lam0*=-2/3 exact=True A(z*)=0 sumA=1
+      status=OPT lam0*=-2/3 exact=True A(z*)=0 sumA=1
+      status=OPT lam0*=-2/3 exact=True A(z*)=0 sumA=1
+      status=OPT lam0*=-2/3 exact=True A(z*)=0 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+      status=OPT lam0*=-2/3 exact=True A(z*)=0 sumA=1
+      status=OPT lam0*=-2/3 exact=True A(z*)=0 sumA=1
+      status=INFEASIBLE lam0*=None exact=None A(z*)=1 sumA=1
+
+== (3) g1 = H1 (S95 witness) fixed; vary g2 witness M2 (K random vertices) ==
+  H1 x H1(n4): distinct lam0* over 8 g2-witnesses = ['-3/5']  infeasible=0
+  H1 x H2(n4): distinct lam0* over 8 g2-witnesses = ['-3/5']  infeasible=0
+  H1 x H5a(n5): distinct lam0* over 8 g2-witnesses = ['-3/5']  infeasible=3
+  H1 x H5b(n5): distinct lam0* over 8 g2-witnesses = ['-3/5']  infeasible=1
+  H1 x H5c(n5): distinct lam0* over 8 g2-witnesses = ['-3/5']  infeasible=4
+  H1 x H5d(n5): distinct lam0* over 8 g2-witnesses = ['-3/5']  infeasible=3
+  H1 x H5e(n5): distinct lam0* over 8 g2-witnesses = ['-3/5']  infeasible=2

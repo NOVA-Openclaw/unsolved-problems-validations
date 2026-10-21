@@ -1,0 +1,6 @@
+dropped by SLSQP: 5
+  (1, 2, 2, 0, 19) viol=1.16e-07 exact A_min=82/19 =4.315789474 slackE=n/a slackE'=n/a
+  (4, 0, 1, 1, 15) viol=1.13e-07 exact A_min=43/10 =4.3 slackE=n/a slackE'=n/a
+  (4, 0, 1, 8, 63) viol=2.69e-07 exact A_min=3517/567 =6.202821869 slackE=n/a slackE'=n/a
+  (4, 1, 0, 8, 63) viol=3.40e-07 exact A_min=3517/567 =6.202821869 slackE=n/a slackE'=n/a
+  (8, 4, 0, 0, 41) viol=2.47e-06 exact A_min=1121/164 =6.835365854 slackE=n/a slackE'=n/a

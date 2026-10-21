@@ -1,0 +1,119 @@
+S261 composite-error model  NU0=107.20  reps(A)=400  seed=261
+
+[0] Reproduction check (phi=0, CV_w=0, N_c=inf must reproduce S260 floor addendum)
+  floor 4 lab $116: B $  2362 (k=54,n=4) kfloor=54 | ExCa A/B=0.94 | ExMg A/B=0.94 | TotSr A/B=0.83
+  floor 4 lab $300: B $  3834 (k=54,n=4) kfloor=54 | ExCa A/B=0.96 | ExMg A/B=0.96 | TotSr A/B=0.89
+  floor 4 lab $500: B $  5434 (k=54,n=4) kfloor=54 | ExCa A/B=0.97 | ExMg A/B=0.97 | TotSr A/B=0.93
+  floor 8 lab $116: B $  3290 (k=27,n=8) kfloor=27 | ExCa A/B=0.96 | ExMg A/B=0.96 | TotSr A/B=0.89
+  floor 8 lab $300: B $  6234 (k=27,n=8) kfloor=27 | ExCa A/B=0.98 | ExMg A/B=0.98 | TotSr A/B=0.94
+  floor 8 lab $500: B $  9434 (k=27,n=8) kfloor=27 | ExCa A/B=0.99 | ExMg A/B=0.99 | TotSr A/B=0.96
+
+[1] Additive floor: NU0*2*(phi+(1-phi)/N_c) = n reachable only as k->inf (must be < floor)
+   phi \ N_c     inf   10000    1000     300     100      30
+     0.0000     0.00    0.02    0.21    0.71    2.14    7.15
+     0.0001     0.02    0.04    0.24    0.74    2.17    7.17
+     0.0010     0.21    0.24    0.43    0.93    2.36    7.35
+     0.0030     0.64    0.66    0.86    1.36    2.78    7.77
+     0.0100     2.14    2.17    2.36    2.85    4.27    9.22
+     0.0300     6.43    6.45    6.64    7.13    8.51   13.36
+
+[2] Regime B: smallest k reaching the floor (kfloor), vs S260 (27 / 54). CV_w in {0,0.2,0.4}
+  floor 8:
+   CV_w=0.0: phi \ N_c    inf  10000   1000    300    100     30
+        0.0000              27     27     28     30     37    252
+        0.0001              27     27     28     30     37    258
+        0.0010              28     28     29     31     38    332
+        0.0030              30     30     30     33     41    923
+        0.0100              37     37     38     42     57     --
+        0.0300             133    135    153    238     --     --
+   CV_w=0.2: phi \ N_c    inf  10000   1000    300    100     30
+        0.0000              28     28     29     31     39    262
+        0.0001              28     29     29     31     39    268
+        0.0010              29     29     30     32     40    345
+        0.0030              31     31     32     34     43    960
+        0.0100              38     38     40     43     60     --
+        0.0300             138    140    160    248     --     --
+   CV_w=0.4: phi \ N_c    inf  10000   1000    300    100     30
+        0.0000              32     32     32     35     43    292
+        0.0001              32     32     33     35     43    299
+        0.0010              32     32     33     36     45    385
+        0.0030              34     34     35     38     48   1070
+        0.0100              43     43     44     48     66     --
+        0.0300             154    156    178    276     --     --
+  floor 4:
+   CV_w=0.0: phi \ N_c    inf  10000   1000    300    100     30
+        0.0000              54     54     57     66    116     --
+        0.0001              54     55     57     66    117     --
+        0.0010              57     57     60     70    131     --
+        0.0030              64     65     69     81    176     --
+        0.0100             115    116    130    185     --     --
+        0.0300              --     --     --     --     --     --
+   CV_w=0.2: phi \ N_c    inf  10000   1000    300    100     30
+        0.0000              56     57     59     68    121     --
+        0.0001              57     57     60     69    122     --
+        0.0010              59     60     63     73    136     --
+        0.0030              67     67     71     85    183     --
+        0.0100             119    121    135    193     --     --
+        0.0300              --     --     --     --     --     --
+   CV_w=0.4: phi \ N_c    inf  10000   1000    300    100     30
+        0.0000              63     63     66     76    134     --
+        0.0001              63     63     67     77    136     --
+        0.0010              66     67     70     81    152     --
+        0.0030              74     75     79     94    204     --
+        0.0100             133    135    150    215     --     --
+        0.0300              --     --     --     --     --     --
+
+[3] Cost + A/B under realistic scenarios (lab $116/$300/$500)
+
+  -- S260 ideal   additive-floor n = 0.00
+    floor 8 lab $116: B $  3290 (k=27,n=8,kfloor=27) x1.00 vs ideal | ExCa A $  3156 (k=15,h=0.5,R=0.5,n=8) A/B=0.96 | ExMg A $  3156 (k=15,h=0.5,R=0.5,n=8) A/B=0.96 | TotSr A $  2914 (k=10,h=0.5,R=0.5,n=8) A/B=0.89
+    floor 8 lab $300: B $  6234 (k=27,n=8,kfloor=27) x1.00 vs ideal | ExCa A $  6100 (k=15,h=0.5,R=0.5,n=8) A/B=0.98 | ExMg A $  6100 (k=15,h=0.5,R=0.5,n=8) A/B=0.98 | TotSr A $  5858 (k=10,h=0.5,R=0.5,n=8) A/B=0.94
+    floor 8 lab $500: B $  9434 (k=27,n=8,kfloor=27) x1.00 vs ideal | ExCa A $  9300 (k=15,h=0.5,R=0.5,n=8) A/B=0.99 | ExMg A $  9300 (k=15,h=0.5,R=0.5,n=8) A/B=0.99 | TotSr A $  9058 (k=10,h=0.5,R=0.5,n=8) A/B=0.96
+    floor 4 lab $116: B $  2362 (k=54,n=4,kfloor=54) x1.00 vs ideal | ExCa A $  2211 (k=30,h=0.5,R=2,n=4) A/B=0.94 | ExMg A $  2211 (k=30,h=0.5,R=2,n=4) A/B=0.94 | TotSr A $  1957 (k=20,h=0.5,R=1,n=4) A/B=0.83
+    floor 4 lab $300: B $  3834 (k=54,n=4,kfloor=54) x1.00 vs ideal | ExCa A $  3683 (k=30,h=0.5,R=2,n=4) A/B=0.96 | ExMg A $  3683 (k=30,h=0.5,R=2,n=4) A/B=0.96 | TotSr A $  3429 (k=20,h=0.5,R=1,n=4) A/B=0.89
+    floor 4 lab $500: B $  5434 (k=54,n=4,kfloor=54) x1.00 vs ideal | ExCa A $  5283 (k=30,h=0.5,R=2,n=4) A/B=0.97 | ExMg A $  5283 (k=30,h=0.5,R=2,n=4) A/B=0.97 | TotSr A $  5029 (k=20,h=0.5,R=1,n=4) A/B=0.93
+
+  -- good prep (split>=20g, pulverise): phi=1e-3 CV_w=0.2 N_c=1e4   additive-floor n = 0.24
+    floor 8 lab $116: B $  3391 (k=29,n=8,kfloor=29) x1.03 vs ideal | ExCa A $  3161 (k=15,h=0.5,R=1,n=8) A/B=0.93 | ExMg A $  3161 (k=15,h=0.5,R=1,n=8) A/B=0.93 | TotSr A $  2914 (k=10,h=0.5,R=0.5,n=8) A/B=0.86
+    floor 8 lab $300: B $  6335 (k=29,n=8,kfloor=29) x1.02 vs ideal | ExCa A $  6105 (k=15,h=0.5,R=1,n=8) A/B=0.96 | ExMg A $  6105 (k=15,h=0.5,R=1,n=8) A/B=0.96 | TotSr A $  5858 (k=10,h=0.5,R=0.5,n=8) A/B=0.92
+    floor 8 lab $500: B $  9535 (k=29,n=8,kfloor=29) x1.01 vs ideal | ExCa A $  9305 (k=15,h=0.5,R=1,n=8) A/B=0.98 | ExMg A $  9305 (k=15,h=0.5,R=1,n=8) A/B=0.98 | TotSr A $  9058 (k=10,h=0.5,R=0.5,n=8) A/B=0.95
+    floor 4 lab $116: B $  2513 (k=60,n=4,kfloor=60) x1.06 vs ideal | ExCa A $  2944 (k=40,h=0.5,R=1,n=4) A/B=1.17 | ExMg A $  2617 (k=30,h=0.5,R=0.5,n=5) A/B=1.04 | TotSr A $  2196 (k=30,h=0.5,R=0.5,n=4) A/B=0.87
+    floor 4 lab $300: B $  3985 (k=60,n=4,kfloor=60) x1.04 vs ideal | ExCa A $  4416 (k=40,h=0.5,R=1,n=4) A/B=1.11 | ExMg A $  4409 (k=40,h=0.5,R=0.5,n=4) A/B=1.11 | TotSr A $  3668 (k=30,h=0.5,R=0.5,n=4) A/B=0.92
+    floor 4 lab $500: B $  5585 (k=60,n=4,kfloor=60) x1.03 vs ideal | ExCa A $  6016 (k=40,h=0.5,R=1,n=4) A/B=1.08 | ExMg A $  6009 (k=40,h=0.5,R=0.5,n=4) A/B=1.08 | TotSr A $  5268 (k=30,h=0.5,R=0.5,n=4) A/B=0.94
+
+  -- typical: phi=3e-3 CV_w=0.2 N_c=1000   additive-floor n = 0.86
+    floor 8 lab $116: B $  3542 (k=32,n=8,kfloor=32) x1.08 vs ideal | ExCa A $  3486 (k=15,h=0.5,R=0.5,n=9) A/B=0.98 | ExMg A $  3486 (k=15,h=0.5,R=0.5,n=9) A/B=0.98 | TotSr A $  2917 (k=10,h=0.5,R=1,n=8) A/B=0.82
+    floor 8 lab $300: B $  6486 (k=32,n=8,kfloor=32) x1.04 vs ideal | ExCa A $  6798 (k=15,h=0.5,R=0.5,n=9) A/B=1.05 | ExMg A $  6798 (k=15,h=0.5,R=0.5,n=9) A/B=1.05 | TotSr A $  5861 (k=10,h=0.5,R=1,n=8) A/B=0.90
+    floor 8 lab $500: B $  9686 (k=32,n=8,kfloor=32) x1.03 vs ideal | ExCa A $ 10041 (k=20,h=0.5,R=0.5,n=8) A/B=1.04 | ExMg A $ 10041 (k=20,h=0.5,R=0.5,n=8) A/B=1.04 | TotSr A $  9061 (k=10,h=0.5,R=1,n=8) A/B=0.94
+    floor 4 lab $116: B $  2790 (k=71,n=4,kfloor=71) x1.18 vs ideal | ExCa A $  2957 (k=40,h=0.5,R=2,n=4) A/B=1.06 | ExMg A $  2957 (k=40,h=0.5,R=2,n=4) A/B=1.06 | TotSr A $  2201 (k=30,h=0.5,R=1,n=4) A/B=0.79
+    floor 4 lab $300: B $  4262 (k=71,n=4,kfloor=71) x1.11 vs ideal | ExCa A $  4429 (k=40,h=0.5,R=2,n=4) A/B=1.04 | ExMg A $  4429 (k=40,h=0.5,R=2,n=4) A/B=1.04 | TotSr A $  3673 (k=30,h=0.5,R=1,n=4) A/B=0.86
+    floor 4 lab $500: B $  5862 (k=71,n=4,kfloor=71) x1.08 vs ideal | ExCa A $  6029 (k=40,h=0.5,R=2,n=4) A/B=1.03 | ExMg A $  6029 (k=40,h=0.5,R=2,n=4) A/B=1.03 | TotSr A $  5273 (k=30,h=0.5,R=1,n=4) A/B=0.90
+
+  -- poor field mixing: phi=3e-3 CV_w=0.3 N_c=300   additive-floor n = 1.36
+    floor 8 lab $116: B $  3743 (k=36,n=8,kfloor=36) x1.14 vs ideal | ExCa A $  3491 (k=15,h=0.5,R=1,n=9) A/B=0.93 | ExMg A $  3491 (k=15,h=0.5,R=1,n=9) A/B=0.93 | TotSr A $  3011 (k=12,h=0.5,R=0.5,n=8) A/B=0.80
+    floor 8 lab $300: B $  6687 (k=36,n=8,kfloor=36) x1.07 vs ideal | ExCa A $  6803 (k=15,h=0.5,R=1,n=9) A/B=1.02 | ExMg A $  6803 (k=15,h=0.5,R=1,n=9) A/B=1.02 | TotSr A $  5955 (k=12,h=0.5,R=0.5,n=8) A/B=0.89
+    floor 8 lab $500: B $  9887 (k=36,n=8,kfloor=36) x1.05 vs ideal | ExCa A $ 10041 (k=20,h=0.5,R=0.5,n=8) A/B=1.02 | ExMg A $ 10041 (k=20,h=0.5,R=0.5,n=8) A/B=1.02 | TotSr A $  9155 (k=12,h=0.5,R=0.5,n=8) A/B=0.93
+    floor 4 lab $116: B $  3241 (k=89,n=4,kfloor=89) x1.37 vs ideal | ExCa A $  3285 (k=54,h=0.5,R=1,n=4) A/B=1.01 | ExMg A $  3285 (k=54,h=0.5,R=1,n=4) A/B=1.01 | TotSr A $  2201 (k=30,h=0.5,R=1,n=4) A/B=0.68
+    floor 4 lab $300: B $  4713 (k=89,n=4,kfloor=89) x1.23 vs ideal | ExCa A $  4757 (k=54,h=0.5,R=1,n=4) A/B=1.01 | ExMg A $  4757 (k=54,h=0.5,R=1,n=4) A/B=1.01 | TotSr A $  3673 (k=30,h=0.5,R=1,n=4) A/B=0.78
+    floor 4 lab $500: B $  6313 (k=89,n=4,kfloor=89) x1.16 vs ideal | ExCa A $  6357 (k=54,h=0.5,R=1,n=4) A/B=1.01 | ExMg A $  6357 (k=54,h=0.5,R=1,n=4) A/B=1.01 | TotSr A $  5273 (k=30,h=0.5,R=1,n=4) A/B=0.84
+
+  -- bad: 0.1-0.25 g unground total digest, bucket mix: phi=1e-2 CV_w=0.4 N_c=100   additive-floor n = 4.27
+    floor 8 lab $116: B $  5095 (k=43,n=10,kfloor=66) x1.55 vs ideal | ExCa A $  4391 (k=30,h=0.5,R=1,n=8) A/B=0.86 | ExMg A $  4391 (k=30,h=0.5,R=1,n=8) A/B=0.86 | TotSr A $  3486 (k=15,h=0.5,R=0.5,n=9) A/B=0.68
+    floor 8 lab $300: B $  8184 (k=66,n=8,kfloor=66) x1.31 vs ideal | ExCa A $  7335 (k=30,h=0.5,R=1,n=8) A/B=0.90 | ExMg A $  7335 (k=30,h=0.5,R=1,n=8) A/B=0.90 | TotSr A $  6798 (k=15,h=0.5,R=0.5,n=9) A/B=0.83
+    floor 8 lab $500: B $ 11384 (k=66,n=8,kfloor=66) x1.21 vs ideal | ExCa A $ 10535 (k=30,h=0.5,R=1,n=8) A/B=0.93 | ExMg A $ 10535 (k=30,h=0.5,R=1,n=8) A/B=0.93 | TotSr A $ 10041 (k=20,h=0.5,R=0.5,n=8) A/B=0.88
+    floor 4 lab $116: B $  5095 (k=43,n=10,kfloor=None) x2.16 vs ideal | ExCa A $  4391 (k=30,h=0.5,R=1,n=8) A/B=0.86 | ExMg A $  4391 (k=30,h=0.5,R=1,n=8) A/B=0.86 | TotSr A $  3486 (k=15,h=0.5,R=0.5,n=9) A/B=0.68
+    floor 4 lab $300: B $  8184 (k=66,n=8,kfloor=None) x2.13 vs ideal | ExCa A $  6970 (k=40,h=0.5,R=1,n=7) A/B=0.85 | ExMg A $  6970 (k=40,h=0.5,R=1,n=7) A/B=0.85 | TotSr A $  5693 (k=54,h=0.5,R=1,n=5) A/B=0.70
+    floor 4 lab $500: B $ 11059 (k=91,n=7,kfloor=None) x2.04 vs ideal | ExCa A $  9557 (k=54,h=0.5,R=2,n=6) A/B=0.86 | ExMg A $  9530 (k=54,h=0.5,R=1,n=6) A/B=0.86 | TotSr A $  7693 (k=54,h=0.5,R=1,n=5) A/B=0.70
+
+  -- very bad: phi=3e-2 CV_w=0.4 N_c=30   additive-floor n = 13.36
+    floor 8 lab $116: B $  9033 (k=28,n=22,kfloor=None) x2.75 vs ideal | ExCa A $  6955 (k=15,h=0.5,R=0.5,n=18) A/B=0.77 | ExMg A $  6966 (k=15,h=0.5,R=1,n=18) A/B=0.77 | TotSr A $  5645 (k=15,h=0.5,R=1,n=14) A/B=0.62
+    floor 8 lab $300: B $ 16570 (k=43,n=19,kfloor=None) x2.66 vs ideal | ExCa A $ 13180 (k=20,h=0.5,R=1,n=16) A/B=0.80 | ExMg A $ 13345 (k=30,h=0.5,R=0.5,n=15) A/B=0.81 | TotSr A $ 10483 (k=20,h=0.5,R=0.5,n=13) A/B=0.63
+    floor 8 lab $500: B $ 24014 (k=53,n=18,kfloor=None) x2.55 vs ideal | ExCa A $ 19345 (k=30,h=0.5,R=0.5,n=15) A/B=0.81 | ExMg A $ 19345 (k=30,h=0.5,R=0.5,n=15) A/B=0.81 | TotSr A $ 15274 (k=40,h=0.5,R=1,n=11) A/B=0.64
+    floor 4 lab $116: B $  9033 (k=28,n=22,kfloor=None) x3.82 vs ideal | ExCa A $  6955 (k=15,h=0.5,R=0.5,n=18) A/B=0.77 | ExMg A $  6966 (k=15,h=0.5,R=1,n=18) A/B=0.77 | TotSr A $  5645 (k=15,h=0.5,R=1,n=14) A/B=0.62
+    floor 4 lab $300: B $ 16570 (k=43,n=19,kfloor=None) x4.32 vs ideal | ExCa A $ 13180 (k=20,h=0.5,R=1,n=16) A/B=0.80 | ExMg A $ 13345 (k=30,h=0.5,R=0.5,n=15) A/B=0.81 | TotSr A $ 10483 (k=20,h=0.5,R=0.5,n=13) A/B=0.63
+    floor 4 lab $500: B $ 24014 (k=53,n=18,kfloor=None) x4.42 vs ideal | ExCa A $ 19345 (k=30,h=0.5,R=0.5,n=15) A/B=0.81 | ExMg A $ 19345 (k=30,h=0.5,R=0.5,n=15) A/B=0.81 | TotSr A $ 15274 (k=40,h=0.5,R=1,n=11) A/B=0.64
+
+[4] Within-composite s_w (regime A, tight discs) - why A is LESS exposed to CV_w/N_c terms
+  ExCa: k=15,R=0.5:0.43  k=15,R=2:0.49  k=15,R=5:0.60  k=30,R=0.5:0.43  k=30,R=2:0.49  k=30,R=5:0.60
+  ExMg: k=15,R=0.5:0.47  k=15,R=2:0.50  k=15,R=5:0.58  k=30,R=0.5:0.47  k=30,R=2:0.50  k=30,R=5:0.58
+  TotSr: k=15,R=0.5:0.27  k=15,R=2:0.32  k=15,R=5:0.42  k=30,R=0.5:0.27  k=30,R=2:0.32  k=30,R=5:0.42

@@ -1,0 +1,238 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/292 [00:00<?, ?it/s]Loading weights:   0%|          | 1/292 [00:00<00:37,  7.84it/s]Loading weights:   1%|          | 2/292 [00:00<02:00,  2.41it/s]Loading weights:  41%|████      | 120/292 [00:00<00:00, 182.01it/s]Loading weights:  53%|█████▎    | 154/292 [00:01<00:01, 134.35it/s]Loading weights:  61%|██████    | 178/292 [00:01<00:01, 105.98it/s]Loading weights:  67%|██████▋   | 196/292 [00:02<00:01, 91.16it/s] Loading weights:  72%|███████▏  | 210/292 [00:02<00:00, 87.37it/s]Loading weights:  76%|███████▌  | 222/292 [00:02<00:00, 77.78it/s]Loading weights:  79%|███████▉  | 232/292 [00:02<00:00, 73.89it/s]Loading weights:  83%|████████▎ | 241/292 [00:02<00:00, 66.71it/s]Loading weights:  86%|████████▋ | 252/292 [00:03<00:00, 62.57it/s]Loading weights:  90%|█████████ | 264/292 [00:03<00:00, 70.20it/s]Loading weights:  93%|█████████▎| 272/292 [00:03<00:00, 69.02it/s]Loading weights:  96%|█████████▌| 280/292 [00:03<00:00, 68.65it/s]Loading weights:  99%|█████████▊| 288/292 [00:03<00:00, 67.40it/s]Loading weights: 100%|██████████| 292/292 [00:03<00:00, 83.40it/s]
+[model] EleutherAI/pythia-410m nL=24 hidden=1024 heads=16 dtype=torch.float32
+
+##############################################################################
+# S82 DEPTH-LAW @24 LAYERS — MODEL: EleutherAI/pythia-410m direction=valence INJECT-BLOCK=12 (rel depth 0.50)
+##############################################################################
+[setup] nL=24 inject-block=12 readout-block=23 HA=12 FAR_W=3
+[setup] ||W|| = 5.06 target = 3||W||
+
+[baseline] B (no ablation, FAR out-span deflection) = 1.7970
+
+--- SWEEP 1: keep-only export profile (attn-to-p at ONE layer; ratio = D/B) ---
+                        config      D_far     ratio
+                   s1-keep-L12   0.000000     0.000  (control: expect EXACT 0)
+                   s1-keep-L13   1.359415     0.756  (offset +1)
+                   s1-keep-L14   0.560754     0.312  (offset +2)
+                   s1-keep-L15   0.444435     0.247  (offset +3)
+                   s1-keep-L16   0.513919     0.286  (offset +4)
+                   s1-keep-L17   0.227790     0.127  (offset +5)
+                   s1-keep-L18   0.056498     0.031  (offset +6)
+                   s1-keep-L19   0.279182     0.155  (offset +7)
+                   s1-keep-L20   0.084941     0.047  (offset +8)
+                   s1-keep-L21   0.465350     0.259  (offset +9)
+                   s1-keep-L22   0.066651     0.037  (offset +10)
+                   s1-keep-L23   0.089826     0.050  (offset +11)
+              s1-band-early0-7   1.883484     1.048  
+               s1-band-mid8-15   0.944331     0.525  
+             s1-band-late16-23   1.345607     0.749  
+          s1-band-postinj13-23   0.000000     0.000  (expect EXACT 0)
+                    ctl-k0-all   0.000000     0.000  (expect EXACT 0)
+                      ctl-noop   1.797019     1.000  (mask-apparatus check: expect 1.000)
+
+--- SWEEP 3: relay-readout depth (k=8 regime + FAR blocked from post-p cols at band) ---
+                        config      D_far       D/R   (R = relay reference)
+               s3-relay-ref-k8   0.747217     0.416  (R/B = 0.416)
+             s3-block-early0-7   0.794670     1.064  
+              s3-block-mid8-15   0.659898     0.883  
+            s3-block-late16-23   0.472812     0.633  
+       s3-block-postinj2-14-23   0.000000     0.000  (expect EXACT 0: hop-timing floor)
+       s3-block-postinj3-15-23   0.203871     0.273  (floor tightness: >0 iff readout AT L_inj+2 usable)
+                  s3-block-all   0.000000     0.000  (expect EXACT 0)
+
+--- ALLOCATION TABLE at last two layers (noablate baseline pair; mean FAR rows) ---
+    L   a_p clean   a_p patch   a_p maxh   |dv_p|  sink(j=0)      pre        j=p  carriers     post
+   22    0.000215    0.000670   0.002242    7.389     0.5993   0.0143   0.000215    0.1758   0.2104
+   23    0.000316    0.000132   0.004753    7.654     0.4753   0.0393   0.000316    0.1886   0.2965
+
+##############################################################################
+# S82 DEPTH-LAW @24 LAYERS — MODEL: EleutherAI/pythia-410m direction=size INJECT-BLOCK=12 (rel depth 0.50)
+##############################################################################
+[setup] nL=24 inject-block=12 readout-block=23 HA=12 FAR_W=3
+[setup] ||W|| = 5.82 target = 3||W||
+
+[baseline] B (no ablation, FAR out-span deflection) = 1.4907
+
+--- SWEEP 1: keep-only export profile (attn-to-p at ONE layer; ratio = D/B) ---
+                        config      D_far     ratio
+                   s1-keep-L12   0.000000     0.000  (control: expect EXACT 0)
+                   s1-keep-L13   0.945102     0.634  (offset +1)
+                   s1-keep-L14   0.467274     0.313  (offset +2)
+                   s1-keep-L15   0.477547     0.320  (offset +3)
+                   s1-keep-L16   0.595715     0.400  (offset +4)
+                   s1-keep-L17   0.287722     0.193  (offset +5)
+                   s1-keep-L18   0.065130     0.044  (offset +6)
+                   s1-keep-L19   0.193108     0.130  (offset +7)
+                   s1-keep-L20   0.106943     0.072  (offset +8)
+                   s1-keep-L21   0.397529     0.267  (offset +9)
+                   s1-keep-L22   0.129246     0.087  (offset +10)
+                   s1-keep-L23   0.127100     0.085  (offset +11)
+              s1-band-early0-7   1.599814     1.073  
+               s1-band-mid8-15   0.959185     0.643  
+             s1-band-late16-23   1.001601     0.672  
+          s1-band-postinj13-23   0.000000     0.000  (expect EXACT 0)
+                    ctl-k0-all   0.000000     0.000  (expect EXACT 0)
+                      ctl-noop   1.490742     1.000  (mask-apparatus check: expect 1.000)
+
+--- SWEEP 3: relay-readout depth (k=8 regime + FAR blocked from post-p cols at band) ---
+                        config      D_far       D/R   (R = relay reference)
+               s3-relay-ref-k8   0.574875     0.386  (R/B = 0.386)
+             s3-block-early0-7   0.631223     1.098  
+              s3-block-mid8-15   0.611750     1.064  
+            s3-block-late16-23   0.249943     0.435  
+       s3-block-postinj2-14-23   0.000000     0.000  (expect EXACT 0: hop-timing floor)
+       s3-block-postinj3-15-23   0.143481     0.250  (floor tightness: >0 iff readout AT L_inj+2 usable)
+                  s3-block-all   0.000000     0.000  (expect EXACT 0)
+
+--- ALLOCATION TABLE at last two layers (noablate baseline pair; mean FAR rows) ---
+    L   a_p clean   a_p patch   a_p maxh   |dv_p|  sink(j=0)      pre        j=p  carriers     post
+   22    0.000215    0.002682   0.002242    8.517     0.5993   0.0143   0.000215    0.1758   0.2104
+   23    0.000316    0.007220   0.004753    9.082     0.4753   0.0393   0.000316    0.1886   0.2965
+
+##############################################################################
+# S82 DEPTH-LAW @24 LAYERS — MODEL: EleutherAI/pythia-410m direction=valence INJECT-BLOCK=18 (rel depth 0.75)
+##############################################################################
+[setup] nL=24 inject-block=18 readout-block=23 HA=12 FAR_W=3
+[setup] ||W|| = 9.40 target = 3||W||
+
+[baseline] B (no ablation, FAR out-span deflection) = 0.7684
+
+--- SWEEP 1: keep-only export profile (attn-to-p at ONE layer; ratio = D/B) ---
+                        config      D_far     ratio
+                   s1-keep-L18   0.000000     0.000  (control: expect EXACT 0)
+                   s1-keep-L19   0.388725     0.506  (offset +1)
+                   s1-keep-L20   0.121783     0.158  (offset +2)
+                   s1-keep-L21   0.564540     0.735  (offset +3)
+                   s1-keep-L22   0.101733     0.132  (offset +4)
+                   s1-keep-L23   0.098298     0.128  (offset +5)
+              s1-band-early0-7   0.840917     1.094  
+               s1-band-mid8-15   0.779786     1.015  
+             s1-band-late16-23   0.000000     0.000  
+          s1-band-postinj19-23   0.000000     0.000  (expect EXACT 0)
+                    ctl-k0-all   0.000000     0.000  (expect EXACT 0)
+                      ctl-noop   0.768449     1.000  (mask-apparatus check: expect 1.000)
+
+--- SWEEP 3: relay-readout depth (k=8 regime + FAR blocked from post-p cols at band) ---
+                        config      D_far       D/R   (R = relay reference)
+               s3-relay-ref-k8   0.130910     0.170  (R/B = 0.170)
+             s3-block-early0-7   0.144869     1.107  
+              s3-block-mid8-15   0.138214     1.056  
+            s3-block-late16-23   0.000000     0.000  (expect EXACT 0: late band covers all >= L_inj+2)
+       s3-block-postinj2-20-23   0.000000     0.000  (expect EXACT 0: hop-timing floor)
+       s3-block-postinj3-21-23   0.027712     0.212  (floor tightness: >0 iff readout AT L_inj+2 usable)
+                  s3-block-all   0.000000     0.000  (expect EXACT 0)
+
+--- ALLOCATION TABLE at last two layers (noablate baseline pair; mean FAR rows) ---
+    L   a_p clean   a_p patch   a_p maxh   |dv_p|  sink(j=0)      pre        j=p  carriers     post
+   22    0.000215    0.000536   0.002242   14.058     0.5993   0.0143   0.000215    0.1758   0.2104
+   23    0.000316    0.000033   0.004753   15.034     0.4753   0.0393   0.000316    0.1886   0.2965
+
+##############################################################################
+# S82 DEPTH-LAW @24 LAYERS — MODEL: EleutherAI/pythia-410m direction=size INJECT-BLOCK=18 (rel depth 0.75)
+##############################################################################
+[setup] nL=24 inject-block=18 readout-block=23 HA=12 FAR_W=3
+[setup] ||W|| = 11.77 target = 3||W||
+
+[baseline] B (no ablation, FAR out-span deflection) = 0.6972
+
+--- SWEEP 1: keep-only export profile (attn-to-p at ONE layer; ratio = D/B) ---
+                        config      D_far     ratio
+                   s1-keep-L18   0.000000     0.000  (control: expect EXACT 0)
+                   s1-keep-L19   0.371624     0.533  (offset +1)
+                   s1-keep-L20   0.192394     0.276  (offset +2)
+                   s1-keep-L21   0.441006     0.633  (offset +3)
+                   s1-keep-L22   0.211287     0.303  (offset +4)
+                   s1-keep-L23   0.089946     0.129  (offset +5)
+              s1-band-early0-7   0.800777     1.149  
+               s1-band-mid8-15   0.705707     1.012  
+             s1-band-late16-23   0.000000     0.000  
+          s1-band-postinj19-23   0.000000     0.000  (expect EXACT 0)
+                    ctl-k0-all   0.000000     0.000  (expect EXACT 0)
+                      ctl-noop   0.697213     1.000  (mask-apparatus check: expect 1.000)
+
+--- SWEEP 3: relay-readout depth (k=8 regime + FAR blocked from post-p cols at band) ---
+                        config      D_far       D/R   (R = relay reference)
+               s3-relay-ref-k8   0.137126     0.197  (R/B = 0.197)
+             s3-block-early0-7   0.164038     1.196  
+              s3-block-mid8-15   0.147170     1.073  
+            s3-block-late16-23   0.000000     0.000  (expect EXACT 0: late band covers all >= L_inj+2)
+       s3-block-postinj2-20-23   0.000000     0.000  (expect EXACT 0: hop-timing floor)
+       s3-block-postinj3-21-23   0.018768     0.137  (floor tightness: >0 iff readout AT L_inj+2 usable)
+                  s3-block-all   0.000000     0.000  (expect EXACT 0)
+
+--- ALLOCATION TABLE at last two layers (noablate baseline pair; mean FAR rows) ---
+    L   a_p clean   a_p patch   a_p maxh   |dv_p|  sink(j=0)      pre        j=p  carriers     post
+   22    0.000215    0.001351   0.002242   14.678     0.5993   0.0143   0.000215    0.1758   0.2104
+   23    0.000316    0.000003   0.004753   16.659     0.4753   0.0393   0.000316    0.1886   0.2965
+
+==============================================================================
+SUMMARY — DEPTH-LAW TRANSFER TO 24 LAYERS (pythia-410m)
+==============================================================================
+
+  [valence] inj=12 (rel 0.50)  B=1.797  R/B=0.416
+    controls: k0=0.000000 noop=1.000000 keepL12=0.000000 postinj-band=0.000000 s3-all=0.000000 s3-postinj2=0.000000
+    keep-only by offset: +1:0.76 +2:0.31 +3:0.25 +4:0.29 +5:0.13 +6:0.03 +7:0.16 +8:0.05 +9:0.26 +10:0.04 +11:0.05
+    strongest sole exporter = L13 (offset +1); H1 predicts +1
+    readout blocks D/R: early=1.06 mid=0.88 late=0.63 postinj3=0.27
+    allocation: a_p L22=0.000215 (maxh 0.002242) L23=0.000316 (maxh 0.004753) |dv_p| L23=7.65  keepL22=0.037 keepL23=0.050
+
+  [size] inj=12 (rel 0.50)  B=1.491  R/B=0.386
+    controls: k0=0.000000 noop=1.000000 keepL12=0.000000 postinj-band=0.000000 s3-all=0.000000 s3-postinj2=0.000000
+    keep-only by offset: +1:0.63 +2:0.31 +3:0.32 +4:0.40 +5:0.19 +6:0.04 +7:0.13 +8:0.07 +9:0.27 +10:0.09 +11:0.09
+    strongest sole exporter = L13 (offset +1); H1 predicts +1
+    readout blocks D/R: early=1.10 mid=1.06 late=0.43 postinj3=0.25
+    allocation: a_p L22=0.000215 (maxh 0.002242) L23=0.000316 (maxh 0.004753) |dv_p| L23=9.08  keepL22=0.087 keepL23=0.085
+
+  [valence] inj=18 (rel 0.75)  B=0.768  R/B=0.170
+    controls: k0=0.000000 noop=1.000000 keepL18=0.000000 postinj-band=0.000000 s3-all=0.000000 s3-postinj2=0.000000
+    keep-only by offset: +1:0.51 +2:0.16 +3:0.73 +4:0.13 +5:0.13
+    strongest sole exporter = L21 (offset +3); H1 predicts +1
+    readout blocks D/R: early=1.11 mid=1.06 late=0.00 postinj3=0.21
+    allocation: a_p L22=0.000215 (maxh 0.002242) L23=0.000316 (maxh 0.004753) |dv_p| L23=15.03  keepL22=0.132 keepL23=0.128
+
+  [size] inj=18 (rel 0.75)  B=0.697  R/B=0.197
+    controls: k0=0.000000 noop=1.000000 keepL18=0.000000 postinj-band=0.000000 s3-all=0.000000 s3-postinj2=0.000000
+    keep-only by offset: +1:0.53 +2:0.28 +3:0.63 +4:0.30 +5:0.13
+    strongest sole exporter = L21 (offset +3); H1 predicts +1
+    readout blocks D/R: early=1.20 mid=1.07 late=0.00 postinj3=0.14
+    allocation: a_p L22=0.000215 (maxh 0.002242) L23=0.000316 (maxh 0.004753) |dv_p| L23=16.66  keepL22=0.303 keepL23=0.129
+
+[GLOBAL] k=0 exact-0 in all cells:                                 True
+[GLOBAL] keep-only-Linj exact-0 (injection-locus control):         True
+[GLOBAL] postinj-band exact-0 (all edit edges severed):            True
+[GLOBAL] noop == baseline (mask apparatus):                        True
+[GLOBAL] s3-block-all exact-0:                                     True
+[GLOBAL] s3-block-postinj2 exact-0 (hop-timing floor):             True
+[GLOBAL] inj18 block-late exact-0 (late covers >= L_inj+2):        True
+[GLOBAL] sdpa recorder max recon err: 4.77e-07
+
+==============================================================================
+VERDICT SYNTHESIS (automatic; verify against tables above)
+==============================================================================
+
+  [valence] inj=12:
+    H1 export offset: PEAK AT +1 (absolute-offset)
+    H2 floor: floor exact-0; tightness postinj3 D/R=0.273 (readout AT L_inj+2 usable)
+    H3 late-pinning: block-late D/R=0.633 => readout NOT pinned late (RELATIVE transfers)
+    H4 final-layer allocation: a_p(L23)=0.000316, keepL23=0.050 => ALLOCATION ZERO REPLICATES
+
+  [size] inj=12:
+    H1 export offset: PEAK AT +1 (absolute-offset)
+    H2 floor: floor exact-0; tightness postinj3 D/R=0.250 (readout AT L_inj+2 usable)
+    H3 late-pinning: block-late D/R=0.435 => readout NOT pinned late (RELATIVE transfers)
+    H4 final-layer allocation: a_p(L23)=0.000316, keepL23=0.085 => ALLOCATION ZERO REPLICATES
+
+  [valence] inj=18:
+    H1 export offset: PEAK AT +3 (NOT +1 — check fractional scaling)
+    H2 floor: floor exact-0; tightness postinj3 D/R=0.212 (readout AT L_inj+2 usable)
+    H3 late-pinning: late band structural control (see gates)
+    H4 final-layer allocation: a_p(L23)=0.000316, keepL23=0.128 => ALLOCATION ZERO REPLICATES
+
+  [size] inj=18:
+    H1 export offset: PEAK AT +3 (NOT +1 — check fractional scaling)
+    H2 floor: floor exact-0; tightness postinj3 D/R=0.137 (readout AT L_inj+2 usable)
+    H3 late-pinning: late band structural control (see gates)
+    H4 final-layer allocation: a_p(L23)=0.000316, keepL23=0.129 => ALLOCATION ZERO REPLICATES
+
+[wall-clock] 151.6 s

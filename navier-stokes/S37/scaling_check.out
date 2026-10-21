@@ -1,0 +1,33 @@
+======================================================================
+(1) eq. (2.5): I(j,j') = int_0^inf N N' exp(-(N^2+N'^2) s) ds
+   closed form: N*Np/(N**2 + Np**2)
+   j=j' : 1/2   (paper: ~1)
+   N' << N limit, leading term: r  = N'/N  (paper eq 2.5 writes N_{j,k}^-1 N_{j',k} for j>j' -> same thing)
+======================================================================
+(2) Duhamel impulse on a single Fourier mode
+   vhat(t) = Piecewise((F*N_k1**2*(exp(N_k**2*t) - exp(2*N_k1**2*t))*exp(-t*(N_k**2 + 2*N_k1**2))/(N_k**2 - 2*N_k1**2), Ne(N_k, sqrt(2)*N_k1)), (F*N_k1**2*t*exp(-2*N_k1**2*t), True))
+   N_k=     4, N_k+1=    16,  t=10/N_{k+1}^2: rel.err = 0.03226   (N_k^2/(2N_k+1^2) = 0.03125)
+   N_k=     4, N_k+1=    16,       t=1/N_k^2: rel.err = 0.03226   (N_k^2/(2N_k+1^2) = 0.03125)
+   N_k=    16, N_k+1=   256,  t=10/N_{k+1}^2: rel.err = 0.001957   (N_k^2/(2N_k+1^2) = 0.001953)
+   N_k=    16, N_k+1=   256,       t=1/N_k^2: rel.err = 0.001957   (N_k^2/(2N_k+1^2) = 0.001953)
+   N_k=   256, N_k+1= 65536,  t=10/N_{k+1}^2: rel.err = 7.627e-6   (N_k^2/(2N_k+1^2) = 7.629e-6)
+   N_k=   256, N_k+1= 65536,       t=1/N_k^2: rel.err = 7.629e-6   (N_k^2/(2N_k+1^2) = 7.629e-6)
+   => output amplitude at shell k = (1/2) * [O(1) low-freq part of a_{k+1}^2], no N-dependence:
+      the amplitude recursion a_{k+1}^2 -> a_k is scale-invariant exactly at Type I scaling.
+======================================================================
+(3)-(7) model with N_k = 2^(2^k), k=1..7: ['4.0', '16.0', '256.0', '6.55e+4', '4.29e+9', '1.84e+19', '3.4e+38']
+(3) sup_t sqrt(t)||v(t)||_inf = 0.615789  (single-mode max = (2e)^-1/2 = 0.428882)
+    lower bound at t_k = N_k^-2 : sqrt(t_k)||v(t_k)|| = ['0.3679', '0.6027', '0.4458', '0.3721', '0.3679', '0.3679', '0.3679']  (>= e^-1 = 0.3679)
+(4) int ||v||_inf^2 dt: diagonal per scale = ['0.5', '0.5', '0.5', '0.5', '0.5', '0.5', '0.5']; cross terms total = 0.6348
+    partial sums grow linearly in K  => v not in L^2_t L^inf_x (log-divergent at borderline)  ✔ consistent with Thm 2.1
+(5) c=0.5: partial sums K=1e2,1e4,1e6 -> [8.7847, 113.7116, 1191.4155]
+(5) c=1.0: partial sums K=1e2,1e4,1e6 -> [3.0682, 6.3801, 9.702]
+(5) c=1.5: partial sums K=1e2,1e4,1e6 -> [1.5803, 1.7362, 1.7518]
+(5) c=2.0: partial sums K=1e2,1e4,1e6 -> [1.1375, 1.1478, 1.1479]
+    => (1.4) holds only for c > 1 with double-exponential N_k (paper says 'for some c>0'; any c>1 works).
+(6) p=  2: sum_k (1/2) 2^(-2k/p) (k<60) = 0.5000  (limit 0.5000; finite for every p<inf)
+(6) p=  4: sum_k (1/2) 2^(-2k/p) (k<60) = 1.2071  (limit 1.2071; finite for every p<inf)
+(6) p= 10: sum_k (1/2) 2^(-2k/p) (k<60) = 3.3616  (limit 3.3625; finite for every p<inf)
+(6) p=100: sum_k (1/2) 2^(-2k/p) (k<60) = 20.0096  (limit 35.8180; finite for every p<inf)
+(7) log10 energy at t_k=N_k^-2 ~ log10(N_k^2 2^-k e^-2): ['0.0345', '0.9376', '3.045', '7.56', '16.89', '35.86', '74.09']
+    -> diverges: energy blows up as t->T*+, so the branch is NOT Leray–Hopf (as the paper states).

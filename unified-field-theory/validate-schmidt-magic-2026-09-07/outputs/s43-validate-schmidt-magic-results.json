@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "date": "2026-09-07",
+    "session": 43,
+    "tol": 1e-09,
+    "seed": 20260907,
+    "num_stabilizer_trials": 200,
+    "num_mono_trials": 1000
+  },
+  "faithfulness": {
+    "stabilizer_trials": 200,
+    "m2_sch_violations": 0,
+    "dstab_nl_violations": 0
+  },
+  "monotonicity": {
+    "mono_trials": 1000,
+    "results": {
+      "dephase": {
+        "M2_Sch_violations": 513,
+        "D_stab_NL_violations": 559,
+        "max_viol_M2": 0.704422336019819,
+        "max_viol_D": 0.3077835960427724
+      },
+      "ptrace": {
+        "M2_Sch_violations": 382,
+        "D_stab_NL_violations": 386,
+        "max_viol_M2": 0.7517981639677628,
+        "max_viol_D": 0.36090665103753133
+      },
+      "pauli_ch": {
+        "M2_Sch_violations": 497,
+        "D_stab_NL_violations": 500,
+        "max_viol_M2": 0.7566772256842199,
+        "max_viol_D": 0.3006899049270359
+      },
+      "selective_avg": {
+        "M2_Sch_violations": 335,
+        "D_stab_NL_violations": 398,
+        "max_viol_M2": 0.38343001803362925,
+        "max_viol_D": 0.19250311682527202
+      }
+    }
+  }
+}

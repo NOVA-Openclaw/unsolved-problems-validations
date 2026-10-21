@@ -1,0 +1,29 @@
+z-laws computed
+== (A) N4c decomposition, beta=1/2 schemes (worst tau by bound) ==
+ # 0 bound=+0.1170 delta=0.1787 a2=0.2737 a3=0.4306 Eg-EF=+0.3907 succ@tau=0.8396 min_tau succ=0.8188 VACUOUS(<0.3)
+ # 1 bound=+0.5882 delta=0.2196 a2=0.0000 a3=0.1922 Eg-EF=+0.5882 succ@tau=0.8188 min_tau succ=0.8188 ok
+ # 2 bound=-0.1550 delta=0.1870 a2=0.4063 a3=0.5617 Eg-EF=+0.2513 succ@tau=0.8396 min_tau succ=0.8188 VACUOUS(<0.3)
+ # 3 bound=+0.1166 delta=0.1806 a2=0.2731 a3=0.4297 Eg-EF=+0.3897 succ@tau=0.8396 min_tau succ=0.8188 VACUOUS(<0.3)
+ # 4 bound=-0.1562 delta=0.1802 a2=0.4097 a3=0.5663 Eg-EF=-0.1562 succ@tau=0.8396 min_tau succ=0.8188 VACUOUS(<0.3)
+ # 5 bound=+0.6031 delta=0.2037 a2=0.0000 a3=0.1932 Eg-EF=+0.6031 succ@tau=0.8188 min_tau succ=0.8188 ok
+ # 6 bound=+0.6199 delta=0.1955 a2=0.0000 a3=0.1845 Eg-EF=+0.6199 succ@tau=0.8188 min_tau succ=0.8188 ok
+ # 7 bound=+0.0892 delta=0.2114 a2=0.2626 a3=0.4369 Eg-EF=+0.3517 succ@tau=0.8188 min_tau succ=0.8188 VACUOUS(<0.3)
+ # 8 bound=+0.6116 delta=0.2008 a2=0.0000 a3=0.1876 Eg-EF=+0.6116 succ@tau=0.8188 min_tau succ=0.8188 ok
+ # 9 bound=+0.1176 delta=0.1738 a2=0.2754 a3=0.4333 Eg-EF=+0.3930 succ@tau=0.8396 min_tau succ=0.8188 VACUOUS(<0.3)
+ #10 bound=+0.6193 delta=0.1924 a2=0.0000 a3=0.1883 Eg-EF=+0.6193 succ@tau=0.8188 min_tau succ=0.8188 ok
+ #11 bound=+0.6154 delta=0.1822 a2=0.0000 a3=0.2024 Eg-EF=+0.6154 succ@tau=0.8188 min_tau succ=0.8188 ok
+ vacuous n=6: mean delta=0.1853 a2=0.3168 a3=0.4764
+ non-vac n=6: mean delta=0.1991 a2=0.0000 a3=0.1914
+[PASS] R2-A success >= bound at worst tau for all 12 beta=1/2 schemes (violations=0)
+== (B) N5b re-test on identical N5 draws ==
+   beta=1/2 tau=(1, 1, 1, 1): orig max-dev 6.30 sd at p=1.20e-06 (E=0.0240, obs=1); min exact binom p=1.61e-02 (Bonf thr 4.3e-07); chi2=46.4 df=54 z=-0.73
+   beta=1/2 tau=(1, -1, 1, -1): orig max-dev 2.76 sd at p=5.52e-05 (E=1.1032, obs=4); min exact binom p=5.20e-02 (Bonf thr 4.3e-07); chi2=46.6 df=56 z=-0.89
+   beta=1/2 tau=(-1, -1, -1, -1): orig max-dev 23.27 sd at p=9.20e-08 (E=0.0018, obs=1); min exact binom p=3.68e-03 (Bonf thr 4.3e-07); chi2=46.2 df=54 z=-0.76
+   beta=1/2 tau=(1, 1, 1, 1): orig max-dev 4.42 sd at p=2.33e-06 (E=0.0465, obs=1); min exact binom p=5.96e-04 (Bonf thr 4.3e-07); chi2=68.4 df=54 z=+1.39
+   beta=1/2 tau=(1, -1, 1, -1): orig max-dev 3.50 sd at p=1.25e-05 (E=0.2496, obs=2); min exact binom p=2.83e-02 (Bonf thr 4.3e-07); chi2=51.9 df=56 z=-0.39
+   beta=1/2 tau=(-1, -1, -1, -1): orig max-dev 10.02 sd at p=4.89e-07 (E=0.0098, obs=1); min exact binom p=1.15e-02 (Bonf thr 4.3e-07); chi2=48.6 df=54 z=-0.52
+   beta=1/2 tau=(1, 1, 1, 1): orig max-dev 6.30 sd at p=1.20e-06 (E=0.0240, obs=1); min exact binom p=1.94e-03 (Bonf thr 4.3e-07); chi2=54.1 df=54 z=+0.01
+   beta=1/2 tau=(1, -1, 1, -1): orig max-dev 2.79 sd at p=1.10e-02 (E=219.9017, obs=261); min exact binom p=7.24e-03 (Bonf thr 4.3e-07); chi2=56.6 df=56 z=+0.05
+   beta=1/2 tau=(-1, -1, -1, -1): orig max-dev 4.85 sd at p=1.96e-06 (E=0.0392, obs=1); min exact binom p=1.10e-02 (Bonf thr 4.3e-07); chi2=39.3 df=54 z=-1.41
+[PASS] R2-B1 exact binomial per-cell, Bonferroni family 1e-3, no impossible cells (impossible=0)
+[PASS] R2-B2 pooled chi-square z<4 on identical N5 draws

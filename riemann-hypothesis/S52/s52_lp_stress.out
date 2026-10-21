@@ -1,0 +1,13 @@
+data points solved: 38955  max constraint violation: 2.4746918718676625e-06
+E  : cases with A_min < 5/2+sqrt2: 32267  min slack: 0.0  at (n,r,p,q,N,A)= (1, 0, 0, 0, 1) 1.0
+E' : cases with A_min in [2+sqrt2,4): 4282  min slack: -1.33638235505e-51  at (0, 0, 1, 4, 18) 3.6
+
+Tightness family (only simple reals n and multiple non-real q, N=n+4q):
+  n= 1 q= 1 A_min=3.4 ratio=0.2 fE=0.1764501988 slackE=0.0235498 [E-range]
+  n= 1 q= 2 A_min=3.66666666667 ratio=0.1111111111 fE=0.08494466531 slackE=0.0261664 fE'=0.09090909091 slackE'=0.020202 [E-range]
+  n= 2 q= 3 A_min=3.57142857143 ratio=0.1428571429 fE=0.117625213 slackE=0.0252319 fE'=0.12 slackE'=0.0228571 [E-range]
+  n= 3 q= 5 A_min=3.60869565217 ratio=0.1304347826 fE=0.1048371726 slackE=0.0255976 fE'=0.1084337349 slackE'=0.022001 [E-range]
+  n= 1 q= 3 A_min=3.76923076923 ratio=0.07692307692 fE=0.04975022936 slackE=0.0271728 fE'=0.0612244898 slackE'=0.0156986 [E-range]
+  n= 5 q= 8 A_min=3.59459459459 ratio=0.1351351351 fE=0.1096758906 slackE=0.0254592 fE'=0.1127819549 slackE'=0.0223532 [E-range]
+  n=10 q=17 A_min=3.61538461538 ratio=0.1282051282 fE=0.1025418833 slackE=0.0256632 fE'=0.1063829787 slackE'=0.0218221 [E-range]
+  n= 1 q=10 A_min=3.92682926829 ratio=0.0243902439 fE=-0.004329025876 slackE=0.0287193 fE'=0.01863354037 slackE'=0.0057567 [beyond A*]

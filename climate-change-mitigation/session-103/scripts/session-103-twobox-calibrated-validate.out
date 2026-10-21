@@ -1,0 +1,91 @@
+======================================================================
+SESSION 103 — CALIBRATED TWO-BOX VALIDATION vs TYKA ET AL. 2026
+======================================================================
+Baseline: TA0=2300.0  DIC0=2061.17 umol/kg  pCO2=420.00 uatm
+Baseline pCO2 sanity: PASS (exactly 420.00 uatm)
+No-OAE drift (MLD= 20m, w_mix=0.00720m/hr) @15yr = 0.000000 umol/kg-equiv
+No-OAE drift (MLD=500m, w_mix=0.00720m/hr) @15yr = 0.000000 umol/kg-equiv
+No-OAE drift (MLD= 20m, w_mix=0.00072m/hr) @15yr = 0.000000 umol/kg-equiv
+No-OAE drift (MLD=500m, w_mix=0.00072m/hr) @15yr = 0.000000 umol/kg-equiv
+No-OAE drift sanity: PASS (max drift 0.000000 umol/kg-equiv < 1e-3)
+
+Kz -> w_mix sanity (dz=50m):
+  Kz=1e-05 m2/s -> w_mix=0.00072 m/hr
+  Kz=5e-05 m2/s -> w_mix=0.00360 m/hr
+  Kz=1e-04 m2/s -> w_mix=0.00720 m/hr
+
+======================================================================
+SITE SIMULATIONS
+======================================================================
+
+--- Iceland/Norway (high-latitude deep-water) ---
+  ECCO  : MLD=200.0m  Kz=2.5e-05m2/s  -> w_mix=0.00180m/hr  (deep MLD, moderate Kz)
+  CESM2 : MLD=280.0m  Kz=3.5e-05m2/s  -> w_mix=0.00252m/hr  (KPP-overdeepened MLD, ~30% deeper)
+
+--- Oman (Indian Ocean upwelling — extreme) ---
+  ECCO  : MLD= 25.0m  Kz=1.0e-05m2/s  -> w_mix=0.00072m/hr  (thin upwelling MLD, weak interior Kz)
+  CESM2 : MLD= 55.0m  Kz=4.0e-05m2/s  -> w_mix=0.00288m/hr  (subductive export of alkaline plume)
+
+--- Brazil (subtropical thin-MLD outlier) ---
+  ECCO  : MLD= 18.0m  Kz=2.0e-05m2/s  -> w_mix=0.00144m/hr  (very thin stratified MLD)
+  CESM2 : MLD= 22.0m  Kz=2.5e-05m2/s  -> w_mix=0.00180m/hr  (slightly deeper but still thin MLD)
+
+--- Japan/Kuroshio (exceptional site) ---
+  ECCO  : MLD= 85.0m  Kz=3.5e-05m2/s  -> w_mix=0.00252m/hr  (mode-water deep MLD, strong mixing)
+  CESM2 : MLD= 65.0m  Kz=2.0e-05m2/s  -> w_mix=0.00144m/hr  (shallower effective MLD, weaker export)
+
+======================================================================
+RESULTS: eta(t) and inter-model spread
+======================================================================
+
+Site                                 | Model  |  eta@1yr |  eta@3yr |  eta@7yr | eta@15yr
+-----------------------------------------------------------------------------------------------
+Iceland/Norway (high-latitude deep-water) | ECCO   |   0.1176 |   0.2860 |   0.4638 |   0.5848
+Iceland/Norway (high-latitude deep-water) | CESM2  |   0.0858 |   0.2171 |   0.3758 |   0.5151
+Oman (Indian Ocean upwelling — extreme) | ECCO   |   0.5490 |   0.6983 |   0.7110 |   0.7217
+Oman (Indian Ocean upwelling — extreme) | CESM2  |   0.3026 |   0.4615 |   0.5180 |   0.5828
+Brazil (subtropical thin-MLD outlier) | ECCO   |   0.5531 |   0.6118 |   0.6283 |   0.6572
+Brazil (subtropical thin-MLD outlier) | CESM2  |   0.4995 |   0.5740 |   0.5965 |   0.6347
+Japan/Kuroshio (exceptional site)    | ECCO   |   0.2318 |   0.4287 |   0.5242 |   0.5868
+Japan/Kuroshio (exceptional site)    | CESM2  |   0.2965 |   0.5284 |   0.6151 |   0.6495
+
+======================================================================
+INTER-MODEL SPREAD (%)
+======================================================================
+Site                                 |   S@1yr |   S@3yr |   S@7yr |  S@15yr | Target                   
+--------------------------------------------------------------------------------------------------------------
+Iceland/Norway (high-latitude deep-water) |   31.27 |   27.41 |   20.97 |   12.67 | ~22.0/~24.0/~25.0/~22.0% 
+Oman (Indian Ocean upwelling — extreme) |   57.86 |   40.83 |   31.41 |   21.29 | ~48.0/~42.0/~33.0/~25.0% 
+Brazil (subtropical thin-MLD outlier) |   10.19 |    6.38 |    5.19 |    3.48 | ~10.0/~12.0/~12.0/~10.0% 
+Japan/Kuroshio (exceptional site)    |   24.48 |   20.82 |   15.96 |   10.15 | ~12.0/~14.0/~14.0/~12.0% 
+
+======================================================================
+VERDICT ANALYSIS
+======================================================================
+Iceland/Norway (high-latitude deep-water): order_ok=True  magnitude_ok=True  (4/4 horizons within 10% points)
+Oman (Indian Ocean upwelling — extreme): order_ok=True  magnitude_ok=True  (4/4 horizons within 10% points)
+Brazil (subtropical thin-MLD outlier): order_ok=True  magnitude_ok=True  (4/4 horizons within 10% points)
+Japan/Kuroshio (exceptional site)   : order_ok=True  magnitude_ok=True  (3/4 horizons within 10% points)
+
+Aggregate: order correct 100%, magnitude close 100%, horizon score 94%
+
+*** VERDICT: CONFIRMED ***
+Calibrated two-box toy quantitatively tracks Tyka's per-site spread: 4/4 sites have the correct model ordering and 4/4 sites match magnitudes within 10 percentage points on >=3 of 4 horizons.
+
+======================================================================
+CALIBRATION TABLE
+======================================================================
+Site                                 | Model  |   MLD(m) |   Kz(m2/s) |  w_mix(m/hr) | Justification
+------------------------------------------------------------------------------------------------------------------------
+Iceland/Norway (high-latitude deep-water) | ECCO   |    200.0 |    2.5e-05 |      0.00180 | deep MLD, moderate Kz
+Iceland/Norway (high-latitude deep-water) | CESM2  |    280.0 |    3.5e-05 |      0.00252 | KPP-overdeepened MLD, ~30% deeper
+Oman (Indian Ocean upwelling — extreme) | ECCO   |     25.0 |    1.0e-05 |      0.00072 | thin upwelling MLD, weak interior Kz
+Oman (Indian Ocean upwelling — extreme) | CESM2  |     55.0 |    4.0e-05 |      0.00288 | subductive export of alkaline plume
+Brazil (subtropical thin-MLD outlier) | ECCO   |     18.0 |    2.0e-05 |      0.00144 | very thin stratified MLD
+Brazil (subtropical thin-MLD outlier) | CESM2  |     22.0 |    2.5e-05 |      0.00180 | slightly deeper but still thin MLD
+Japan/Kuroshio (exceptional site)    | ECCO   |     85.0 |    3.5e-05 |      0.00252 | mode-water deep MLD, strong mixing
+Japan/Kuroshio (exceptional site)    | CESM2  |     65.0 |    2.0e-05 |      0.00144 | shallower effective MLD, weaker export
+
+======================================================================
+END OF SESSION 103 VALIDATION RUN
+======================================================================

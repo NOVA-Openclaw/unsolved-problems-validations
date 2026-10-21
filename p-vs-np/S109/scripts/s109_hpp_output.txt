@@ -1,0 +1,57 @@
+H1(n4):
+    ('H++', 'wit_is_H++', 'H1(n4)', '-3/5', 'A(z*)=1') 10
+    ('H++', 'wit_is_H++', 'H5b(n5)', '-3/5', 'A(z*)=1') 10
+    ('norm', 'wit_not_H++', 'H1(n4)', 'None', 'A(z*)=1') 10
+    ('norm', 'wit_not_H++', 'H5b(n5)', 'None', 'A(z*)=1') 10
+H2(n4):
+    ('H++', 'wit_is_H++', 'H1(n4)', '-3/5', 'A(z*)=1') 10
+    ('H++', 'wit_is_H++', 'H5b(n5)', '-3/5', 'A(z*)=1') 10
+    ('norm', 'wit_is_H++', 'H1(n4)', '-3/5', 'A(z*)=1') 1
+    ('norm', 'wit_is_H++', 'H5b(n5)', '-3/5', 'A(z*)=1') 1
+    ('norm', 'wit_not_H++', 'H1(n4)', 'None', 'A(z*)=1') 9
+    ('norm', 'wit_not_H++', 'H5b(n5)', 'None', 'A(z*)=1') 9
+H5a(n5):
+    ('H++', 'wit_is_H++', 'H1(n4)', '-2/3', 'A(z*)=0') 10
+    ('H++', 'wit_is_H++', 'H5b(n5)', '-2/3', 'A(z*)=0') 10
+    ('norm', 'wit_is_H++', 'H1(n4)', '-2/3', 'A(z*)=0') 1
+    ('norm', 'wit_is_H++', 'H5b(n5)', '-2/3', 'A(z*)=0') 1
+    ('norm', 'wit_not_H++', 'H1(n4)', '-2/3', 'A(z*)=0') 3
+    ('norm', 'wit_not_H++', 'H1(n4)', 'None', 'A(z*)=1') 6
+    ('norm', 'wit_not_H++', 'H5b(n5)', '-2/3', 'A(z*)=0') 3
+    ('norm', 'wit_not_H++', 'H5b(n5)', 'None', 'A(z*)=1') 6
+H5b(n5):
+    ('H++', 'wit_is_H++', 'H1(n4)', '-3/5', 'A(z*)=1') 10
+    ('H++', 'wit_is_H++', 'H5b(n5)', '-3/5', 'A(z*)=1') 10
+    ('norm', 'wit_is_H++', 'H1(n4)', '-3/5', 'A(z*)=1') 1
+    ('norm', 'wit_is_H++', 'H5b(n5)', '-3/5', 'A(z*)=1') 1
+    ('norm', 'wit_not_H++', 'H1(n4)', '-3/5', 'A(z*)=1') 1
+    ('norm', 'wit_not_H++', 'H1(n4)', 'None', 'A(z*)=1') 8
+    ('norm', 'wit_not_H++', 'H5b(n5)', '-3/5', 'A(z*)=1') 1
+    ('norm', 'wit_not_H++', 'H5b(n5)', 'None', 'A(z*)=1') 8
+H5c(n5):
+    ('H++', 'wit_is_H++', 'H1(n4)', '-3/5', 'A(z*)=1') 10
+    ('H++', 'wit_is_H++', 'H5b(n5)', '-3/5', 'A(z*)=1') 10
+    ('norm', 'wit_not_H++', 'H1(n4)', '-3/5', 'A(z*)=1') 1
+    ('norm', 'wit_not_H++', 'H1(n4)', 'None', 'A(z*)=1') 9
+    ('norm', 'wit_not_H++', 'H5b(n5)', '-3/5', 'A(z*)=1') 1
+    ('norm', 'wit_not_H++', 'H5b(n5)', 'None', 'A(z*)=1') 9
+H5d(n5):
+    ('H++', 'wit_is_H++', 'H1(n4)', '-2/3', 'A(z*)=0') 10
+    ('H++', 'wit_is_H++', 'H5b(n5)', '-2/3', 'A(z*)=0') 10
+    ('norm', 'wit_is_H++', 'H1(n4)', '-2/3', 'A(z*)=0') 3
+    ('norm', 'wit_is_H++', 'H5b(n5)', '-2/3', 'A(z*)=0') 3
+    ('norm', 'wit_not_H++', 'H1(n4)', '-2/3', 'A(z*)=0') 3
+    ('norm', 'wit_not_H++', 'H1(n4)', 'None', 'A(z*)=0') 1
+    ('norm', 'wit_not_H++', 'H1(n4)', 'None', 'A(z*)=1') 3
+    ('norm', 'wit_not_H++', 'H5b(n5)', '-2/3', 'A(z*)=0') 3
+    ('norm', 'wit_not_H++', 'H5b(n5)', 'None', 'A(z*)=0') 1
+    ('norm', 'wit_not_H++', 'H5b(n5)', 'None', 'A(z*)=1') 3
+H5e(n5):
+    ('H++', 'wit_is_H++', 'H1(n4)', '-2/3', 'A(z*)=0') 10
+    ('H++', 'wit_is_H++', 'H5b(n5)', '-2/3', 'A(z*)=0') 10
+    ('norm', 'wit_is_H++', 'H1(n4)', '-2/3', 'A(z*)=0') 2
+    ('norm', 'wit_is_H++', 'H5b(n5)', '-2/3', 'A(z*)=0') 2
+    ('norm', 'wit_not_H++', 'H1(n4)', '-2/3', 'A(z*)=0') 3
+    ('norm', 'wit_not_H++', 'H1(n4)', 'None', 'A(z*)=1') 5
+    ('norm', 'wit_not_H++', 'H5b(n5)', '-2/3', 'A(z*)=0') 3
+    ('norm', 'wit_not_H++', 'H5b(n5)', 'None', 'A(z*)=1') 5

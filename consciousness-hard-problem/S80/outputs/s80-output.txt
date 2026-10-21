@@ -1,0 +1,316 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights:  89%|████████▉ | 132/148 [00:00<00:00, 1319.75it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 1408.73it/s]
+
+##############################################################################
+# INJECTION-LAYER GENERALITY — MODEL: gpt2 (family=gpt2) direction=valence INJECT-BLOCK=3
+##############################################################################
+[setup] nL=12 inject-block=3 readout-block=11 HA=12 FAR_W=3
+
+[baseline] B (no ablation, FAR out-span deflection) = 0.6160
+
+--- SWEEP 1: keep-only export profile (attn-to-p at ONE layer; ratio = D/B) ---
+                      config      D_far     ratio
+                 s1-keep-L03   0.000000     0.000  (control: expect EXACT 0)
+                 s1-keep-L04   0.588522     0.955  (sole export layer)
+                 s1-keep-L05   0.419833     0.682  (sole export layer)
+                 s1-keep-L06   0.353573     0.574  (sole export layer)
+                 s1-keep-L07   0.204057     0.331  (sole export layer)
+                 s1-keep-L08   0.158983     0.258  (sole export layer)
+                 s1-keep-L09   0.089753     0.146  (sole export layer)
+                 s1-keep-L10   0.084797     0.138  (sole export layer)
+                 s1-keep-L11   0.202421     0.329  (sole export layer)
+            s1-band-early0-3   0.828869     1.346  
+              s1-band-mid4-7   0.373583     0.606  
+            s1-band-late8-11   0.584324     0.949  
+         s1-band-postinj4-11   0.000000     0.000  (expect EXACT 0)
+                  ctl-k0-all   0.000000     0.000  (expect EXACT 0)
+                    ctl-noop   0.616001     1.000  (mask-apparatus check: expect 1.000)
+
+--- SWEEP 3: relay-readout depth (k=8 regime + FAR blocked from post-p cols at band) ---
+                      config      D_far       D/R   (R = relay reference)
+             s3-relay-ref-k8   0.422639     0.686  (R/B = 0.686)
+           s3-block-early0-3   0.548208     1.297  
+             s3-block-mid4-7   0.371249     0.878  
+           s3-block-late8-11   0.243303     0.576  
+      s3-block-postinj2-5-11   0.000000     0.000  (expect EXACT 0: hop-timing floor)
+                s3-block-all   0.000000     0.000  (expect EXACT 0)
+
+##############################################################################
+# INJECTION-LAYER GENERALITY — MODEL: gpt2 (family=gpt2) direction=size INJECT-BLOCK=3
+##############################################################################
+[setup] nL=12 inject-block=3 readout-block=11 HA=12 FAR_W=3
+
+[baseline] B (no ablation, FAR out-span deflection) = 0.4526
+
+--- SWEEP 1: keep-only export profile (attn-to-p at ONE layer; ratio = D/B) ---
+                      config      D_far     ratio
+                 s1-keep-L03   0.000000     0.000  (control: expect EXACT 0)
+                 s1-keep-L04   0.411013     0.908  (sole export layer)
+                 s1-keep-L05   0.247411     0.547  (sole export layer)
+                 s1-keep-L06   0.228203     0.504  (sole export layer)
+                 s1-keep-L07   0.109242     0.241  (sole export layer)
+                 s1-keep-L08   0.100245     0.221  (sole export layer)
+                 s1-keep-L09   0.045154     0.100  (sole export layer)
+                 s1-keep-L10   0.030660     0.068  (sole export layer)
+                 s1-keep-L11   0.172671     0.381  (sole export layer)
+            s1-band-early0-3   0.593086     1.310  
+              s1-band-mid4-7   0.205989     0.455  
+            s1-band-late8-11   0.362520     0.801  
+         s1-band-postinj4-11   0.000000     0.000  (expect EXACT 0)
+                  ctl-k0-all   0.000000     0.000  (expect EXACT 0)
+                    ctl-noop   0.452636     1.000  (mask-apparatus check: expect 1.000)
+
+--- SWEEP 3: relay-readout depth (k=8 regime + FAR blocked from post-p cols at band) ---
+                      config      D_far       D/R   (R = relay reference)
+             s3-relay-ref-k8   0.244263     0.540  (R/B = 0.540)
+           s3-block-early0-3   0.311886     1.277  
+             s3-block-mid4-7   0.268301     1.098  
+           s3-block-late8-11   0.154456     0.632  
+      s3-block-postinj2-5-11   0.000000     0.000  (expect EXACT 0: hop-timing floor)
+                s3-block-all   0.000000     0.000  (expect EXACT 0)
+
+##############################################################################
+# INJECTION-LAYER GENERALITY — MODEL: gpt2 (family=gpt2) direction=valence INJECT-BLOCK=9
+##############################################################################
+[setup] nL=12 inject-block=9 readout-block=11 HA=12 FAR_W=3
+
+[baseline] B (no ablation, FAR out-span deflection) = 0.8260
+
+--- SWEEP 1: keep-only export profile (attn-to-p at ONE layer; ratio = D/B) ---
+                      config      D_far     ratio
+                 s1-keep-L09   0.000000     0.000  (control: expect EXACT 0)
+                 s1-keep-L10   0.399487     0.484  (sole export layer)
+                 s1-keep-L11   0.601630     0.728  (sole export layer)
+            s1-band-early0-3   0.788835     0.955  
+              s1-band-mid4-7   0.813935     0.985  
+            s1-band-late8-11   0.000000     0.000  
+        s1-band-postinj10-11   0.000000     0.000  (expect EXACT 0)
+                  ctl-k0-all   0.000000     0.000  (expect EXACT 0)
+                    ctl-noop   0.826037     1.000  (mask-apparatus check: expect 1.000)
+
+--- SWEEP 3: relay-readout depth (k=8 regime + FAR blocked from post-p cols at band) ---
+                      config      D_far       D/R   (R = relay reference)
+             s3-relay-ref-k8   0.134177     0.162  (R/B = 0.162)
+           s3-block-early0-3   0.115222     0.859  
+             s3-block-mid4-7   0.121474     0.905  
+           s3-block-late8-11   0.000000     0.000  
+     s3-block-postinj2-11-11   0.000000     0.000  (expect EXACT 0: hop-timing floor)
+                s3-block-all   0.000000     0.000  (expect EXACT 0)
+
+##############################################################################
+# INJECTION-LAYER GENERALITY — MODEL: gpt2 (family=gpt2) direction=size INJECT-BLOCK=9
+##############################################################################
+[setup] nL=12 inject-block=9 readout-block=11 HA=12 FAR_W=3
+
+[baseline] B (no ablation, FAR out-span deflection) = 0.7141
+
+--- SWEEP 1: keep-only export profile (attn-to-p at ONE layer; ratio = D/B) ---
+                      config      D_far     ratio
+                 s1-keep-L09   0.000000     0.000  (control: expect EXACT 0)
+                 s1-keep-L10   0.173921     0.244  (sole export layer)
+                 s1-keep-L11   0.599976     0.840  (sole export layer)
+            s1-band-early0-3   0.692258     0.969  
+              s1-band-mid4-7   0.708763     0.992  
+            s1-band-late8-11   0.000000     0.000  
+        s1-band-postinj10-11   0.000000     0.000  (expect EXACT 0)
+                  ctl-k0-all   0.000000     0.000  (expect EXACT 0)
+                    ctl-noop   0.714119     1.000  (mask-apparatus check: expect 1.000)
+
+--- SWEEP 3: relay-readout depth (k=8 regime + FAR blocked from post-p cols at band) ---
+                      config      D_far       D/R   (R = relay reference)
+             s3-relay-ref-k8   0.055879     0.078  (R/B = 0.078)
+           s3-block-early0-3   0.051482     0.921  
+             s3-block-mid4-7   0.050261     0.899  
+           s3-block-late8-11   0.000000     0.000  
+     s3-block-postinj2-11-11   0.000000     0.000  (expect EXACT 0: hop-timing floor)
+                s3-block-all   0.000000     0.000  (expect EXACT 0)
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 1753.78it/s]
+
+##############################################################################
+# INJECTION-LAYER GENERALITY — MODEL: EleutherAI/pythia-160m (family=pythia) direction=valence INJECT-BLOCK=3
+##############################################################################
+[setup] nL=12 inject-block=3 readout-block=11 HA=12 FAR_W=3
+
+[baseline] B (no ablation, FAR out-span deflection) = 1.1264
+
+--- SWEEP 1: keep-only export profile (attn-to-p at ONE layer; ratio = D/B) ---
+                      config      D_far     ratio
+                 s1-keep-L03   0.000000     0.000  (control: expect EXACT 0)
+                 s1-keep-L04   1.190202     1.057  (sole export layer)
+                 s1-keep-L05   0.673031     0.598  (sole export layer)
+                 s1-keep-L06   0.637093     0.566  (sole export layer)
+                 s1-keep-L07   0.681136     0.605  (sole export layer)
+                 s1-keep-L08   0.628601     0.558  (sole export layer)
+                 s1-keep-L09   0.192316     0.171  (sole export layer)
+                 s1-keep-L10   0.169181     0.150  (sole export layer)
+                 s1-keep-L11   0.063123     0.056  (sole export layer)
+            s1-band-early0-3   1.358333     1.206  
+              s1-band-mid4-7   0.534945     0.475  
+            s1-band-late8-11   1.076514     0.956  
+         s1-band-postinj4-11   0.000000     0.000  (expect EXACT 0)
+                  ctl-k0-all   0.000000     0.000  (expect EXACT 0)
+                    ctl-noop   1.126367     1.000  (mask-apparatus check: expect 1.000)
+
+--- SWEEP 3: relay-readout depth (k=8 regime + FAR blocked from post-p cols at band) ---
+                      config      D_far       D/R   (R = relay reference)
+             s3-relay-ref-k8   0.892513     0.792  (R/B = 0.792)
+           s3-block-early0-3   1.292367     1.448  
+             s3-block-mid4-7   0.669840     0.751  
+           s3-block-late8-11   0.603711     0.676  
+      s3-block-postinj2-5-11   0.000000     0.000  (expect EXACT 0: hop-timing floor)
+                s3-block-all   0.000000     0.000  (expect EXACT 0)
+
+##############################################################################
+# INJECTION-LAYER GENERALITY — MODEL: EleutherAI/pythia-160m (family=pythia) direction=size INJECT-BLOCK=3
+##############################################################################
+[setup] nL=12 inject-block=3 readout-block=11 HA=12 FAR_W=3
+
+[baseline] B (no ablation, FAR out-span deflection) = 1.1382
+
+--- SWEEP 1: keep-only export profile (attn-to-p at ONE layer; ratio = D/B) ---
+                      config      D_far     ratio
+                 s1-keep-L03   0.000000     0.000  (control: expect EXACT 0)
+                 s1-keep-L04   0.839941     0.738  (sole export layer)
+                 s1-keep-L05   0.786800     0.691  (sole export layer)
+                 s1-keep-L06   0.661247     0.581  (sole export layer)
+                 s1-keep-L07   0.625423     0.549  (sole export layer)
+                 s1-keep-L08   0.350545     0.308  (sole export layer)
+                 s1-keep-L09   0.149839     0.132  (sole export layer)
+                 s1-keep-L10   0.163336     0.143  (sole export layer)
+                 s1-keep-L11   0.001008     0.001  (sole export layer)
+            s1-band-early0-3   1.183757     1.040  
+              s1-band-mid4-7   0.361271     0.317  
+            s1-band-late8-11   1.197331     1.052  
+         s1-band-postinj4-11   0.000000     0.000  (expect EXACT 0)
+                  ctl-k0-all   0.000000     0.000  (expect EXACT 0)
+                    ctl-noop   1.138232     1.000  (mask-apparatus check: expect 1.000)
+
+--- SWEEP 3: relay-readout depth (k=8 regime + FAR blocked from post-p cols at band) ---
+                      config      D_far       D/R   (R = relay reference)
+             s3-relay-ref-k8   0.777295     0.683  (R/B = 0.683)
+           s3-block-early0-3   1.213997     1.562  
+             s3-block-mid4-7   0.651367     0.838  
+           s3-block-late8-11   0.590348     0.759  
+      s3-block-postinj2-5-11   0.000000     0.000  (expect EXACT 0: hop-timing floor)
+                s3-block-all   0.000000     0.000  (expect EXACT 0)
+
+##############################################################################
+# INJECTION-LAYER GENERALITY — MODEL: EleutherAI/pythia-160m (family=pythia) direction=valence INJECT-BLOCK=9
+##############################################################################
+[setup] nL=12 inject-block=9 readout-block=11 HA=12 FAR_W=3
+
+[baseline] B (no ablation, FAR out-span deflection) = 0.1025
+
+--- SWEEP 1: keep-only export profile (attn-to-p at ONE layer; ratio = D/B) ---
+                      config      D_far     ratio
+                 s1-keep-L09   0.000000     0.000  (control: expect EXACT 0)
+                 s1-keep-L10   0.175750     1.715  (sole export layer)
+                 s1-keep-L11   0.001637     0.016  (sole export layer)
+            s1-band-early0-3   0.123895     1.209  
+              s1-band-mid4-7   0.174339     1.702  
+            s1-band-late8-11   0.000000     0.000  
+        s1-band-postinj10-11   0.000000     0.000  (expect EXACT 0)
+                  ctl-k0-all   0.000000     0.000  (expect EXACT 0)
+                    ctl-noop   0.102462     1.000  (mask-apparatus check: expect 1.000)
+
+--- SWEEP 3: relay-readout depth (k=8 regime + FAR blocked from post-p cols at band) ---
+                      config      D_far       D/R   (R = relay reference)
+             s3-relay-ref-k8   0.076567     0.747  (R/B = 0.747)
+           s3-block-early0-3   0.201609     2.633  
+             s3-block-mid4-7   0.118842     1.552  
+           s3-block-late8-11   0.000000     0.000  
+     s3-block-postinj2-11-11   0.000000     0.000  (expect EXACT 0: hop-timing floor)
+                s3-block-all   0.000000     0.000  (expect EXACT 0)
+
+##############################################################################
+# INJECTION-LAYER GENERALITY — MODEL: EleutherAI/pythia-160m (family=pythia) direction=size INJECT-BLOCK=9
+##############################################################################
+[setup] nL=12 inject-block=9 readout-block=11 HA=12 FAR_W=3
+
+[baseline] B (no ablation, FAR out-span deflection) = 0.1343
+
+--- SWEEP 1: keep-only export profile (attn-to-p at ONE layer; ratio = D/B) ---
+                      config      D_far     ratio
+                 s1-keep-L09   0.000000     0.000  (control: expect EXACT 0)
+                 s1-keep-L10   0.175496     1.307  (sole export layer)
+                 s1-keep-L11   0.001639     0.012  (sole export layer)
+            s1-band-early0-3   0.103223     0.769  
+              s1-band-mid4-7   0.122607     0.913  
+            s1-band-late8-11   0.000000     0.000  
+        s1-band-postinj10-11   0.000000     0.000  (expect EXACT 0)
+                  ctl-k0-all   0.000000     0.000  (expect EXACT 0)
+                    ctl-noop   0.134281     1.000  (mask-apparatus check: expect 1.000)
+
+--- SWEEP 3: relay-readout depth (k=8 regime + FAR blocked from post-p cols at band) ---
+                      config      D_far       D/R   (R = relay reference)
+             s3-relay-ref-k8   0.079816     0.594  (R/B = 0.594)
+           s3-block-early0-3   0.084646     1.061  
+             s3-block-mid4-7   0.150799     1.889  
+           s3-block-late8-11   0.000000     0.000  
+     s3-block-postinj2-11-11   0.000000     0.000  (expect EXACT 0: hop-timing floor)
+                s3-block-all   0.000000     0.000  (expect EXACT 0)
+
+==============================================================================
+CROSS-MODEL SUMMARY — INJECTION-LAYER GENERALITY (relative vs absolute depth)
+==============================================================================
+
+  gpt2 [valence] inj=3  B=0.616  R/B=0.686
+    controls: k0=0.000000 noop=1.000000 keepL03=0.000000 postinj-band=0.000000 s3-all=0.000000 s3-postinj2=0.000000
+    keep-only: L3:0.00 L4:0.96 L5:0.68 L6:0.57 L7:0.33 L8:0.26 L9:0.15 L10:0.14 L11:0.33 | strongest-sole-exporter=L4 | rel-law-predicts=L4/L5
+    readout blocks D/R: early=1.30 mid=0.88 late=0.58  [inj3 discriminator: late>0 => RELATIVE, late==0 => ABSOLUTE]
+
+  gpt2 [size] inj=3  B=0.453  R/B=0.540
+    controls: k0=0.000000 noop=1.000000 keepL03=0.000000 postinj-band=0.000000 s3-all=0.000000 s3-postinj2=0.000000
+    keep-only: L3:0.00 L4:0.91 L5:0.55 L6:0.50 L7:0.24 L8:0.22 L9:0.10 L10:0.07 L11:0.38 | strongest-sole-exporter=L4 | rel-law-predicts=L4/L5
+    readout blocks D/R: early=1.28 mid=1.10 late=0.63  [inj3 discriminator: late>0 => RELATIVE, late==0 => ABSOLUTE]
+
+  gpt2 [valence] inj=9  B=0.826  R/B=0.162
+    controls: k0=0.000000 noop=1.000000 keepL09=0.000000 postinj-band=0.000000 s3-all=0.000000 s3-postinj2=0.000000
+    keep-only: L9:0.00 L10:0.48 L11:0.73 | strongest-sole-exporter=L11 | rel-law-predicts=L10/L11
+    readout blocks D/R: early=0.86 mid=0.91 late=0.00
+
+  gpt2 [size] inj=9  B=0.714  R/B=0.078
+    controls: k0=0.000000 noop=1.000000 keepL09=0.000000 postinj-band=0.000000 s3-all=0.000000 s3-postinj2=0.000000
+    keep-only: L9:0.00 L10:0.24 L11:0.84 | strongest-sole-exporter=L11 | rel-law-predicts=L10/L11
+    readout blocks D/R: early=0.92 mid=0.90 late=0.00
+
+  EleutherAI/pythia-160m [valence] inj=3  B=1.126  R/B=0.792
+    controls: k0=0.000000 noop=1.000000 keepL03=0.000000 postinj-band=0.000000 s3-all=0.000000 s3-postinj2=0.000000
+    keep-only: L3:0.00 L4:1.06 L5:0.60 L6:0.57 L7:0.60 L8:0.56 L9:0.17 L10:0.15 L11:0.06 | strongest-sole-exporter=L4 | rel-law-predicts=L4/L5
+    readout blocks D/R: early=1.45 mid=0.75 late=0.68  [inj3 discriminator: late>0 => RELATIVE, late==0 => ABSOLUTE]
+
+  EleutherAI/pythia-160m [size] inj=3  B=1.138  R/B=0.683
+    controls: k0=0.000000 noop=1.000000 keepL03=0.000000 postinj-band=0.000000 s3-all=0.000000 s3-postinj2=0.000000
+    keep-only: L3:0.00 L4:0.74 L5:0.69 L6:0.58 L7:0.55 L8:0.31 L9:0.13 L10:0.14 L11:0.00 | strongest-sole-exporter=L4 | rel-law-predicts=L4/L5
+    readout blocks D/R: early=1.56 mid=0.84 late=0.76  [inj3 discriminator: late>0 => RELATIVE, late==0 => ABSOLUTE]
+
+  EleutherAI/pythia-160m [valence] inj=9  B=0.102  R/B=0.747
+    controls: k0=0.000000 noop=1.000000 keepL09=0.000000 postinj-band=0.000000 s3-all=0.000000 s3-postinj2=0.000000
+    keep-only: L9:0.00 L10:1.72 L11:0.02 | strongest-sole-exporter=L10 | rel-law-predicts=L10/L11
+    readout blocks D/R: early=2.63 mid=1.55 late=0.00
+
+  EleutherAI/pythia-160m [size] inj=9  B=0.134  R/B=0.594
+    controls: k0=0.000000 noop=1.000000 keepL09=0.000000 postinj-band=0.000000 s3-all=0.000000 s3-postinj2=0.000000
+    keep-only: L9:0.00 L10:1.31 L11:0.01 | strongest-sole-exporter=L10 | rel-law-predicts=L10/L11
+    readout blocks D/R: early=1.06 mid=1.89 late=0.00
+
+[GLOBAL] k=0 exact-0 in all cells:                         True
+[GLOBAL] keep-only-Linj exact-0 (injection-locus control): True
+[GLOBAL] postinj-band exact-0 (all edit edges severed):    True
+[GLOBAL] noop == baseline (mask apparatus):                True
+[GLOBAL] s3-block-all exact-0:                             True
+[GLOBAL] s3-block-postinj2 exact-0 (hop-timing floor):     True
+
+==============================================================================
+VERDICT SYNTHESIS (automatic; verify against tables above)
+==============================================================================
+  gpt2 [valence] inj=3: export peak L4 (rel-mass 0.96 vs L7/L8 0.33) => RELATIVE; block-late D/R=0.576 => readout RELATIVE (mid readout survives)
+  gpt2 [size] inj=3: export peak L4 (rel-mass 0.91 vs L7/L8 0.24) => RELATIVE; block-late D/R=0.632 => readout RELATIVE (mid readout survives)
+  gpt2 [valence] inj=9: R/B=0.162; keep-only L10:0.48 L11:0.73 (rel law: L10/L11 only possible exporters); keep-L11 split check: 0.728
+  gpt2 [size] inj=9: R/B=0.078; keep-only L10:0.24 L11:0.84 (rel law: L10/L11 only possible exporters); keep-L11 split check: 0.840
+  EleutherAI/pythia-160m [valence] inj=3: export peak L4 (rel-mass 1.06 vs L7/L8 0.60) => RELATIVE; block-late D/R=0.676 => readout RELATIVE (mid readout survives)
+  EleutherAI/pythia-160m [size] inj=3: export peak L4 (rel-mass 0.74 vs L7/L8 0.55) => RELATIVE; block-late D/R=0.759 => readout RELATIVE (mid readout survives)
+  EleutherAI/pythia-160m [valence] inj=9: R/B=0.747; keep-only L10:1.72 L11:0.02 (rel law: L10/L11 only possible exporters); keep-L11 split check: 0.016
+  EleutherAI/pythia-160m [size] inj=9: R/B=0.594; keep-only L10:1.31 L11:0.01 (rel law: L10/L11 only possible exporters); keep-L11 split check: 0.012
+
+[wall-clock] 173.3 s

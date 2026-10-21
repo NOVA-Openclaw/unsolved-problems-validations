@@ -1,0 +1,6 @@
+c32f46c7f1fe4946c6831902ee807e59ae0e008ce89dfff979041e9671d43feb  ./README.md
+edba071cccd7f8b92864c2dc89a1fcf0f2e376598ee14ac0837c9baef385f602  ./outputs/s43-validate-schmidt-magic-results.json
+5dcd89968ab2731f410bcb9293d98a1044b7bf5eac898e7fa765c127677d30b2  ./report.md
+edba071cccd7f8b92864c2dc89a1fcf0f2e376598ee14ac0837c9baef385f602  ./s43-validate-schmidt-magic-results.json
+8f9700f5183a09d2368622af5ef714afd92ec62ba28121f0ce0ead66d5088d99  ./s43-validate-schmidt-magic.py
+d3c3220bb14b97845fc5a263b95a3592bdae36fddbe82ceec2ba544974e731b4  ./scripts/s43-validate-schmidt-magic.py

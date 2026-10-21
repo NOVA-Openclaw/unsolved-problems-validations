@@ -1,0 +1,185 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+S85 VALIDATE — pythia-1b within-family scale curve + late allocation scan  SEED=85
+primary model: EleutherAI/pythia-1b  (expect nL=16; Linj=12)
+torch 2.13.0+cpu  cuda=False
+[Linj rationale] 16L model → inj=12 leaves layers 13,14,15 post-injection (3 post layers; analogue of S82/S83 inj18 on 24L leaving 5 post, scaled down).
+
+==============================================================================
+LOADING EleutherAI/pythia-1b
+==============================================================================
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights:   1%|          | 1/196 [00:06<19:38,  6.04s/it]Loading weights:  22%|██▏       | 44/196 [00:06<00:15, 10.00it/s]Loading weights:  32%|███▏      | 62/196 [00:07<00:12, 10.75it/s]Loading weights:  37%|███▋      | 73/196 [00:08<00:11, 11.03it/s]Loading weights:  41%|████      | 80/196 [00:08<00:09, 11.91it/s]Loading weights:  43%|████▎     | 85/196 [00:09<00:10, 10.46it/s]Loading weights:  50%|█████     | 98/196 [00:10<00:08, 11.12it/s]Loading weights:  56%|█████▌    | 110/196 [00:11<00:06, 14.28it/s]Loading weights:  59%|█████▉    | 116/196 [00:11<00:05, 13.40it/s]Loading weights:  61%|██████    | 120/196 [00:12<00:05, 13.29it/s]Loading weights:  63%|██████▎   | 123/196 [00:12<00:05, 14.10it/s]Loading weights:  65%|██████▌   | 128/196 [00:12<00:04, 15.81it/s]Loading weights:  67%|██████▋   | 132/196 [00:12<00:05, 12.63it/s]Loading weights:  68%|██████▊   | 134/196 [00:12<00:04, 13.26it/s]Loading weights:  71%|███████▏  | 140/196 [00:13<00:03, 16.14it/s]Loading weights:  73%|███████▎  | 144/196 [00:13<00:03, 14.37it/s]Loading weights:  74%|███████▍  | 146/196 [00:13<00:04, 10.93it/s]Loading weights:  80%|███████▉  | 156/196 [00:14<00:02, 15.81it/s]Loading weights:  81%|████████  | 158/196 [00:14<00:03, 11.75it/s]Loading weights:  84%|████████▎ | 164/196 [00:15<00:02, 13.71it/s]Loading weights:  86%|████████▌ | 168/196 [00:16<00:03,  7.26it/s]Loading weights:  87%|████████▋ | 170/196 [00:16<00:03,  7.84it/s]Loading weights:  92%|█████████▏| 180/196 [00:17<00:01, 10.52it/s]Loading weights:  93%|█████████▎| 182/196 [00:18<00:02,  5.98it/s]Loading weights: 100%|██████████| 196/196 [00:18<00:00, 10.55it/s]
+[model] EleutherAI/pythia-1b family=pythia nL=16 hidden=2048 heads=8 dtype=torch.float32
+
+[1] CLEAN allocation scan a_FAR,p across all layers (no injection)
+
+[allocation curve point] final L15 a_FAR,p mean=9.713199e-03 max-head=2.463025e-02
+[final-layer clean group mass] sink0:0.5245 pre:0.0432 p:0.0097 car:0.2022 post:0.2204
+
+[per-layer a_FAR,p clean (mean heads / max head)]
+    L         mean         maxh top_h      top_a
+    0 3.685253e-02 7.107156e-02     6   0.061975
+    1 2.279981e-02 5.797057e-02     1   0.043969
+    2 1.481115e-02 3.392977e-02     4   0.027834
+    3 1.303045e-02 3.997439e-02     1   0.025576
+    4 1.052133e-02 3.388131e-02     7   0.021392
+    5 1.410922e-02 4.502608e-02     0   0.041049
+    6 9.905367e-03 3.267652e-02     6   0.020398
+    7 1.366387e-02 5.289331e-02     4   0.050107
+    8 1.008083e-02 2.906301e-02     3   0.021250
+    9 1.176210e-02 3.706638e-02     3   0.025341
+   10 9.346134e-03 2.848864e-02     0   0.019229
+   11 6.461249e-03 2.417040e-02     0   0.016782
+   12 6.904233e-03 2.976529e-02     2   0.017673
+   13 5.750647e-03 1.670946e-02     0   0.013320
+   14 1.221982e-02 3.212221e-02     1   0.026489
+   15 9.713199e-03 2.463025e-02     7   0.017326
+
+[island detector late-half L>=8, ratio≥10× neighbors]
+  (none flagged at 10×; reporting top-5 late layers by mean a_p)
+  top-5 late by mean a_p:
+    L14: mean=1.221982e-02 maxh=3.212221e-02 ratio_mean=1.26 top h1 a=0.0265
+    L9: mean=1.176210e-02 maxh=3.706638e-02 ratio_mean=1.17 top h3 a=0.0253
+    L8: mean=1.008083e-02 maxh=2.906301e-02 ratio_mean=0.74 top h3 a=0.0213
+    L15: mean=9.713199e-03 maxh=2.463025e-02 ratio_mean=0.79 top h7 a=0.0173
+    L10: mean=9.346134e-03 maxh=2.848864e-02 ratio_mean=0.79 top h0 a=0.0192
+
+[late summary] peak late L14 mean a_p=1.221982e-02; final L15=9.713199e-03; peak/last2 = 1.11×
+  top heads at peak L14: h1:0.02649 h7:0.01972 h2:0.01787 h4:0.01293 h6:0.00769
+  top heads at final L15: h7:0.01733 h1:0.01671 h2:0.01383 h5:0.00991 h3:0.00843
+
+[2] KEEP-ONLY export at layers [9, 11, 13, 14, 15] (inj=12)
+    Linj choice: inj=12 on 16L → post layers [13, 14, 15] (3 post layers remain)
+
+##############################################################################
+# S85 EXPORT CELLS — valence inj=12 keep_Ls=[9, 11, 13, 14, 15]
+##############################################################################
+[setup] ||W||=20.66 target=3||W|| HA=12 FAR_W=3
+
+[hs16 FAR out-span] B(noablate) = 0.8163
+            k0 D = 0.000000  D/B = 0.0000
+      keep-L11 D = 0.000000  D/B = 0.0000
+      keep-L13 D = 0.592081  D/B = 0.7254
+      keep-L14 D = 0.780517  D/B = 0.9562
+      keep-L15 D = 0.416002  D/B = 0.5096
+       keep-L9 D = 0.000000  D/B = 0.0000
+     keep-Linj D = 0.000000  D/B = 0.0000
+
+##############################################################################
+# S85 EXPORT CELLS — size inj=12 keep_Ls=[9, 11, 13, 14, 15]
+##############################################################################
+[setup] ||W||=28.44 target=3||W|| HA=12 FAR_W=3
+
+[hs16 FAR out-span] B(noablate) = 0.9058
+            k0 D = 0.000000  D/B = 0.0000
+      keep-L11 D = 0.000000  D/B = 0.0000
+      keep-L13 D = 0.872604  D/B = 0.9633
+      keep-L14 D = 0.703097  D/B = 0.7762
+      keep-L15 D = 0.415204  D/B = 0.4584
+       keep-L9 D = 0.000000  D/B = 0.0000
+     keep-Linj D = 0.000000  D/B = 0.0000
+
+==============================================================================
+OPTIONAL LIGHT RE-ANCHOR: pythia-410m clean final-layer a_p under SEED=85
+==============================================================================
+
+==============================================================================
+LOADING EleutherAI/pythia-410m
+==============================================================================
+Loading weights:   0%|          | 0/292 [00:00<?, ?it/s]Loading weights:   0%|          | 1/292 [00:02<13:29,  2.78s/it]Loading weights:  21%|██        | 62/292 [00:02<00:07, 28.80it/s]Loading weights:  28%|██▊       | 81/292 [00:03<00:05, 36.16it/s]Loading weights:  33%|███▎      | 95/292 [00:03<00:04, 41.08it/s]Loading weights:  37%|███▋      | 107/292 [00:03<00:04, 44.78it/s]Loading weights:  40%|████      | 117/292 [00:03<00:03, 44.22it/s]Loading weights:  43%|████▎     | 125/292 [00:03<00:03, 44.39it/s]Loading weights:  45%|████▌     | 132/292 [00:04<00:03, 40.48it/s]Loading weights:  50%|█████     | 146/292 [00:04<00:03, 43.75it/s]Loading weights:  53%|█████▎    | 156/292 [00:04<00:02, 50.85it/s]Loading weights:  58%|█████▊    | 168/292 [00:04<00:02, 52.91it/s]Loading weights:  60%|██████    | 176/292 [00:04<00:02, 56.69it/s]Loading weights:  63%|██████▎   | 183/292 [00:05<00:02, 53.05it/s]Loading weights:  66%|██████▌   | 192/292 [00:05<00:01, 58.81it/s]Loading weights:  68%|██████▊   | 199/292 [00:05<00:01, 59.85it/s]Loading weights:  71%|███████   | 206/292 [00:05<00:01, 52.01it/s]Loading weights:  74%|███████▍  | 216/292 [00:05<00:01, 50.89it/s]Loading weights:  78%|███████▊  | 228/292 [00:05<00:01, 55.08it/s]Loading weights:  81%|████████  | 236/292 [00:05<00:00, 59.50it/s]Loading weights:  83%|████████▎ | 243/292 [00:06<00:00, 53.72it/s]Loading weights:  87%|████████▋ | 254/292 [00:06<00:00, 51.23it/s]Loading weights:  91%|█████████ | 266/292 [00:06<00:00, 61.69it/s]Loading weights:  93%|█████████▎| 273/292 [00:06<00:00, 62.43it/s]Loading weights:  96%|█████████▌| 280/292 [00:06<00:00, 62.48it/s]Loading weights:  99%|█████████▊| 288/292 [00:06<00:00, 65.46it/s]Loading weights: 100%|██████████| 292/292 [00:06<00:00, 42.46it/s]
+[model] EleutherAI/pythia-410m family=pythia nL=24 hidden=1024 heads=16 dtype=torch.float32
+
+[1] CLEAN allocation scan a_FAR,p across all layers (no injection)
+
+[allocation curve point] final L23 a_FAR,p mean=3.161706e-04 max-head=4.752544e-03
+[final-layer clean group mass] sink0:0.4753 pre:0.0393 p:0.0003 car:0.1886 post:0.2965
+
+[per-layer a_FAR,p clean (mean heads / max head)]
+    L         mean         maxh top_h      top_a
+    0 2.657038e-02 8.563577e-02     3   0.061716
+    1 9.664638e-03 6.070821e-02     2   0.036677
+    2 2.145606e-02 1.008987e-01     4   0.051914
+    3 1.495033e-02 5.055674e-02     5   0.038752
+    4 1.905065e-02 6.666653e-02     2   0.042679
+    5 1.032566e-02 4.726843e-02     7   0.034855
+    6 1.040722e-02 5.184497e-02     1   0.036250
+    7 6.200108e-03 3.066302e-02    12   0.012097
+    8 7.824135e-03 4.474558e-02    15   0.031223
+    9 6.811025e-03 2.482836e-02    15   0.018110
+   10 5.047390e-03 2.789078e-02    10   0.021437
+   11 3.229135e-03 1.217378e-02     4   0.006579
+   12 6.668859e-03 2.505884e-02     7   0.016220
+   13 4.678473e-03 2.754357e-02     6   0.017149
+   14 5.197872e-03 2.342189e-02    15   0.019201
+   15 3.967685e-03 1.834113e-02    15   0.011981
+   16 4.621059e-03 3.897586e-02     6   0.038067
+   17 3.049975e-03 1.891031e-02     0   0.007777
+   18 1.065999e-03 6.302238e-03    10   0.003346
+   19 4.126429e-03 2.627575e-02     2   0.021164
+   20 1.153563e-03 8.532970e-03     1   0.005481
+   21 1.345778e-02 1.914971e-01    11   0.161754
+   22 2.147537e-04 2.241870e-03    14   0.001204
+   23 3.161706e-04 4.752544e-03     8   0.004461
+
+[island detector late-half L>=12, ratio≥10× neighbors]
+  ISLAND L21: mean=1.345778e-02 (×11.7 neigh) maxh=1.914971e-01 (×22.4) top h11 a=0.161754
+  top-5 late by mean a_p:
+    L21: mean=1.345778e-02 maxh=1.914971e-01 ratio_mean=11.67 top h11 a=0.1618
+    L12: mean=6.668859e-03 maxh=2.505884e-02 ratio_mean=1.43 top h7 a=0.0162
+    L14: mean=5.197872e-03 maxh=2.342189e-02 ratio_mean=1.11 top h15 a=0.0192
+    L13: mean=4.678473e-03 maxh=2.754357e-02 ratio_mean=0.70 top h6 a=0.0171
+    L16: mean=4.621059e-03 maxh=3.897586e-02 ratio_mean=1.16 top h6 a=0.0381
+
+[late summary] peak late L21 mean a_p=1.345778e-02; final L23=3.161706e-04; peak/last2 = 50.70×
+  top heads at peak L21: h11:0.16175 h10:0.03020 h0:0.01404 h12:0.00356 h3:0.00247
+  top heads at final L23: h8:0.00446 h4:0.00021 h10:0.00015 h0:0.00008 h5:0.00005
+
+==============================================================================
+APPARATUS / EXACTNESS GATES
+==============================================================================
+g1 sdpa recon max abs err:           7.15e-07  (PASS)
+g2 pythia-1b nL==16:                 1      (PASS)
+g3 keep-Linj D ~ 0 (max):            0.00e+00  (PASS)
+g4 k0 D ~ 0 (max):                   0.00e+00  (PASS)
+g5 injection out/in span rel (max):  1.94e-07  (PASS)
+g6 final a_p in [0,1] finite:        9.713199e-03  (PASS)
+g7 island scan cells (H*nL):         128     (PASS)
+
+==============================================================================
+SYNTHESIS — within-family pythia scale curve + island check
+==============================================================================
+
+[allocation-suppression curve — final-layer a_FAR,p clean mean]
+  model             nL L_final      a_FAR,p source                      
+  pythia-160m       12      11 0.000000e+00 S81 exact zero              
+  pythia-410m       24      23 3.160000e-04 S82 ~3e-4                   
+  gpt2-124M         12      11 1.420000e-02 S84 re-anchor               
+  gpt2-medium       24      23 2.010000e-02 S84 outgroup NO island      
+  pythia-1b         16      15 9.713199e-03 S85 THIS RUN                
+  pythia-410m@s85   24      23 3.161706e-04 S85 light re-anchor         
+
+[curve reading vs pythia-410m 3.16e-04] pythia-1b / 410m = 30.74× → RELAX-STRONG (approaching gpt2-like allocation)
+
+[island check — pythia-1b 16L within-family]
+  late peak: L14 a_mean=1.221982e-02  peak/last2=1.11×  (S83 L21 was ~40–60× L22/23)
+  VERDICT island: NO — no ≥10× neighbor spike; peak/last2=1.11×
+
+[keep-only export D/B @ inj12]
+  [valence] B=0.8163
+              k0: D=0.0000  D/B=0.000
+        keep-L11: D=0.0000  D/B=0.000
+        keep-L13: D=0.5921  D/B=0.725
+        keep-L14: D=0.7805  D/B=0.956
+        keep-L15: D=0.4160  D/B=0.510
+         keep-L9: D=0.0000  D/B=0.000
+       keep-Linj: D=0.0000  D/B=0.000
+  [size] B=0.9058
+              k0: D=0.0000  D/B=0.000
+        keep-L11: D=0.0000  D/B=0.000
+        keep-L13: D=0.8726  D/B=0.963
+        keep-L14: D=0.7031  D/B=0.776
+        keep-L15: D=0.4152  D/B=0.458
+         keep-L9: D=0.0000  D/B=0.000
+       keep-Linj: D=0.0000  D/B=0.000
+
+[model choice] primary=EleutherAI/pythia-1b; optional 410m re-anchor DONE.
+[wall-clock] 181.4 s

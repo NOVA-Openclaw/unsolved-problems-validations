@@ -1,0 +1,156 @@
+{
+  "E2F1": {
+    "matrix_id": "MA0024.3",
+    "jaspar_name": "E2F1",
+    "prereg": "TTTSSCGC",
+    "length": 12,
+    "t25": {
+      "full": "TTTGGCGCCAAA",
+      "core": "TTTGGCGCCAAA",
+      "core_span": [0, 12],
+      "obligate_cpg": 1,
+      "possible_cpg": 1,
+      "m": 1.0
+    },
+    "t40": {
+      "full": "TTTGGCGCCAAA",
+      "core": "TTTGGCGCCAAA",
+      "core_span": [0, 12],
+      "obligate_cpg": 1,
+      "possible_cpg": 1,
+      "m": 1.0
+    }
+  },
+  "E2F4": {
+    "matrix_id": "MA0470.3",
+    "jaspar_name": "E2F4",
+    "prereg": "TTTSSCGC",
+    "length": 13,
+    "t25": {
+      "full": "WTTTGGCGCCAWW",
+      "core": "WTTTGGCGCCAWW",
+      "core_span": [0, 13],
+      "obligate_cpg": 1,
+      "possible_cpg": 1,
+      "m": 1.0
+    },
+    "t40": {
+      "full": "TTTTGGCGCCATT",
+      "core": "TTTTGGCGCCATT",
+      "core_span": [0, 13],
+      "obligate_cpg": 1,
+      "possible_cpg": 1,
+      "m": 1.0
+    }
+  },
+  "ELK1": {
+    "matrix_id": "MA0028.3",
+    "jaspar_name": "ELK1",
+    "prereg": "SCGGAAGY",
+    "length": 9,
+    "t25": {
+      "full": "ACCGGAAGT",
+      "core": "ACCGGAAGT",
+      "core_span": [0, 9],
+      "obligate_cpg": 1,
+      "possible_cpg": 1,
+      "m": 1.0
+    },
+    "t40": {
+      "full": "ACCGGAAGT",
+      "core": "ACCGGAAGT",
+      "core_span": [0, 9],
+      "obligate_cpg": 1,
+      "possible_cpg": 1,
+      "m": 1.0
+    }
+  },
+  "SP1": {
+    "matrix_id": "MA0079.5",
+    "jaspar_name": "SP1",
+    "prereg": "GGGGCGGGG",
+    "length": 9,
+    "t25": {
+      "full": "GGGGMGGRG",
+      "core": "GGGGMGGRG",
+      "core_span": [0, 9],
+      "obligate_cpg": 0,
+      "possible_cpg": 1,
+      "m": 0.5
+    },
+    "t40": {
+      "full": "GGGGCGGGG",
+      "core": "GGGGCGGGG",
+      "core_span": [0, 9],
+      "obligate_cpg": 1,
+      "possible_cpg": 1,
+      "m": 1.0
+    }
+  },
+  "SRF": {
+    "matrix_id": "MA0083.3",
+    "jaspar_name": "SRF",
+    "prereg": "CCWWWWWWGG",
+    "length": 16,
+    "t25": {
+      "full": "TGMCCATATAWGGKCA",
+      "core": "TGMCCATATAWGGKCA",
+      "core_span": [0, 16],
+      "obligate_cpg": 0,
+      "possible_cpg": 0,
+      "m": 0.0
+    },
+    "t40": {
+      "full": "TGACCATATATGGTCA",
+      "core": "TGACCATATATGGTCA",
+      "core_span": [0, 16],
+      "obligate_cpg": 0,
+      "possible_cpg": 0,
+      "m": 0.0
+    }
+  },
+  "USF1": {
+    "matrix_id": "MA0093.4",
+    "jaspar_name": "USF1",
+    "prereg": "CACGTG",
+    "length": 10,
+    "t25": {
+      "full": "GTCATGTGAC",
+      "core": "GTCATGTGAC",
+      "core_span": [0, 10],
+      "obligate_cpg": 0,
+      "possible_cpg": 0,
+      "m": 0.0
+    },
+    "t40": {
+      "full": "GTCATGTGAC",
+      "core": "GTCATGTGAC",
+      "core_span": [0, 10],
+      "obligate_cpg": 0,
+      "possible_cpg": 0,
+      "m": 0.0
+    }
+  },
+  "USF2": {
+    "matrix_id": "MA0526.5",
+    "jaspar_name": "USF2",
+    "prereg": "CACGTG",
+    "length": 10,
+    "t25": {
+      "full": "RTCACGTGAY",
+      "core": "RTCACGTGAY",
+      "core_span": [0, 10],
+      "obligate_cpg": 1,
+      "possible_cpg": 1,
+      "m": 1.0
+    },
+    "t40": {
+      "full": "GTCACGTGAC",
+      "core": "GTCACGTGAC",
+      "core_span": [0, 10],
+      "obligate_cpg": 1,
+      "possible_cpg": 1,
+      "m": 1.0
+    }
+  }
+}

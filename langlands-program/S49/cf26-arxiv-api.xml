@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/oQpScpi7wYHIGJ7AfxNfZhEht3w</id>
+  <title>arXiv Query: search_query=&amp;id_list=2609.16381,2609.16387,2609.17060,2202.03982&amp;start=0&amp;max_results=4</title>
+  <updated>2026-10-20T19:21:26Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=4&amp;id_list=2609.16381,2609.16387,2609.17060,2202.03982" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>4</opensearch:itemsPerPage>
+  <opensearch:totalResults>4</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.16387v2</id>
+    <title>Local Langlands functoriality for Yu's supercuspidals II: Fargues--Scholze's parametrization</title>
+    <updated>2026-09-29T19:22:08Z</updated>
+    <link href="https://arxiv.org/abs/2609.16387v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.16387v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This is the second of two papers dedicated to the explicit computation of the Fargues--Scholze correspondence. We compute the Tate cohomology of cuspidal representations arising from Yu's construction. Combining this with modular functoriality in the Local Langlands Correspondence, independence of $\ell$, and the partial characterization of the Local Langlands Correspondence established in the first paper, we compare the Fargues--Scholze and Kaletha parametrizations. Among the consequences, we deduce that the Fargues--Scholze correspondence has finite fibers and is surjective onto inertial L-parameters.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-14T21:50:37Z</published>
+    <arxiv:comment>59 pages, comments welcome! v2: results now stated unconditionally, other minor edits</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Sean Cotner</name>
+    </author>
+    <author>
+      <name>Tony Feng</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.16381v2</id>
+    <title>Local Langlands functoriality for Yu's supercuspidals I: Kaletha's parametrization</title>
+    <updated>2026-09-29T19:22:41Z</updated>
+    <link href="https://arxiv.org/abs/2609.16381v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.16381v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This is the first of two papers dedicated to the explicit computation of the Fargues--Scholze correspondence. In this first part, we construct (inspired by, and extending, Kaletha's explicit Local Langlands Correspondence for non-singular supercuspidal representations) semisimple inertial L-parameters for all cuspidal representations arising from Yu's constructions, with arbitrary coefficients. We then establish a characterization of this correpondence in terms of certain functoriality properties. This characterization will be used in the sequel paper in order to compute the Fargues--Scholze correspondence after restriction to inertia.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-14T21:45:32Z</published>
+    <arxiv:comment>64 pages, comments welcome! v2: minor edits</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Sean Cotner</name>
+    </author>
+    <author>
+      <name>Tony Feng</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.17060v1</id>
+    <title>Modular functoriality for finite groups</title>
+    <updated>2026-09-15T12:07:02Z</updated>
+    <link href="https://arxiv.org/abs/2609.17060v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.17060v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We develop an extension of Deligne--Lusztig theory to certain (possibly infinite type) disconnected reductive groups arising from the special fibers of point stabilizers in the Bruhat--Tits building, which we call \emph{paraductive}. We then compute explicit lower bounds for the Tate cohomology of representations of paraductive groups, relating these to Shintani descent, Lusztig restriction, and the Glauberman correspondence. As an application, using Feng's modular functoriality and Scholze's independence of $\ell$, we compute the Fargues--Scholze L-parameters of non-singular depth $0$ cuspidal representations of a (possibly wildly ramified) reductive group over a nonarchimedean local field.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-15T12:07:02Z</published>
+    <arxiv:comment>46 pages, comments welcome!</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Sean Cotner</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2202.03982v3</id>
+    <title>Depth zero representations over $\overline{\mathbb{Z}}[\frac{1}{p}]$</title>
+    <updated>2025-02-07T15:39:56Z</updated>
+    <link href="https://arxiv.org/abs/2202.03982v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2202.03982v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider the category of depth $0$ representations of a $p$-adic quasi-split reductive group with coefficients in $\overline{\mathbb{Z}}[\frac{1}{p}]$. We prove that the blocks of this category are in natural bijection with the connected components of the space of tamely ramified Langlands parameters for $G$ over $\overline{\mathbb{Z}}[\frac{1}{p}]$. As a particular case, this depth $0$ category is thus indecomposable when the group is tamely ramified. Along the way we prove a similar result for finite reductive groups. As an application, we deduce that the semi-simple local Langlands correspondence $π\mapsto \varphi_π$ constructed by Fargues and Scholze takes depth $0$ representations to tamely ramified parameters, using a motivic version of their construction recently announced by Scholze. We also bound the restriction of $\varphi_π$ to tame inertia in terms of the Deligne-Lusztig parameter of $π$ and show, in particular, that $\varphi_π$ is unramified if $π$ is unipotent.</summary>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-02-08T16:39:13Z</published>
+    <arxiv:comment>We added applications to the Fargues-Scholze semisimple correspondence. We proved that this correspondence takes depth 0 representations to tamely ramified parameters. We also bound the restriction of a parameter to tame inertia in terms of the Deligne-Lusztig parameter of the representation and show, in particular, that the parameter associated with a unipotent representation is unramified</arxiv:comment>
+    <arxiv:primary_category term="math.RT"/>
+    <arxiv:journal_ref>Alg. Number Th. 20 (2026) 1451-1478</arxiv:journal_ref>
+    <author>
+      <name>Jean-François Dat</name>
+    </author>
+    <author>
+      <name>Thomas Lanard</name>
+    </author>
+    <arxiv:doi>10.2140/ant.2026.20.1451</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.2140/ant.2026.20.1451" title="doi"/>
+  </entry>
+</feed>

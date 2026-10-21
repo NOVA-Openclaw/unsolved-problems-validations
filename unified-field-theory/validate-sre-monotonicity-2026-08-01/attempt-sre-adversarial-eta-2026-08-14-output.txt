@@ -1,0 +1,24 @@
+sanity OK (M_lin(T(x)T) = 0.437500)
+N=2 dephase        max f = +7.344e-03  (q=0, rank=2, 3.1s)
+N=2 ptrace         max f = -3.253e-14  (q=0, rank=2, 2.7s)
+N=2 pauli_ch       max f = +3.333e-01  (q=0, rank=2, 12.5s)
+N=2 selective_avg  max f = -1.076e-12  (q=0, rank=2, 4.3s)
+*** COUNTEREXAMPLE N=2 dephase: f=7.344e-03 ***
+*** COUNTEREXAMPLE N=2 pauli_ch: f=3.333e-01 ***
+N=3 dephase        max f = +1.991e-02  (q=2, rank=2, 217.8s)
+N=3 ptrace         max f = +5.358e-03  (q=2, rank=2, 162.1s)
+N=3 pauli_ch       max f = +4.776e-01  (q=1, rank=2, 608.9s)
+N=3 selective_avg  max f = +5.483e-03  (q=0, rank=2, 281.0s)
+*** COUNTEREXAMPLE N=3 dephase: f=1.991e-02 ***
+*** COUNTEREXAMPLE N=3 ptrace: f=5.358e-03 ***
+*** COUNTEREXAMPLE N=3 pauli_ch: f=4.776e-01 ***
+*** COUNTEREXAMPLE N=3 selective_avg: f=5.483e-03 ***
+sampling N=2: 20000 states done (4s)
+sampling N=3: 8000 states done (19s)
+{
+  "adversarial_counterexample_found": true,
+  "random_sampling_violations_found": true,
+  "eta_estimates_from_rates": {
+    "pauli_ch": 2.424802725718295
+  }
+}

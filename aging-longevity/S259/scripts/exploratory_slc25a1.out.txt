@@ -1,0 +1,7 @@
+=== SLC25A1 -1000..+200 (exploratory) ===
+SLC25A1  22:19178536-19179736 strand -1 TSS=19178736 len=1201 GC=69.4% CpG o/e=0.78
+          CACGTG n=1 [-395]
+          GGGGCGGGG n=1 [-99]
+          GGGCGG n=3 | CCGCCC n=6 (Sp1 GC-box core, both strands)
+
+=== EGR1 -1000..+200 (exploratory, CArG/SRE control) ===

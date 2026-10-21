@@ -1,0 +1,29 @@
+max |c2_S47 - c2_from_(2.7)| : 2.6645352591003757e-15
+max |d_S47 - (3-C)/2|        : 1.7763568394002505e-15
+c2(theta)=0  [S47 claims 0.261286]: 0.261286429995
+d(theta)=0   [S47 claims 0.346658; Wang 0.346658926139761]: 0.346658926140
+c(theta)=0 Wang simple&crit [0.550193964744154]: 0.550193964744
+C(theta)=2  (Lamzouri (2.7) stated hypothesis A<2 boundary): 0.550193964744
+C(theta)=5/2+sqrt2 (b1>0 boundary actually used in proof): 0.261286429995
+
+values at theta=1 (global):
+  C_MT=C(1)=1.3274992963206  C0=2-C(1)=0.6725007036794  (Lamzouri C0=0.6725007)
+  c2(1)=0.8876200081734  Lamzouri C2=(1+2r2+2C0)/(3+2r2)=0.8876200081734  (paper: 0.88762)
+  d(1)=0.8362503518397  Lamzouri C1=(C0+1)/2=0.8362503518397  (paper: 0.83625)
+  BGST/Soundararajan conditional (2+C0)/3=0.89083 (c2 should be below this)
+
+on [theta_c2, 1]: c2 min=0.000e+00 max=0.8876200082 strictly increasing=True <=1: True
+  max |numeric c2' - cot^2/(3+2r2)| = 1.06e-09
+
+table:
+  theta=0.2613  C= 3.91402  c_wang=-1.91402  d=-0.45701  c2=+0.00007  (A<2? False)
+  theta=0.3     C= 3.43318  c_wang=-1.43318  d=-0.21659  c2=+0.16506  (A<2? False)
+  theta=0.3293  C= 3.14631  c_wang=-1.14631  d=-0.07316  c2=+0.26350  (A<2? False)
+  theta=0.35    C= 2.97357  c_wang=-0.97357  d=+0.01322  c2=+0.32278  (A<2? False)
+  theta=0.4     C= 2.63298  c_wang=-0.63298  d=+0.18351  c2=+0.43965  (A<2? False)
+  theta=0.5     C= 2.16596  c_wang=-0.16596  d=+0.41702  c2=+0.59990  (A<2? False)
+  theta=0.5502  C= 1.99998  c_wang=+0.00002  d=+0.50001  c2=+0.65686  (A<2? True)
+  theta=0.6     C= 1.86545  c_wang=+0.13455  d=+0.56728  c2=+0.70303  (A<2? True)
+  theta=0.75    C= 1.58092  c_wang=+0.41908  d=+0.70954  c2=+0.80066  (A<2? True)
+  theta=0.9     C= 1.40690  c_wang=+0.59310  d=+0.79655  c2=+0.86037  (A<2? True)
+  theta=1.0     C= 1.32750  c_wang=+0.67250  d=+0.83625  c2=+0.88762  (A<2? True)

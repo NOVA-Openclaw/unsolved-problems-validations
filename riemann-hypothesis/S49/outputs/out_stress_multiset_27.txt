@@ -1,0 +1,4 @@
+(2.4) min slack over all trials: 0.0000e+00  (>= -1e-9 means holds)
+(2.6) min slack over all trials: 0.0000e+00
+(2.7) trials with A<5/2+sqrt2: 3678; of which A in [2, 3.914): 2395; max A seen there 3.911
+(2.7) min slack in the EXTENDED regime A>=2: 1.1956e-01

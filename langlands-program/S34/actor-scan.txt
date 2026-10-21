@@ -1,0 +1,24 @@
+########################################################################
+S34-WINDOW 202608190000 202608240000
+  Peter Scholze          total=0
+  Laurent Fargues        total=0
+  Dennis Gaitsgory       total=0
+  Sam Raskin             total=0
+  David Helm             total=0
+  Maarten Solleveld      total=0
+  David Hansen           total=0
+  Linus Hamann           total=0
+  Yujie Xu               total=0
+  Xinwen Zhu             total=0
+########################################################################
+SINCE-S34 202608230000 202609072359
+  Peter Scholze          total=0
+  Laurent Fargues        total=0
+  Dennis Gaitsgory       total=0
+  Sam Raskin             total=0
+  David Helm             total=0
+  Maarten Solleveld      total=0
+  David Hansen           total=0
+  Linus Hamann           total=0
+  Yujie Xu               total=1
+  Xinwen Zhu             total=0

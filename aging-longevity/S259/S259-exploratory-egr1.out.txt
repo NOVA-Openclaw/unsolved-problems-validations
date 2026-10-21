@@ -1,0 +1,10 @@
+EGR1 5:138464479-138465679 strand +1 TSS=138465479 len=1201 GC=70.3% CpG o/e=0.79
+CArG CC(A/T)6GG n=5 positions(rel TSS)=[-418, -380, -364, -105, -83]
+CArG-like CCn6GG n=5
+   box at -418: CCATATAAGG  contains CG: False
+   box at -380: CCTTATTTGG  contains CG: False
+   box at -364: CCTTATTTGG  contains CG: False
+   box at -105: CCATATTAGG  contains CG: False
+   box at -83: CCATATATGG  contains CG: False
+ELK1 core GGAA/TTCC n=8/12
+CCGGAAGT (ELK1 ETS with CpG) n=0 | CCGGAA n=3

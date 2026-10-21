@@ -1,0 +1,15 @@
+Check A: theta = Coxeter n-cycle on X_*(T_der) for Ghat_der=SL_n; |ker L_theta| = |det(theta-1)|, finite <=> elliptic
+  n=2: det(theta-1)=-2  ->  |(T_der)^theta| = 2 (expected n=2, = |Z(SL_n)| ) ok=True
+  n=3: det(theta-1)=3  ->  |(T_der)^theta| = 3 (expected n=3, = |Z(SL_n)| ) ok=True
+  n=4: det(theta-1)=-4  ->  |(T_der)^theta| = 4 (expected n=4, = |Z(SL_n)| ) ok=True
+  n=5: det(theta-1)=5  ->  |(T_der)^theta| = 5 (expected n=5, = |Z(SL_n)| ) ok=True
+  n=6: det(theta-1)=-6  ->  |(T_der)^theta| = 6 (expected n=6, = |Z(SL_n)| ) ok=True
+  n=7: det(theta-1)=7  ->  |(T_der)^theta| = 7 (expected n=7, = |Z(SL_n)| ) ok=True
+Check B: non-elliptic theta (identity) gives det 0 -> L_theta not an isogeny (ellipticity is needed)
+  det(0 matrix)= 0
+Check C: s of order m with gcd(m,q)=1 => s is a power of s^q, so Z(s^q)=Z(s) (used implicitly for x = t n)
+  counterexamples: 0
+  |T(F_q)| for split rank-r torus = (q-1)^r, nonsplit rank-1 = q+1: both prime to p -> True
+Check D: 'regular semisimple => centralizer is a torus' fails without connectedness when Ghat_der not simply connected
+  w s w^-1 = [[-1, 0], [0, 1]] = -s: True -> in PGL2 the centralizer of s is T u wT (disconnected).
+  => Fu's 'T_s := Z(s) is a maximal torus' relies on DR09's regularity definition (centralizer of phi(I) a torus), not plain regular semisimplicity.

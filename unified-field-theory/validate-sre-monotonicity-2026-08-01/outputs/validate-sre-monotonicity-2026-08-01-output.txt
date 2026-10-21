@@ -1,0 +1,22 @@
+sanity OK  (M_lin(T⊗T) = 0.437500)
+N=2 done (0.3s)
+N=3 done (0.7s)
+N=4 done (1.2s)
+N=5 done (3.3s)
+
+=== RESULTS: violation rate (Delta M_lin > 1e-9) by op and N ===
+op              N=2: rate / max_viol        N=3: rate / max_viol        N=4: rate / max_viol        N=5: rate / max_viol      
+clifford        0.000 / 0.00e+00     0.000 / 0.00e+00     0.000 / 0.00e+00     0.000 / 0.00e+00   
+dephase         0.000 / 0.00e+00     0.000 / 0.00e+00     0.000 / 0.00e+00     0.000 / 0.00e+00   
+ptrace          0.000 / 0.00e+00     0.000 / 0.00e+00     0.000 / 0.00e+00     0.000 / 0.00e+00   
+pauli_ch        0.000 / 0.00e+00     0.000 / 0.00e+00     0.000 / 0.00e+00     0.000 / 0.00e+00   
+selective_avg   0.000 / 0.00e+00     0.000 / 0.00e+00     0.000 / 0.00e+00     0.000 / 0.00e+00   
+
+mean Delta M_lin by op and N (negative = magic decreased):
+clifford        +0.00000     +0.00000     +0.00000     +0.00000   
+dephase         -0.15229     -0.14618     -0.12506     -0.10807   
+ptrace          -0.26956     -0.28060     -0.25178     -0.21802   
+pauli_ch        -0.17463     -0.17141     -0.16049     -0.14450   
+selective_avg   -0.23192     -0.20209     -0.16102     -0.12877   
+
+results JSON written.

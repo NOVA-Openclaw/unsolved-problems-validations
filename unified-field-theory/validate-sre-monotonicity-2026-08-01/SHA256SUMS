@@ -1,0 +1,8 @@
+43545b0a541001827f6fbb58d4e400182383b736bf03befdde97f3329c70c312  ./README.md
+4a2ed8ad0b27560d844e6f4fce67a627164444efb80d0fd24b529f0c031c8de6  ./attempt-sre-adversarial-eta-2026-08-14-output.txt
+94fc0a40421dc652766d45f6fa109ac60f8eafb49e99b1e4beaeac731d596b92  ./attempt-sre-adversarial-eta-2026-08-14-results.json
+e6fa44a9706da9f175258511118c09d490e52f2454a22051e8bc7cedd71d500e  ./attempt-sre-adversarial-eta-2026-08-14.py
+5859d8bf557c2327ece176c41bea35b6a4814bc9240e781fb85efdb580ce4646  ./outputs/validate-sre-monotonicity-2026-08-01-output.txt
+0f1f57a92a94b80858c7e822ec42e9060cfd906a215622575e5190f8d6ba80b3  ./outputs/validate-sre-monotonicity-2026-08-01-results.json
+e55a9289e696dd5905b11a63831a615df96a0fed3164ee76620f5d0120166c5b  ./report.md
+0ea18b26a3ea614823e9091e524d78b5219510c9e31a2712d77567e31d6c62e2  ./scripts/validate-sre-monotonicity-2026-08-01.py

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/wPp49KmfdHwE73IxdVWdm87Ekow</id>
+  <title>arXiv Query: search_query=&amp;id_list=2606.10149&amp;start=0&amp;max_results=1</title>
+  <updated>2026-09-07T14:37:19Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=1&amp;id_list=2606.10149" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>1</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2606.10149v2</id>
+    <title>A generic categorical local Langlands correspondence for quasi-split reductive groups</title>
+    <updated>2026-07-22T13:59:47Z</updated>
+    <link href="https://arxiv.org/abs/2606.10149v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.10149v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We $\textit{unconditionally}$ prove a $\textit{generic}$ categorical local Langlands conjecture for a large class of quasi-split reductive $p$-adic groups $G$, including all quasi-split classical groups and some non-classical groups. More precisely, we construct a natural fully faithful functor from the stable $\infty$-category of $\textit{generic}$ Bernstein blocks on the automorphic side to the stable $\infty$-category of ind-coherent sheaves on the moduli stack of (arithmetic) $L$-parameters, generalizing earlier work of the first author with Ben-Zvi, Chen and Nadler [BZCHN24] for $\mathrm{GL}_n$. Moreover, for an $\textit{arbitrary}$ quasi-split reductive $p$-adic group $G$, we formulate a classical local Langlands framework under which a classical correspondence can be lifted to an $\infty$-categorical correspondence.
+  Our result builds upon the phenomenal recent work of Zhu [Zhu25] on the unipotent block, as well as structure results such as [Sol22] on the automorphic side and [DHKM25] on the spectral side.
+  In particular, our work establishes [HM26,Conjecture 8.2.1], which implies that the conditional proof of [HM26] for the Fargues-Scholze categorical local Langlands equivalence [FS24] (conditional on the conjectured compatibility of the Fargues-Scholze construction with spectral Eisenstein series) applies as well to a large class of quasi-split reductive $p$-adic groups $G$.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-08T20:27:05Z</published>
+    <arxiv:comment>44 pages; comments welcome</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>David Helm</name>
+    </author>
+    <author>
+      <name>Maarten Solleveld</name>
+    </author>
+    <author>
+      <name>Yujie Xu</name>
+    </author>
+  </entry>
+</feed>

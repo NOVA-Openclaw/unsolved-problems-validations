@@ -1,0 +1,46 @@
+==============================================================================
+S257 VALIDATE -- MMSI under JASPAR-verified motif strings
+==============================================================================
+
+### SCENARIO: prereg (recalled strings)
+  m: Sp1=1.00, USF=1.00, E2F=1.00, SRF=0.00, ELK1=1.00
+  NAMPT     MMSI=0.7600  R=0.2000  -> HIT-AND-RUN            vs baseline HIT-AND-RUN  MATCH
+  EZH2      MMSI=0.7575  R=0.1125  -> HIT-AND-RUN            vs baseline HIT-AND-RUN  MATCH
+  SLC25A1   MMSI=0.6800  R=0.1700  -> HIT-AND-RUN            vs baseline HIT-AND-RUN  MATCH
+  EGR1      MMSI=0.1250  R=0.6000  -> PLASTIC (R-override)   vs baseline PLASTIC      MATCH
+  gap(lowest-of-3 - EGR1) = 0.5550  (prediction >=0.40: met)
+  all four classes reproduce baseline: True
+
+### SCENARIO: JASPAR t=0.40 (strict consensus)
+  m: Sp1=1.00, USF=1.00, E2F=1.00, SRF=0.00, ELK1=1.00
+  NAMPT     MMSI=0.7600  R=0.2000  -> HIT-AND-RUN            vs baseline HIT-AND-RUN  MATCH
+  EZH2      MMSI=0.7575  R=0.1125  -> HIT-AND-RUN            vs baseline HIT-AND-RUN  MATCH
+  SLC25A1   MMSI=0.6800  R=0.1700  -> HIT-AND-RUN            vs baseline HIT-AND-RUN  MATCH
+  EGR1      MMSI=0.1250  R=0.6000  -> PLASTIC (R-override)   vs baseline PLASTIC      MATCH
+  gap(lowest-of-3 - EGR1) = 0.5550  (prediction >=0.40: met)
+  all four classes reproduce baseline: True
+
+### SCENARIO: JASPAR t=0.25 (permissive consensus)
+  m: Sp1=0.50, USF=1.00, E2F=1.00, SRF=0.00, ELK1=1.00
+  NAMPT     MMSI=0.7600  R=0.2000  -> HIT-AND-RUN            vs baseline HIT-AND-RUN  MATCH
+  EZH2      MMSI=0.6975  R=0.1125  -> HIT-AND-RUN            vs baseline HIT-AND-RUN  MATCH
+  SLC25A1   MMSI=0.3400  R=0.5100  -> PLASTIC (R-override)   vs baseline HIT-AND-RUN  **MISMATCH**
+  EGR1      MMSI=0.1250  R=0.6000  -> PLASTIC (R-override)   vs baseline PLASTIC      MATCH
+  gap(lowest-of-3 - EGR1) = 0.2150  (prediction >=0.40: FAILED)
+  all four classes reproduce baseline: False
+
+### SCENARIO: JASPAR t=0.25, USF1-only E-box (MA0093.4)
+  m: Sp1=0.50, USF=0.00, E2F=1.00, SRF=0.00, ELK1=1.00
+  EZH2      MMSI=0.6975  R=0.1125  -> HIT-AND-RUN            vs baseline HIT-AND-RUN  MATCH
+  SLC25A1   MMSI=0.3400  R=0.5100  -> PLASTIC (R-override)   vs baseline HIT-AND-RUN  **MISMATCH**
+  EGR1      MMSI=0.1250  R=0.6000  -> PLASTIC (R-override)   vs baseline PLASTIC      MATCH
+  NAMPT     MMSI=0.0000  R=0.8000  -> PLASTIC (R-override)   vs baseline HIT-AND-RUN  **MISMATCH**
+  gap(lowest-of-3 - EGR1) = 0.1250  (prediction >=0.40: FAILED)
+  all four classes reproduce baseline: False
+
+==============================================================================
+PF3 CHECK (primary falsifier): does a JASPAR-verified CArG/SRE admit CpG?
+  SRF MA0083.3 consensus t25 = TGMCCATATAWGGKCA : obligate CpG 0, possible CpG 0  -> m_SRF = 0.0
+  SRF MA0083.3 consensus t40 = TGACCATATATGGTCA : obligate CpG 0, possible CpG 0  -> m_SRF = 0.0
+  PF3: NOT TRIGGERED. The m_SRF=0 result SURVIVES verification against a real PFM.
+==============================================================================

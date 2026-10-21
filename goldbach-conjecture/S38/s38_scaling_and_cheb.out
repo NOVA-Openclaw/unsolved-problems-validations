@@ -1,0 +1,46 @@
+=== (c) [1000,50000] CoV under same conventions ===
+S37/S35 convention (500-pt Riemann I): mean 0.960712  var(y/mean) 0.00125912  CoV 3.5484%
+accurate I:                             mean 0.978680  var(y/mean) 0.00131349  CoV 3.6242%
+  [S37 conv] detrended (y - a - b log n) CoV 3.4432%  slope b=0.00998
+  [accurate] detrended (y - a - b log n) CoV 3.4340%  slope b=0.01374
+
+=== (c) window scan, width 5000 evens-span, y accurate; local-detrended scatter ===
+            window    mean r     CoV%  CoVdetr%  1/sqrt(mean r)%   ratio
+[  2000, 12000]     111.8   4.8744    4.7815           9.4583   0.506
+[  5000, 15000]     147.7   4.1234    4.1002           8.2289   0.498
+[ 10000, 20000]     202.4   3.4482    3.4419           7.0290   0.490
+[ 20000, 30000]     302.1   2.8607    2.8592           5.7534   0.497
+[ 40000, 50000]     480.4   2.3229    2.3226           4.5624   0.509
+[ 80000, 90000]     800.3   1.8654    1.8628           3.5348   0.527
+[100000,110000]     949.9   1.5767    1.5764           3.2445   0.486
+[140000,150000]    1235.5   1.5120    1.5109           2.8449   0.531
+[190000,200000]    1574.8   1.2520    1.2520           2.5199   0.497
+log-log slope of detrended CoV vs X: -0.390   (1/sqrt(X) predicts -0.5)
+log-log slope of detrended CoV vs mean r: -0.490   (1/sqrt(r) predicts -0.5)
+naive 1/sqrt(r) prediction for S37 CoV from 3.5484%: 1.9524%  (mean r 298.4 -> 985.5)
+naive 1/sqrt(Xmid) prediction: 1.7085%
+
+=== (d) partitioned Chebyshev correction, independent implementation ===
+baseline (S35 conv) var(y/mean) = 0.00125912  CoV 3.5484%  [S35 claimed 0.00125912, 3.5484%]
+-- denominator total_L - 1 (S35 bug)
+   q<=  3: var 0.00106450  red  15.4562%  CoV 3.2627%
+   q<=  5: var 0.00103858  red  17.5149%  CoV 3.2227%
+   q<=  7: var 0.00103738  red  17.6107%  CoV 3.2208%
+   q<= 11: var 0.00105245  red  16.4137%  CoV 3.2441%
+   q<= 13: var 0.00107327  red  14.7603%  CoV 3.2761%
+   q<= 17: var 0.00109834  red  12.7687%  CoV 3.3141%
+-- denominator correct sum(counts_L) (S36 fix)
+   q<=  3: var 0.00104095  red  17.3270%  CoV 3.2264%
+   q<=  5: var 0.00098768  red  21.5579%  CoV 3.1427%
+   q<=  7: var 0.00095518  red  24.1388%  CoV 3.0906%
+   q<= 11: var 0.00093584  red  25.6748%  CoV 3.0592%
+   q<= 13: var 0.00091907  red  27.0067%  CoV 3.0316%
+   q<= 17: var 0.00090138  red  28.4120%  CoV 3.0023%
+-- robustness: accurate-I baseline var 0.00131349, fixed denominator
+   q<=  3: var 0.00109679  red  16.4982%
+   q<=  5: var 0.00104378  red  20.5333%
+   q<=  7: var 0.00101157  red  22.9860%
+   q<= 11: var 0.00099222  red  24.4593%
+   q<= 13: var 0.00097533  red  25.7448%
+   q<= 17: var 0.00095791  red  27.0712%
+bug factor prod_q TL/(TL-1) over q<=17: n=1000 -> 1.06897, n=50000 -> 1.00218; its CoV 0.8430% (compare baseline CoV)

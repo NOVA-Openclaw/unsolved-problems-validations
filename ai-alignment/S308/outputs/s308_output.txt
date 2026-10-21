@@ -1,0 +1,56 @@
+z-laws computed
+ scheme beta=1/2 #0 w/thr=0.672 min_tau bound=0.1170
+ scheme beta=1/2 #1 w/thr=0.984 min_tau bound=0.5882
+ scheme beta=1/2 #2 w/thr=0.938 min_tau bound=-0.1550
+ scheme beta=1/2 #3 w/thr=0.594 min_tau bound=0.1166
+ scheme beta=1/2 #4 w/thr=0.625 min_tau bound=-0.1562
+ scheme beta=1/2 #5 w/thr=0.547 min_tau bound=0.6031
+ scheme beta=1/2 #6 w/thr=0.578 min_tau bound=0.6199
+ scheme beta=1/2 #7 w/thr=0.984 min_tau bound=0.0892
+ scheme beta=1/2 #8 w/thr=0.578 min_tau bound=0.6116
+ scheme beta=1/2 #9 w/thr=0.531 min_tau bound=0.1176
+ scheme beta=1/2 #10 w/thr=0.781 min_tau bound=0.6193
+ scheme beta=1/2 #11 w/thr=0.797 min_tau bound=0.6154
+ scheme beta=1/4 #0 w/thr=0.625 min_tau bound=-0.3019
+ scheme beta=1/4 #1 w/thr=0.625 min_tau bound=-0.3030
+ scheme beta=1/4 #2 w/thr=0.844 min_tau bound=-0.6035
+ scheme beta=1/4 #3 w/thr=0.703 min_tau bound=-0.3041
+ scheme beta=1/4 #4 w/thr=0.797 min_tau bound=-0.7417
+ scheme beta=1/4 #5 w/thr=0.562 min_tau bound=-0.5199
+ scheme beta=1/4 #6 w/thr=0.609 min_tau bound=-0.3141
+ scheme beta=1/4 #7 w/thr=0.938 min_tau bound=-0.2985
+ scheme beta=1/4 #8 w/thr=0.750 min_tau bound=-0.6174
+ scheme beta=1/4 #9 w/thr=0.516 min_tau bound=-0.6328
+ scheme beta=1/4 #10 w/thr=0.984 min_tau bound=-0.5921
+ scheme beta=1/4 #11 w/thr=0.969 min_tau bound=-0.5829
+[PASS] N1 H(x,tau') <= f_tau(x,tau') off-diagonal (PV.R3)  cells=1474560 H>0 cells=325350 violations=0
+[PASS] N2 g >= t - f2 pointwise (PV.R2)  cells=98304 violations=0
+[PASS] N3a 1{unique argmax H = tau} >= g - F pointwise (PV.R4)  cells=98304 violations=0
+[PASS] N3b non-vacuous share >= 50% (probability-weighted)  weighted=0.6113 unweighted=5824/98304=0.0592
+[PASS] N4a success >= Eg-EF >= 1-delta-a2-a3 every (scheme,tau)  cases=384 violations=0
+[FAIL] N4b every scheme non-vacuous (min_tau bound >= 0.3)  beta=1/2 min bounds in [-0.156,0.620]; beta=1/4 in [-0.742,-0.299]
+[FAIL] N4c (diagnostic) every beta=1/2 scheme non-vacuous (>=0.3)  
+== N5 Monte Carlo ==
+   beta=1/2 tau=(1, 1, 1, 1): MC fail=0.3882 exact EF=0.3881 (0.03 sd); z-law max dev 6.30 sd
+   beta=1/2 tau=(1, -1, 1, -1): MC fail=0.1454 exact EF=0.1450 (0.17 sd); z-law max dev 2.76 sd
+   beta=1/2 tau=(-1, -1, -1, -1): MC fail=0.1872 exact EF=0.1851 (0.76 sd); z-law max dev 23.27 sd
+   beta=1/2 tau=(1, 1, 1, 1): MC fail=0.1002 exact EF=0.1046 (2.03 sd); z-law max dev 4.42 sd
+   beta=1/2 tau=(1, -1, 1, -1): MC fail=0.1523 exact EF=0.1539 (0.63 sd); z-law max dev 3.50 sd
+   beta=1/2 tau=(-1, -1, -1, -1): MC fail=0.1920 exact EF=0.1922 (0.05 sd); z-law max dev 10.02 sd
+   beta=1/2 tau=(1, 1, 1, 1): MC fail=0.5335 exact EF=0.5301 (0.97 sd); z-law max dev 6.30 sd
+   beta=1/2 tau=(1, -1, 1, -1): MC fail=0.5561 exact EF=0.5514 (1.33 sd); z-law max dev 2.79 sd
+   beta=1/2 tau=(-1, -1, -1, -1): MC fail=0.1778 exact EF=0.1794 (0.58 sd); z-law max dev 4.85 sd
+[PASS] N5a MC failure of first-argmax W-blind explorer matches exact E F (4 sd)  
+[FAIL] N5b MC z-law matches exact law (max cell dev <= 4.5 sd)  
+[PASS] N6a equality w=beta(1-beta)/8: fractional rec (Delta=1/2) at Ham-1 rival gives H=1, f=0  Delta=1/2 ell=23/32 target=23/32
+[PASS] N6b exact LP over continuous f: some rival qualifies w/o failing at equality (all Ham-1 pairs)  Ham-1 pairs reaching a-w at equality = 64/64
+[PASS] N6c exact LP: at w = thr - 1e-6 no rival (any Ham) qualifies w/o failing  
+== N7 Example PV.R ==
+   eps_tau in [0.09522,0.18123]
+   global alpha=0.23582 closed=0.23582 delta_max=0.16915 eps_max=0.18123
+[PASS] N7a alpha exact = max_tau(eps+(1-eps)/15); matches S307 0.23582; 2alpha+delta<1  2a+d=0.64079
+[PASS] N7b delta_tau = (14/15) eps_tau exactly  
+[PASS] N7c every fixed coin u: alpha_u = 1 exactly; PV.1 decoder has 2 qualifiers at every x (success 0)  
+[PASS] N7d averaged decoder success = 1-eps >= 1-2alpha-delta; E F = alpha_tau (R1 tight)  min succ=0.81877 bound=0.35921
+[PASS] N8 Fano: d=64 equality, even d>=66 strict, c/4=0.0022996  c=0.0091985 c/4=0.0022996
+TOTAL 14 PASS / 3 FAIL

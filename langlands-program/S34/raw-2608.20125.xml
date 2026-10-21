@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/8yvwUCrHjrWzJr13f0dH3x41bck</id>
+  <title>arXiv Query: search_query=&amp;id_list=2608.20125&amp;start=0&amp;max_results=1</title>
+  <updated>2026-09-07T14:37:07Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=1&amp;id_list=2608.20125" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>1</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2608.20125v1</id>
+    <title>Modularity theorems for Eisenstein congruences in prime-power level</title>
+    <updated>2026-08-20T14:53:58Z</updated>
+    <link href="https://arxiv.org/abs/2608.20125v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.20125v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $p, N \geq 5$ be primes such that $N \equiv 1 \bmod p$. We prove modularity theorems at levels $N$ and $N^2$, showing that suitable Eisenstein localizations of the weight-$2$ $p$-adic Hecke algebra at these levels are isomorphic to certain natural quotients of a universal pseudodeformation ring. This universal ring parametrizes pseudorepresentations that are residually Eisenstein, unramified outside $Np$ and finite-flat at $p$, and satisfy appropriate conditions at $N$ depending on the level.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-20T14:53:58Z</published>
+    <arxiv:comment>20 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Jaclyn Lang</name>
+    </author>
+    <author>
+      <name>Katharina Müller</name>
+    </author>
+    <author>
+      <name>Bharathwaj Palvannan</name>
+    </author>
+  </entry>
+</feed>

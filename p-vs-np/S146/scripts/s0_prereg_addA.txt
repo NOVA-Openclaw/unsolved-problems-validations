@@ -1,0 +1,6 @@
+S146 prereg addendum A (written after reading Sec 2 and before writing its code; post-hoc, flagged as such).
+V8: Brute-force check of Lemma lem:monotone (Sec 2): for P_n = conv{chi^F : (V,F) has an odd component},
+h_{P_n}(w) = h_{P_n}(c) = c(E) - tau(c), where c = max(w,0) and tau = minimum odd cut. Check exactly (integers) for n=4 (all 64 F)
+and n=6 (all 32768 F), using 200 random integer w in [-9,9]^E per n plus the all-zero and all-negative w.
+PASS = equality on every w. This is only the support-function identity behind the O(n^8) vxc bound. The NN construction,
+the xc >= 2^Omega(n) lower bound and Thm 1.1 overall stay unverified (paper claim).

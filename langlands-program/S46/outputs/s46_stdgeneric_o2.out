@@ -1,0 +1,8 @@
+l=13 q= 5 n=2 O2: generic=    82 generic&Std-generic=    48 of_which_not_regular=0
+l=13 q= 5 n=3 O2: generic=   240 generic&Std-generic=    96 of_which_not_regular=0
+l=17 q= 3 n=2 O2: generic=   170 generic&Std-generic=   120 of_which_not_regular=0
+l=17 q= 3 n=3 O2: generic=  1020 generic&Std-generic=   480 of_which_not_regular=0
+l=11 q= 2 n=3 O2: generic=    72 generic&Std-generic=     0 of_which_not_regular=0
+l=19 q= 7 n=3 O2: generic=  1944 generic&Std-generic=     0 of_which_not_regular=0
+l=29 q= 2 n=3 O2: generic= 10692 generic&Std-generic=  7920 of_which_not_regular=0
+mismatches=0 stdgeneric_nonvacuous=True stdgeneric_strictly_stronger=True

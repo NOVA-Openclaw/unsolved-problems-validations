@@ -1,0 +1,28 @@
+sanity r_un brute-force OK at 100,1000,1e5,1.2e5; r_un(100000) = 810
+
+=== Claim (a) window: evens in [100000,120000], N=10001 ===
+convention                                           mean      rawvar         sd     CoV%  var(y/mean)
+r_ord / (S*I_full)                             0.99150345  0.00024998 0.01581071   1.5946   0.00025428
+r_un  / (S*I_half)                             0.99157395  0.00025009 0.01581413   1.5949   0.00025436
+r_ord / G_simple                               1.20757874  0.00037447 0.01935130   1.6025   0.00025680
+r_un  / G_simple                               0.60383231  0.00009366 0.00967784   1.6027   0.00025688
+r_un  / (S*I_s37) [S37 exact convention]       0.96731581  0.00023826 0.01543557   1.5957   0.00025463
+
+=== Claim (b): mod 6 branching, y = r/I (no singular series) ===
+  [I_half accurate] n=0 mod 6 (N=3334): mean r/I = 2.973798, mean S = 3.000007, mean S excl p=3 factor = 1.500003
+  [I_half accurate] n=2 mod 6 (N=3333): mean r/I = 1.481813, mean S = 1.500120, mean S excl p=3 factor = 1.500120
+  [I_half accurate] n=4 mod 6 (N=3334): mean r/I = 1.493349, mean S = 1.499956, mean S excl p=3 factor = 1.499956
+  [I_half accurate] band ratio mean0 / mean(mean2,mean4) = 1.999083
+  [I_s37 (500-pt Riemann)] n=0 mod 6 (N=3334): mean r/I = 2.901046, mean S = 3.000007, mean S excl p=3 factor = 1.500003
+  [I_s37 (500-pt Riemann)] n=2 mod 6 (N=3333): mean r/I = 1.445562, mean S = 1.500120, mean S excl p=3 factor = 1.500120
+  [I_s37 (500-pt Riemann)] n=4 mod 6 (N=3334): mean r/I = 1.456815, mean S = 1.499956, mean S excl p=3 factor = 1.499956
+  [I_s37 (500-pt Riemann)] band ratio mean0 / mean(mean2,mean4) = 1.999083
+  S' (singular series without p=3 factor): E[S'|0 mod 6]=1.500003  E[S'|2,4]=1.500038  ratio=0.999977
+  rho=r/(S I): E[rho|0]=0.991275 E[rho|2]=0.987816 E[rho|4]=0.995629
+  => predicted band ratio 2 * S'ratio * rho-ratio = 1.999050
+  Band ratio across other 20000-wide windows (I accurate, r_un):
+    [20000,40000] ratio = 1.996819
+    [40000,60000] ratio = 1.998106
+    [60000,80000] ratio = 1.998493
+    [80000,100000] ratio = 1.999218
+    [100000,120000] ratio = 1.999083

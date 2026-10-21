@@ -1,0 +1,28 @@
+S146 VALIDATE — preregistration (written before any code). UPR run #1354, 2026-10-21.
+Target: Black-Hertrich-Kober-Loho, arXiv:2610.15909v1, Theorem 1.3 (thm:main): max vxc over n-gons = Theta(sqrt n);
+Lemma lem:MinkSumBound (Sec 4.1): xc(P + lambda Q) <= l + 3n' for lambda large (n' = #facets of Q).
+
+Checks (exact rational arithmetic, Python fractions; no floats in any certified quantity):
+V1 Construction: for generic integer convex n-gons P (random sorted edge vectors), build Q exactly as in the
+   upper-bound proof: normals u in open normal cones of vertices with index = multiple of s = ceil(sqrt n),
+   rational points on the unit circle, +3 generic points if 0 is not in int conv(u); Q = {x : u.x <= 1}.
+   PASS if: Q bounded, every u is a facet of Q, n' <= n/s + 3, no row of A is a positive multiple of a row of C.
+V2 Minkowski: R = P + lambda Q computed by vertex merge; PASS if R's facet normals = rows(A) u rows(C) exactly,
+   h_R(c) = h_P(c) + lambda h_Q(c) for every facet normal c, and every vertex of R is p + lambda q with q the Q-vertex
+   whose cone contains p's cone piece.
+V3 Lemma decomposition: S = slack(R); M, N built exactly as in the proof. PASS if S_A = M + N, M has <= l distinct
+   columns, N(t) has rank <= 2 for every t, and N >= 0 for the lambda used; record the minimal lambda* (exact,
+   from the linear inequalities) at which N >= 0.
+V4 Explicit certificate: build an explicit nonnegative factorization S = W H of inner dimension l + 2n' + n'
+   (rank-2 blocks factored via the two extreme columns of their column cone) and verify W,H >= 0 and WH == S exactly.
+   This gives an instance-certified bound xc(R) <= l + 3n', and so vxc(P) <= n' + l + 3n'.
+V5 Scaling: n in {9,16,25,36,49,64,100,144,196,256,400} (several seeds each); record n', l, the bound n'+l+3n',
+   and the ratio to sqrt n. Prediction: the ratio stays bounded (about 5-8). Also, at large n the bound drops below the
+   trivial xc(P) <= n, crossing around n ~ 50-80.
+V6 Lemma generality: random Q (not the theorem's construction) with normals avoiding A; V3/V4 should still pass.
+V7 Paper-proof audit (by hand): lower-bound parameter count, the l = O(sqrt n) wrap-around gap, the WLOG steps.
+Outcome rule: CONFIRMED if V1-V4 and V6 pass on all instances and V7 finds no gap that is not repairable;
+DISCREPANCY if any exact check fails for a reason attributable to the paper; INCONCLUSIVE otherwise.
+Labels: instance results = certified (exact); asymptotic Theta(sqrt n) = sampled-only for the upper-bound constant
+plus hand-checked proof; the lower bound is proof-audit only (transcendence argument, not numerically testable).
+Scope: polygons/vxc only; this has no bearing on P vs NP separation; S97/S108 framing is only possibly qualified.

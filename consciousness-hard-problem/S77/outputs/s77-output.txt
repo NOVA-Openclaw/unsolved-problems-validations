@@ -1,0 +1,97 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+##########################################################################
+# MODEL: gpt2  (family=gpt2)
+##########################################################################
+
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 148/148 [00:00<00:00, 4791.38it/s]
+[setup] n_layer=12 d_model=768 readout=block11
+
+========================================================================
+P1 — WITHIN-PASS BACKWARD DEFLECTION (positions < p) across layers x concepts
+     collapse-condition #1: any value >> fp-noise breaks the kind distinction
+========================================================================
+[cfg] prompt='The film I watched last night was' n_tok=7 patch_pos p=6 patch_layers(block idx)=[3, 6, 9]
+  layer   concept   backward(<p)       at-p  out-span@p
+      3   valence      0.000e+00      5.894       5.794
+      3 formality      0.000e+00     63.338      62.963
+      3      size      0.000e+00      4.405       4.376
+      3     tense      0.000e+00      5.004       4.994
+      6   valence      0.000e+00     10.201       9.979
+      6 formality      0.000e+00     34.054      33.007
+      6      size      0.000e+00     31.963      31.723
+      6     tense      0.000e+00     17.474      17.161
+      9   valence      0.000e+00     15.436      13.501
+      9 formality      0.000e+00     89.033      86.886
+      9      size      0.000e+00     25.787      23.760
+      9     tense      0.000e+00     30.463      26.750
+[P1] max backward deflection over ALL layers x concepts = 0.000e+00
+[P1] verdict: CONFIRMED exact-0 (distinction holds)
+[ctrl] zero-magnitude patch deflection@p=2.841e-05 (expect ~0); next-token flipped=False ' a'->' a'
+
+========================================================================
+P2 — ACROSS-GEN out-span decay: RAW vs ATTENTION-NORMALIZED estimator
+     (cleaner estimator = deflection / attention-mass-to-p; S75 caveat #1)
+========================================================================
+
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 148/148 [00:00<00:00, 4536.87it/s]
+  step:                 1      2      3      4      5      6      7      8      9     10     11     12
+  raw out-span:     3.248  4.502  3.184  2.598  1.590  1.933  2.108  1.530  1.900  1.393  1.730  1.396
+  raw shape(s1=1):  1.000  1.589  1.130  0.929  0.529  0.776  0.757  0.578  0.733  0.493  0.574  0.432
+  attn-norm shape:  1.000  2.334  2.953  3.056  2.572  2.946  4.328  2.936  3.440  4.328  3.645  4.470
+[P2] raw: nonzero-mean=2.259  frac-decreasing(raw shape)=0.64
+[P2] attn-normalized: frac-decreasing=0.27  (smoother if > raw frac-decreasing)
+
+##########################################################################
+# MODEL: EleutherAI/pythia-160m  (family=pythia)
+##########################################################################
+
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 148/148 [00:00<00:00, 4157.59it/s]
+research/unsolved/consciousness-hard-problem/s77-sig1-robustness-validate.py:248: RuntimeWarning: Mean of empty slice
+  norm_shape=np.nanmean(norm_shape_prompt,0)
+[setup] n_layer=12 d_model=768 readout=block11
+
+========================================================================
+P1 — WITHIN-PASS BACKWARD DEFLECTION (positions < p) across layers x concepts
+     collapse-condition #1: any value >> fp-noise breaks the kind distinction
+========================================================================
+[cfg] prompt='The film I watched last night was' n_tok=7 patch_pos p=6 patch_layers(block idx)=[3, 6, 9]
+  layer   concept   backward(<p)       at-p  out-span@p
+      3   valence      0.000e+00      9.547       9.305
+      3 formality      0.000e+00     37.688      36.688
+      3      size      0.000e+00     11.086      10.977
+      3     tense      0.000e+00      5.465       5.418
+      6   valence      0.000e+00     18.266      17.266
+      6 formality      0.000e+00     60.344      55.375
+      6      size      0.000e+00     30.375      28.422
+      6     tense      0.000e+00     27.531      26.672
+      9   valence      0.000e+00     31.359      23.703
+      9 formality      0.000e+00     97.750      68.688
+      9      size      0.000e+00     45.875      35.156
+      9     tense      0.000e+00     47.562      33.906
+[P1] max backward deflection over ALL layers x concepts = 0.000e+00
+[P1] verdict: CONFIRMED exact-0 (distinction holds)
+[ctrl] zero-magnitude patch deflection@p=1.052e-01 (expect ~0); next-token flipped=False ' a'->' a'
+
+========================================================================
+P2 — ACROSS-GEN out-span decay: RAW vs ATTENTION-NORMALIZED estimator
+     (cleaner estimator = deflection / attention-mass-to-p; S75 caveat #1)
+========================================================================
+  step:                 1      2      3      4      5      6      7      8      9     10     11     12
+  raw out-span:     6.055  4.660  3.604  2.995  2.258  1.989  1.993  1.604  1.575  1.405  1.199  1.451
+  raw shape(s1=1):  1.000  0.859  0.721  0.613  0.377  0.345  0.358  0.389  0.377  0.335  0.298  0.340
+  attn-norm shape:    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan
+[P2] raw: nonzero-mean=2.566  frac-decreasing(raw shape)=0.73
+[P2] attn-normalized: frac-decreasing=nan  (smoother if > raw frac-decreasing)
+
+==========================================================================
+CROSS-MODEL SUMMARY
+==========================================================================
+                    gpt2: P1 max-backward=0.000e+00  zero-ctrl=2.841e-05  flip=False  P2 raw-mean=2.259  mono raw=0.64->attn-norm=0.27
+  EleutherAI/pythia-160m: P1 max-backward=0.000e+00  zero-ctrl=1.052e-01  flip=False  P2 raw-mean=2.566  mono raw=0.73->attn-norm=nan
+
+[VERDICT] P1 exact-0 across BOTH models, ALL layers, ALL concepts: True
+[VERDICT] Distinction HARDENS: no within-pass back-arrow anywhere (collapse-cond#1 not met).
